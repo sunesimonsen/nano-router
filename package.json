@@ -1,0 +1,36 @@
+{
+  "name": "nano-router",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A tiny modern router",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "lerna run test",
+    "format": "prettier --write '**/*.{js,md}'",
+    "lint": "eslint . && prettier --check '**/*.{js,md}'",
+    "ci": "npm run lint && npm test",
+    "release": "node-publisher release"
+  },
+  "keywords": [
+    "React",
+    "router",
+    "simple"
+  ],
+  "author": "Sune Simonsen",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-mocha": "^8.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-standard": "^4.0.1",
+    "esm": "^3.2.25",
+    "lerna": "^3.22.1",
+    "node-publisher": "^1.5.0",
+    "prettier": "^2.1.0"
+  }
+}
