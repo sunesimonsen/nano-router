@@ -1,0 +1,26 @@
+{
+  "name": "@nano-router/router",
+  "version": "1.0.0",
+  "description": "The nano-router",
+  "keywords": [
+    "browser",
+    "history",
+    "routing",
+    "router"
+  ],
+  "author": "Sune Simonsen <sune@we-knowhow.dk>",
+  "license": "MIT",
+  "main": "src/index.js",
+  "dependencies": {
+    "@nano-router/routes": "1.0.0",
+    "@nano-router/url": "1.0.0",
+    "querystring": "^0.2.0"
+  },
+  "devDependencies": {
+    "history": "^5.0.0",
+    "mocha": "^8.1.1",
+    "sinon": "^9.0.3",
+    "unexpected": "^11.14.0",
+    "unexpected-sinon": "^10.11.2"
+  }
+}
