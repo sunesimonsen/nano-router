@@ -1,0 +1,22 @@
+{
+  "name": "@nano-router/path",
+  "version": "1.0.0",
+  "description": "Simple path patterns for matching and stringifying",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha src"
+  },
+  "keywords": [
+    "path",
+    "pattern",
+    "matching",
+    "stringify"
+  ],
+  "author": "Sune Simonsen <sune@we-knowhow.dk>",
+  "license": "MIT",
+  "sideEffects": false,
+  "devDependencies": {
+    "mocha": "^8.1.1",
+    "unexpected": "^11.14.0"
+  }
+}
