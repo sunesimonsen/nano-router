@@ -1,0 +1,25 @@
+{
+  "name": "@nano-router/routes",
+  "version": "1.0.0",
+  "description": "Objects to setup routes",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "mocha src"
+  },
+  "keywords": [
+    "React",
+    "router",
+    "routes",
+    "simple"
+  ],
+  "author": "Sune Simonsen",
+  "license": "MIT",
+  "sideEffects": false,
+  "dependencies": {
+    "@nano-router/path": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^8.1.1",
+    "unexpected": "^11.14.0"
+  }
+}
