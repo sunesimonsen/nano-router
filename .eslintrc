@@ -1,16 +1,19 @@
 {
-  "extends": ["standard", "prettier", "prettier/standard"],
-  "plugins": ["import", "mocha", "react"],
+  "extends": ["standard", "prettier", "prettier/standard", 'plugin:react/recommended'],
+  "plugins": ["import", "mocha", "react", "react-hooks"],
   "env": {
     "mocha": true
   },
   "rules": {
     "react/jsx-uses-vars": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "import/no-extraneous-dependencies": [
       "error",
       {
         "devDependencies": [
           "**/*.spec.js",
+          "**/expect.js",
         ],
         "optionalDependencies": false,
         "peerDependencies": true
