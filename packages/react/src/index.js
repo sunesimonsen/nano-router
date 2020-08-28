@@ -7,3 +7,4 @@ export { useParams } from "./useParams";
 export { useQueryParams } from "./useQueryParams";
 export { useRouterSubscription } from "./useRouterSubscription";
 export { useLocation } from "./useLocation";
+export { usePrompt } from "./usePrompt";
