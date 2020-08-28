@@ -31,7 +31,10 @@
     "unexpected-reaction": "^2.16.0"
   },
   "dependencies": {
-    "history": "^5.0.0",
-    "@nano-router/router": "1.0.0"
+    "@nano-router/router": "^1.0.0",
+    "history": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

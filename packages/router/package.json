@@ -12,8 +12,8 @@
   "license": "MIT",
   "main": "src/index.js",
   "dependencies": {
-    "@nano-router/routes": "1.0.0",
-    "@nano-router/url": "1.0.0",
+    "@nano-router/routes": "^1.0.0",
+    "@nano-router/url": "^1.0.0",
     "querystring": "^0.2.0"
   },
   "devDependencies": {
@@ -22,5 +22,8 @@
     "sinon": "^9.0.3",
     "unexpected": "^11.14.0",
     "unexpected-sinon": "^10.11.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

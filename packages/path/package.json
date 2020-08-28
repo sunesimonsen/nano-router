@@ -18,5 +18,8 @@
   "devDependencies": {
     "mocha": "^8.1.1",
     "unexpected": "^11.14.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
