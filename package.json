@@ -6,6 +6,7 @@
   "main": "./lib/index.js",
   "scripts": {
     "test": "lerna run test",
+    "build": "lerna run build",
     "format": "prettier --write '**/*.{js,md}'",
     "lint": "eslint . && prettier --check '**/*.{js,md}'",
     "ci": "npm run lint && npm test",

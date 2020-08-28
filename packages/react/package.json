@@ -2,9 +2,10 @@
   "name": "@nano-router/react",
   "version": "1.1.0",
   "description": "React integration for @nano-router/router",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "mocha src"
+    "test": "mocha src",
+    "build": "babel --out-dir lib --quiet src"
   },
   "keywords": [
     "router",
