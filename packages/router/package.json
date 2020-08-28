@@ -1,6 +1,6 @@
 {
   "name": "@nano-router/router",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The nano-router",
   "keywords": [
     "browser",
@@ -12,8 +12,8 @@
   "license": "MIT",
   "main": "src/index.js",
   "dependencies": {
-    "@nano-router/routes": "^1.0.0",
-    "@nano-router/url": "^1.0.0",
+    "@nano-router/routes": "^1.1.0",
+    "@nano-router/url": "^1.1.0",
     "querystring": "^0.2.0"
   },
   "devDependencies": {

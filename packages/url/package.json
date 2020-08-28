@@ -1,6 +1,6 @@
 {
   "name": "@nano-router/url",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Methods to create urls",
   "main": "src/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "license": "MIT",
   "sideEffects": false,
   "dependencies": {
-    "@nano-router/path": "^1.0.0",
+    "@nano-router/path": "^1.1.0",
     "querystring": "^0.2.0"
   },
   "devDependencies": {
