@@ -10,7 +10,7 @@
     "format": "prettier --write '**/*.{js,md}'",
     "lint": "eslint . && prettier --check '**/*.{js,md}'",
     "ci": "npm run lint && npm test",
-    "release": "node-publisher release"
+    "release": "npm run build; lerna publish"
   },
   "keywords": [
     "React",
@@ -32,7 +32,6 @@
     "eslint-plugin-standard": "^4.0.1",
     "esm": "^3.2.25",
     "lerna": "^3.22.1",
-    "node-publisher": "^1.5.0",
     "prettier": "^2.1.0"
   }
 }
