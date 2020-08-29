@@ -24,13 +24,10 @@ describe("PathPattern", () => {
       });
     });
 
-    it("matches prefixes of a given path", () => {
+    it("returns the path match to be exact", () => {
       const pattern = new PathPattern("/posts/:locale/edit/:id");
 
-      expect(pattern.match("/posts/da/edit/123/extra/stuff"), "to equal", {
-        id: "123",
-        locale: "da",
-      });
+      expect(pattern.match("/posts/da/edit/123/extra/stuff"), "to be null");
     });
 
     it("returns null if pattern doesn't match", () => {

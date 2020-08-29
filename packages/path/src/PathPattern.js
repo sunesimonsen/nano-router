@@ -8,7 +8,7 @@ export class PathPattern {
   match(path) {
     const pathSegments = trimSlashes(path).split("/");
 
-    if (this.pattern.length > pathSegments.length) {
+    if (this.pattern.length !== pathSegments.length) {
       return null;
     }
 
