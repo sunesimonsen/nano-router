@@ -1,6 +1,9 @@
 {
   "extends": ["standard", "prettier", "prettier/standard", 'plugin:react/recommended'],
   "plugins": ["import", "mocha", "react", "react-hooks"],
+  "globals": {
+    "fetch"
+  },
   "env": {
     "mocha": true
   },
