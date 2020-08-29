@@ -10,31 +10,63 @@ export class Router {
       this[method] = this.history[method].bind(history);
     });
 
-    this.listen = this.listen.bind(this);
-    this.updateState = this.updateState.bind(this);
+    [
+      "listen",
+      "updateState",
+      "createUrl",
+      "createRouteOptions",
+      "navigate",
+    ].forEach((method) => {
+      this[method] = this[method].bind(this);
+    });
 
     this.updateState();
   }
 
-  navigate({
-    route: routeName = this.route,
-    params = this.params,
-    queryParams = this.queryParams,
-    hash = this.location.hash,
-    state,
-    replace = false,
-  }) {
+  createRouteOptions(routeNameOrOptions) {
+    const options =
+      typeof routeNameOrOptions === "string"
+        ? { route: routeNameOrOptions }
+        : routeNameOrOptions;
+
+    const {
+      route = this.route,
+      params = this.params,
+      queryParams = this.queryParams,
+      hash = this.location.hash,
+      state,
+      replace = false,
+    } = options;
+
+    return { route, params, queryParams, hash, state, replace };
+  }
+
+  createUrl(routeNameOrOptions) {
+    const {
+      route: routeName,
+      params,
+      queryParams,
+      hash,
+    } = this.createRouteOptions(routeNameOrOptions);
+
     const route = this.routes.byName(routeName);
 
     if (!route) {
       throw new Error(`Unknown route: ${routeName}`);
     }
 
-    const url = createUrl({
+    return createUrl({
       basename: route.stringify(params),
       queryParams,
       hash,
     });
+  }
+
+  navigate(routeNameOrOptions) {
+    const options = this.createRouteOptions(routeNameOrOptions);
+    const url = this.createUrl(options);
+
+    const { replace, state } = options;
 
     if (replace) {
       this.history.replace(url, state);

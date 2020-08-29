@@ -33,7 +33,43 @@ describe("BrowserRouter", () => {
   });
 
   describe("navigate", () => {
-    describe("when the base path matches", () => {
+    describe("when only given a string", () => {
+      it("uses the string as the route name", () => {
+        router.navigate({
+          route: "posts/edit",
+          params: { id: 123 },
+          queryParams: { hello: "you" },
+          hash: "#anchor",
+          state: "hello",
+        });
+
+        router.navigate("posts/new");
+
+        expect(transitionSpy, "to have calls satisfying", () => {
+          transitionSpy({
+            action: "PUSH",
+            location: {
+              pathname: "/posts/edit/123",
+              search: "?hello=you",
+              hash: "#anchor",
+              state: "hello",
+            },
+          });
+
+          transitionSpy({
+            action: "PUSH",
+            location: {
+              pathname: "/posts/new",
+              search: "?hello=you",
+              hash: "#anchor",
+              state: null,
+            },
+          });
+        });
+      });
+    });
+
+    describe("when the pathname matches", () => {
       it("transition the url to the new route", () => {
         router.navigate({
           route: "posts/edit",
