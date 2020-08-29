@@ -8,6 +8,7 @@ import {
   useRouteName,
   useRouter,
   useParams,
+  useLink,
 } from "./index";
 
 const routes = new Routes(
@@ -45,16 +46,12 @@ const EditView = () => {
 };
 
 const PostsView = () => {
-  const router = useRouter();
-
-  const navigate = () => {
-    router.navigate({ route: "posts/new" });
-  };
+  const showNewPost = useLink("posts/new");
 
   return (
-    <button data-test-id="new" onClick={navigate}>
+    <a data-test-id="new" {...showNewPost}>
       New post
-    </button>
+    </a>
   );
 };
 

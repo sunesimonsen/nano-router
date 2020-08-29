@@ -8,12 +8,6 @@ const routes = new Routes(
   new Route("posts", "/posts")
 );
 
-const RouteName = () => {
-  const routeName = useRouteName();
-
-  return <div data-test-id="route-name">{routeName}</div>;
-};
-
 const NewView = () => <div data-test-id="new-view" />;
 
 const PostsView = () => {
@@ -42,7 +36,6 @@ const App = () => {
     <div>
       <MemoryRouter routes={routes} initialPath="/posts">
         <RootView />
-        <RouteName />
       </MemoryRouter>
     </div>
   );
@@ -59,29 +52,27 @@ describe("useRouteName", () => {
     unmount(component);
   });
 
-  it("returns the name of the current route", () => {
-    expect(
-      component,
-      "queried for test id",
-      "route-name",
-      "to have text",
-      "posts"
-    );
-  });
-
   describe("when navigating", () => {
     beforeEach(() => {
       simulate(component, { type: "click", target: "[data-test-id=new]" });
     });
 
-    it("updates the route name", () => {
-      expect(
-        component,
-        "queried for test id",
-        "route-name",
-        "to have text",
-        "posts/new"
-      ).and("to contain test id", "new-view");
+    it("re-renders the subscribed parts", () => {
+      expect(component, "to contain test id", "new-view");
+    });
+  });
+
+  describe("when pressing a modifyer key", () => {
+    beforeEach(() => {
+      simulate(component, {
+        type: "click",
+        data: { ctrlKey: true },
+        target: "[data-test-id=new]",
+      });
+    });
+
+    it("doesn't prevent default", () => {
+      expect(component, "not to contain test id", "new-view");
     });
   });
 });

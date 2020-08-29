@@ -4,10 +4,10 @@ import expect, { mount, unmount, simulate } from "./expect";
 import {
   Routes,
   Route,
-  InMemoryRouter,
+  MemoryRouter,
   useRouteName,
-  useRouter,
   usePrompt,
+  useLink,
 } from "./index";
 
 const routes = new Routes(
@@ -16,14 +16,11 @@ const routes = new Routes(
 );
 
 const NewView = () => {
-  const router = useRouter();
   const [name, setName] = useState("");
   const isDirty = Boolean(name);
   const confirm = usePrompt(isDirty);
 
-  const showList = () => {
-    router.navigate({ route: "posts" });
-  };
+  const showPosts = useLink("posts");
 
   const onChange = (e) => {
     setName(e.target.value);
@@ -37,9 +34,9 @@ const NewView = () => {
           Confirm
         </button>
       )}
-      <button data-test-id="show-list" onClick={showList}>
+      <a data-test-id="show-list" {...showPosts}>
         Show list
-      </button>
+      </a>
     </div>
   );
 };
@@ -58,9 +55,9 @@ const RootView = () => {
 const App = () => {
   return (
     <div>
-      <InMemoryRouter routes={routes} initialPath="/posts/new">
+      <MemoryRouter routes={routes} initialPath="/posts/new">
         <RootView />
-      </InMemoryRouter>
+      </MemoryRouter>
     </div>
   );
 };
