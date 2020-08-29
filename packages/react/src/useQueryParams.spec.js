@@ -1,7 +1,7 @@
 import React from "react";
 import expect, { mount, unmount } from "./expect";
 
-import { Routes, Route, InMemoryRouter, useQueryParams } from "./index";
+import { Routes, Route, MemoryRouter, useQueryParams } from "./index";
 
 const routes = new Routes(new Route("posts/edit", "/posts/:id"));
 
@@ -14,9 +14,9 @@ const RouteQueryParams = () => {
 const App = () => {
   return (
     <div>
-      <InMemoryRouter routes={routes} initialPath="/posts/42?message=hello">
+      <MemoryRouter routes={routes} initialPath="/posts/42?message=hello">
         <RouteQueryParams />
-      </InMemoryRouter>
+      </MemoryRouter>
     </div>
   );
 };

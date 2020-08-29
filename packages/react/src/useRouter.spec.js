@@ -1,7 +1,7 @@
 import React from "react";
 import expect, { mount, unmount } from "./expect";
 
-import { Routes, Route, InMemoryRouter, useRouter } from "./index";
+import { Routes, Route, MemoryRouter, useRouter } from "./index";
 
 const routes = new Routes(new Route("posts", "/posts"));
 
@@ -13,9 +13,9 @@ const Location = () => {
 
 const App = () => (
   <div>
-    <InMemoryRouter routes={routes} initialPath="/posts">
+    <MemoryRouter routes={routes} initialPath="/posts">
       <Location />
-    </InMemoryRouter>
+    </MemoryRouter>
   </div>
 );
 

@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { createMemoryHistory } from "history";
 import { Router } from "./Router";
 
-export const InMemoryRouter = ({ routes, initialPath = "/", children }) => {
+export const MemoryRouter = ({ routes, initialPath = "/", children }) => {
   const history = useMemo(
     () =>
       createMemoryHistory({

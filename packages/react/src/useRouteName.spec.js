@@ -1,13 +1,7 @@
 import React from "react";
 import expect, { mount, unmount, simulate } from "./expect";
 
-import {
-  Routes,
-  Route,
-  InMemoryRouter,
-  useRouteName,
-  useRouter,
-} from "./index";
+import { Routes, Route, MemoryRouter, useRouteName, useRouter } from "./index";
 
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),
@@ -50,10 +44,10 @@ const RootView = () => {
 const App = () => {
   return (
     <div>
-      <InMemoryRouter routes={routes} initialPath="/posts">
+      <MemoryRouter routes={routes} initialPath="/posts">
         <RootView />
         <RouteName />
-      </InMemoryRouter>
+      </MemoryRouter>
     </div>
   );
 };

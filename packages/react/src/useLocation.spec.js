@@ -1,7 +1,7 @@
 import React from "react";
 import expect, { mount, unmount, simulate } from "./expect";
 
-import { Routes, Route, InMemoryRouter, useLocation, useRouter } from "./index";
+import { Routes, Route, MemoryRouter, useLocation, useRouter } from "./index";
 
 const routes = new Routes(new Route("posts/edit", "/posts/:id"));
 
@@ -33,10 +33,10 @@ const SetMessage = () => {
 
 const App = () => (
   <div>
-    <InMemoryRouter routes={routes} initialPath="/posts/42?message=hello#h2">
+    <MemoryRouter routes={routes} initialPath="/posts/42?message=hello#h2">
       <RouteLocation />
       <SetMessage />
-    </InMemoryRouter>
+    </MemoryRouter>
   </div>
 );
 

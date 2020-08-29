@@ -4,7 +4,7 @@ import expect, { mount, unmount, simulate } from "./expect";
 import {
   Routes,
   Route,
-  InMemoryRouter,
+  MemoryRouter,
   useRouteName,
   useRouter,
   useParams,
@@ -74,10 +74,10 @@ const RootView = () => {
 const App = () => {
   return (
     <div>
-      <InMemoryRouter routes={routes} initialPath="/posts">
+      <MemoryRouter routes={routes} initialPath="/posts">
         <RootView />
         <RouteName />
-      </InMemoryRouter>
+      </MemoryRouter>
     </div>
   );
 };
