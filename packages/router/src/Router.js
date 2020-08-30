@@ -87,7 +87,7 @@ export class Router {
 
   listen(listener) {
     if (!this.stateListener) {
-      this.stateListener = this.history.listen(({ action, location }) => {
+      this.stateListener = this.history.listen(() => {
         this.updateState();
       });
     }
