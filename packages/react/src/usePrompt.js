@@ -10,7 +10,6 @@ export const usePrompt = (isActive) => {
       const unblock = router.block((tx) => {
         setConfirmation({
           reject: () => {
-            unblock();
             setConfirmation(null);
           },
           approve: () => {

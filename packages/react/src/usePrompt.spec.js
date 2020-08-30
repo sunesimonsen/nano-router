@@ -121,4 +121,23 @@ describe("useRouteName", () => {
       );
     });
   });
+
+  describe("when block navigation is rejected multiple times", () => {
+    beforeEach(() => {
+      simulate(component, [
+        { type: "change", target: "[data-test-id=name]", value: "Sune" },
+        { type: "click", target: "[data-test-id=show-list]" },
+        { type: "click", target: "[data-test-id=reject]" },
+        { type: "click", target: "[data-test-id=show-list]" },
+        { type: "click", target: "[data-test-id=reject]" },
+      ]);
+    });
+
+    it("removes the confirmation but it doesn't navigate", () => {
+      expect(component, "not to contain test id", "approve").and(
+        "not to contain test id",
+        "posts-list"
+      );
+    });
+  });
 });
