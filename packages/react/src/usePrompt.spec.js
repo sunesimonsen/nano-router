@@ -41,7 +41,7 @@ const NewView = () => {
   return (
     <div>
       <input data-test-id="name" value={name} onChange={onChange} />
-      {confirmation && (
+      {confirmation.isVisible && (
         <div>
           <button data-test-id="reject" onClick={confirmation.reject}>
             Reject

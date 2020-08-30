@@ -1,14 +1,21 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useMemo, useState, useEffect } from "react";
 import { useRouter } from "./useRouter";
 
 export const usePrompt = (isActive) => {
   const router = useRouter();
   const isRemovedRef = useRef(false);
 
-  const [confirmation, setConfirmation] = useState({
-    isVisible: false,
-    remove: () => {},
-  });
+  const inVisibleConfirmation = useMemo(
+    () => ({
+      isVisible: false,
+      remove: () => {
+        isRemovedRef.current = true;
+      },
+    }),
+    []
+  );
+
+  const [confirmation, setConfirmation] = useState(inVisibleConfirmation);
 
   useEffect(() => {
     if (isActive && !isRemovedRef.current) {
@@ -20,36 +27,25 @@ export const usePrompt = (isActive) => {
           setConfirmation({
             isVisible: true,
             reject: () => {
-              setConfirmation(null);
+              setConfirmation(inVisibleConfirmation);
             },
             approve: () => {
               unblock();
               tx.retry();
-              setConfirmation(null);
+              isRemovedRef.current = true;
+              setConfirmation(inVisibleConfirmation);
             },
           });
         }
-      });
-
-      setConfirmation({
-        isVisible: false,
-        remove: () => {
-          unblock();
-        },
       });
 
       return () => {
         unblock();
       };
     } else {
-      setConfirmation({
-        isVisible: false,
-        remove: () => {
-          isRemovedRef.current = true;
-        },
-      });
+      setConfirmation(inVisibleConfirmation);
     }
-  }, [router, isActive]);
+  }, [router, isActive, inVisibleConfirmation]);
 
   return confirmation;
 };
