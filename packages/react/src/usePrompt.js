@@ -3,16 +3,21 @@ import { useRouter } from "./useRouter";
 
 export const usePrompt = (isActive) => {
   const router = useRouter();
-  const [confirm, setConfirm] = useState(null);
+  const [confirmation, setConfirmation] = useState(null);
 
   useEffect(() => {
     if (isActive) {
       const unblock = router.block((tx) => {
-        console.log("blocked");
-        setConfirm(() => () => {
-          console.log("confirm");
-          unblock();
-          tx.retry();
+        setConfirmation({
+          reject: () => {
+            unblock();
+            setConfirmation(null);
+          },
+          approve: () => {
+            unblock();
+            tx.retry();
+            setConfirmation(null);
+          },
         });
       });
 
@@ -20,9 +25,9 @@ export const usePrompt = (isActive) => {
         unblock();
       };
     } else {
-      setConfirm(null);
+      setConfirmation(null);
     }
   }, [router, isActive]);
 
-  return confirm;
+  return confirmation;
 };

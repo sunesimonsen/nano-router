@@ -18,7 +18,7 @@ const routes = new Routes(
 const NewView = () => {
   const [name, setName] = useState("");
   const isDirty = Boolean(name);
-  const confirm = usePrompt(isDirty);
+  const confirmation = usePrompt(isDirty);
 
   const showPosts = useLink("posts");
 
@@ -29,10 +29,15 @@ const NewView = () => {
   return (
     <div>
       <input data-test-id="name" value={name} onChange={onChange} />
-      {confirm && (
-        <button data-test-id="confirm" onClick={confirm}>
-          Confirm
-        </button>
+      {confirmation && (
+        <div>
+          <button data-test-id="reject" onClick={confirmation.reject}>
+            Reject
+          </button>
+          <button data-test-id="approve" onClick={confirmation.approve}>
+            Approve
+          </button>
+        </div>
       )}
       <a data-test-id="show-list" {...showPosts}>
         Show list
@@ -82,7 +87,7 @@ describe("useRouteName", () => {
     });
 
     it("shows a confirmation", () => {
-      expect(component, "to contain test id", "confirm");
+      expect(component, "to contain test id", "approve");
     });
   });
 
@@ -91,12 +96,29 @@ describe("useRouteName", () => {
       simulate(component, [
         { type: "change", target: "[data-test-id=name]", value: "Sune" },
         { type: "click", target: "[data-test-id=show-list]" },
-        { type: "click", target: "[data-test-id=confirm]" },
+        { type: "click", target: "[data-test-id=approve]" },
       ]);
     });
 
     it("shows a confirmation", () => {
       expect(component, "to contain test id", "posts-list");
+    });
+  });
+
+  describe("when block navigation is rejected", () => {
+    beforeEach(() => {
+      simulate(component, [
+        { type: "change", target: "[data-test-id=name]", value: "Sune" },
+        { type: "click", target: "[data-test-id=show-list]" },
+        { type: "click", target: "[data-test-id=reject]" },
+      ]);
+    });
+
+    it("removes the confirmation but it doesn't navigate", () => {
+      expect(component, "not to contain test id", "approve").and(
+        "not to contain test id",
+        "posts-list"
+      );
     });
   });
 });
