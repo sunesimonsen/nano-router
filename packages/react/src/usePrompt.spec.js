@@ -6,6 +6,7 @@ import {
   Route,
   MemoryRouter,
   useRouteName,
+  useRouter,
   usePrompt,
   useLink,
 } from "./index";
@@ -16,6 +17,7 @@ const routes = new Routes(
 );
 
 const NewView = () => {
+  const router = useRouter();
   const [name, setName] = useState("");
   const isDirty = Boolean(name);
   const confirmation = usePrompt(isDirty);
@@ -24,6 +26,16 @@ const NewView = () => {
 
   const onChange = (e) => {
     setName(e.target.value);
+  };
+
+  const onSave = () => {
+    // Save
+    // Success
+    confirmation.remove();
+
+    router.navigate({
+      route: "posts",
+    });
   };
 
   return (
@@ -39,6 +51,9 @@ const NewView = () => {
           </button>
         </div>
       )}
+      <button data-test-id="save" onClick={onSave}>
+        Save
+      </button>
       <a data-test-id="show-list" {...showPosts}>
         Show list
       </a>
@@ -138,6 +153,19 @@ describe("useRouteName", () => {
         "not to contain test id",
         "posts-list"
       );
+    });
+  });
+
+  describe("when removing a confirmation", () => {
+    beforeEach(() => {
+      simulate(component, [
+        { type: "change", target: "[data-test-id=name]", value: "Sune" },
+        { type: "click", target: "[data-test-id=save]" },
+      ]);
+    });
+
+    it("won't prompt on navigation", () => {
+      expect(component, "to contain test id", "posts-list");
     });
   });
 });
