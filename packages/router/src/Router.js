@@ -92,9 +92,14 @@ export class Router {
       });
     }
 
+    let subscribed = true;
     this.listenerCount++;
 
-    const clearListener = this.history.listen(listener);
+    const clearListener = this.history.listen((...args) => {
+      if (subscribed && listener) {
+        listener(...args);
+      }
+    });
 
     return () => {
       this.listenerCount--;
@@ -107,6 +112,7 @@ export class Router {
       }
 
       clearListener();
+      subscribed = false;
     };
   }
 }
