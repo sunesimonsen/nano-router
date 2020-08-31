@@ -23,13 +23,23 @@ export const usePrompt = (isActive) => {
         setConfirmation({
           isVisible: true,
           reject: () => {
-            setConfirmation(inVisibleConfirmation);
+            setConfirmation({
+              isVisible: false,
+              remove: () => {
+                unblock();
+              },
+            });
           },
           approve: () => {
             unblock();
             tx.retry();
             isRemovedRef.current = true;
-            setConfirmation(inVisibleConfirmation);
+            setConfirmation({
+              isVisible: false,
+              remove: () => {
+                unblock();
+              },
+            });
           },
         });
       });
