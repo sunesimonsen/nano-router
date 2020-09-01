@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { createMemoryHistory } from "history";
+import { createMemoryHistory } from "@nano-router/history";
 import { Router } from "./Router";
 
 export const MemoryRouter = ({ routes, initialPath = "/", children }) => {

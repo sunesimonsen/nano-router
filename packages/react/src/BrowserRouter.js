@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Router } from "./Router";
-import { createBrowserHistory } from "history";
+import { createBrowserHistory } from "@nano-router/history";
 
 export const BrowserRouter = ({ routes, children }) => {
   const history = useMemo(() => createBrowserHistory(), []);
