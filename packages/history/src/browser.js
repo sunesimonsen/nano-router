@@ -11,7 +11,7 @@ import {
 const BeforeUnloadEventType = "beforeunload";
 const PopStateEventType = "popstate";
 
-export function createBrowserHistory(options) {
+export function createBrowserHistory(options = {}) {
   const { window = document.defaultView } = options;
   const globalHistory = window.history;
 
