@@ -1,6 +1,6 @@
 {
   "name": "@nano-router/react",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "React integration for @nano-router/router",
   "main": "lib/index.js",
   "scripts": {
@@ -33,8 +33,8 @@
     "unexpected-reaction": "^2.16.0"
   },
   "dependencies": {
-    "@nano-router/history": "^1.4.0",
-    "@nano-router/router": "^1.4.0",
+    "@nano-router/history": "^1.4.1",
+    "@nano-router/router": "^1.4.1",
     "history": "^5.0.0"
   },
   "publishConfig": {

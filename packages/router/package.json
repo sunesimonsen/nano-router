@@ -1,6 +1,6 @@
 {
   "name": "@nano-router/router",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "The nano-router",
   "keywords": [
     "browser",
@@ -17,7 +17,7 @@
     "querystring": "^0.2.0"
   },
   "devDependencies": {
-    "@nano-router/history": "^1.4.0",
+    "@nano-router/history": "^1.4.1",
     "mocha": "^8.1.1",
     "sinon": "^9.0.3",
     "unexpected": "^11.14.0",
