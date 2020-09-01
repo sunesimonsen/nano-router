@@ -1,6 +1,6 @@
 {
   "name": "@nano-router/history",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "Fork of the history package to make it tree shakeable",
   "main": "src/index.js",
   "module": "src/index.js",

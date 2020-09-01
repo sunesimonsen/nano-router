@@ -1,6 +1,6 @@
 {
   "name": "@nano-router/routes",
-  "version": "1.2.0",
+  "version": "1.5.0",
   "description": "Objects to setup routes",
   "main": "./src/index.js",
   "module": "lib/index.js",
@@ -17,7 +17,7 @@
   "license": "MIT",
   "sideEffects": false,
   "dependencies": {
-    "@nano-router/path": "^1.2.0"
+    "@nano-router/path": "^1.5.0"
   },
   "devDependencies": {
     "mocha": "^8.1.1",
