@@ -3,6 +3,7 @@
   "version": "1.2.0",
   "description": "Methods to create urls",
   "main": "src/index.js",
+  "module": "lib/index.js",
   "scripts": {
     "test": "mocha src"
   },

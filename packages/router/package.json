@@ -11,6 +11,7 @@
   "author": "Sune Simonsen <sune@we-knowhow.dk>",
   "license": "MIT",
   "main": "src/index.js",
+  "module": "lib/index.js",
   "dependencies": {
     "@nano-router/routes": "^1.2.0",
     "@nano-router/url": "^1.2.0",

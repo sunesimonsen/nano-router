@@ -3,6 +3,7 @@
   "version": "1.4.1",
   "description": "Fork of the history package to make it tree shakeable",
   "main": "src/index.js",
+  "module": "src/index.js",
   "scripts": {
     "test": "mocha src"
   },
