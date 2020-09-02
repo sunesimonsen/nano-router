@@ -12,6 +12,7 @@
   "license": "MIT",
   "main": "src/index.js",
   "module": "lib/index.js",
+  "sideEffects": false,
   "dependencies": {
     "@nano-router/routes": "^1.5.0",
     "@nano-router/url": "^1.5.0",
