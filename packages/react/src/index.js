@@ -1,4 +1,3 @@
-export { Router } from "./BrowserRouter";
 export { Router } from "./Router";
 export { Routes, Route } from "@nano-router/router";
 export { useLink } from "./useLink";
@@ -8,4 +7,3 @@ export { usePrompt } from "./usePrompt";
 export { useQueryParams } from "./useQueryParams";
 export { useRouteName } from "./useRouteName";
 export { useRouter } from "./useRouter";
-export { useRouterSubscription } from "./useRouterSubscription";
