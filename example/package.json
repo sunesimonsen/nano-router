@@ -15,7 +15,7 @@
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
-    "@nano-router/react": "^1.7.0",
+    "@nano-router/react": "^1.8.1",
     "@zendeskgarden/css-bedrock": "^8.0.1",
     "@zendeskgarden/react-accordions": "^8.21.0",
     "@zendeskgarden/react-buttons": "^8.21.0",
@@ -27,6 +27,7 @@
     "@zendeskgarden/react-theming": "^8.21.0",
     "@zendeskgarden/react-typography": "^8.21.0",
     "@zendeskgarden/svg-icons": "^6.22.0",
+    "history": "^5.0.0",
     "mem": "^6.1.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",

@@ -1,6 +1,7 @@
-import React, { useRef } from "react";
+import React, { useMemo, useRef } from "react";
 import { render } from "react-dom";
-import { BrowserRouter } from "@nano-router/react";
+import { Router } from "@nano-router/react";
+import { createBrowserHistory } from "history";
 import { ThemeProvider } from "@zendeskgarden/react-theming";
 
 import { routes } from "./routes.js";
@@ -16,16 +17,17 @@ const Container = styled.div`
 
 export const App = () => {
   const rootViewRef = useRef();
+  const history = useMemo(() => createBrowserHistory());
 
   return (
     <Container ref={rootViewRef}>
-      <BrowserRouter routes={routes}>
+      <Router history={history} routes={routes}>
         <ThemeProvider focusVisibleRef={rootViewRef}>
           <ErrorBoundary>
             <RootView />
           </ErrorBoundary>
         </ThemeProvider>
-      </BrowserRouter>
+      </Router>
     </Container>
   );
 };
