@@ -10,7 +10,9 @@
   },
   "keywords": [
     "router",
-    "react"
+    "react",
+    "minimal",
+    "tiny"
   ],
   "author": "Sune Simonsen <sune@we-knowhow.dk>",
   "license": "MIT",
