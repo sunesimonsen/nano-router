@@ -1,6 +1,6 @@
 {
   "name": "@nano-router/react",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "React integration for @nano-router/router",
   "main": "lib/index.js",
   "module": "lib/index.js",
