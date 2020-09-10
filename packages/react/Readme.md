@@ -3,6 +3,26 @@
 This package provides [React hooks](https://reactjs.org/docs/hooks-intro.html)
 for the [nano-router](../router).
 
+<!-- toc -->
+
+- [Instalation](#instalation)
+- [Usage](#usage)
+  - [Setup your routes](#setup-your-routes)
+  - [Add the router to your application](#add-the-router-to-your-application)
+  - [Switch on the route name](#switch-on-the-route-name)
+  - [Use routing information in your views](#use-routing-information-in-your-views)
+- [API](#api)
+  - [Router](#router)
+  - [useLink](#uselink)
+  - [useLocation](#uselocation)
+  - [useParams](#useparams)
+  - [usePrompt](#useprompt)
+  - [useQueryParams](#usequeryparams)
+  - [useRouteName](#useroutename)
+  - [useRouter](#userouter)
+
+<!-- tocstop -->
+
 ## Instalation
 
 ```sh
@@ -41,7 +61,7 @@ const App = () => {
       <RootRoute />
     </Router>
   );
-}
+};
 
 render(<App />, document.getElementById("app"));
 ```
@@ -112,7 +132,7 @@ A router provider that takes a [history](https://www.npmjs.com/package/history) 
 Creating a router for the browser history:
 
 ```js
-import React, { useMemo } from 'react'
+import React, { useMemo } from "react";
 import { Router } from "@nano-router/react";
 
 const App = () => {
@@ -120,29 +140,31 @@ const App = () => {
 
   return (
     <Router history={history} routes={routes}>
-    ...
+      ...
     </Router>
   );
-}
+};
 ```
 
 Creating a router for a memory history useful for testing:
 
 ```js
-import React, { useMemo } from 'react'
+import React, { useMemo } from "react";
 import { Router } from "@nano-router/react";
 
 const App = () => {
-  const history = useMemo(() => createMemoryHistory({
-    initialEntries: ['/posts']
-  }));
+  const history = useMemo(() =>
+    createMemoryHistory({
+      initialEntries: ["/posts"],
+    })
+  );
 
   return (
     <Router history={history} routes={routes}>
-    ...
+      ...
     </Router>
   );
-}
+};
 ```
 
 ### useLink
