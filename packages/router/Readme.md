@@ -7,7 +7,7 @@ This package is meant as a basis for creating framework specific routers like th
 ## Instalation
 
 ```sh
-npm install @nano-router/router
+npm install @nano-router/router history
 ```
 
 ## Usage
@@ -15,10 +15,7 @@ npm install @nano-router/router
 ### Setup the history
 
 ```js
-import {
-  createBrowserHistory,
-  createMemoryHistory,
-} from "@nano-router/history";
+import { createBrowserHistory, createMemoryHistory } from "history";
 
 const browserHistory = createBrowserHistory();
 // or
@@ -50,6 +47,10 @@ router.listen(() => {
   // routing has been updated
 });
 ```
+
+See
+[history.listen(...)](https://github.com/ReactTraining/history/blob/master/docs/api-reference.md#history.listen)
+for more information.
 
 ### navigate
 
@@ -206,7 +207,9 @@ const unblock = router.block((tx) => {
 });
 ```
 
-See [history.back()](../history) for more information.
+See
+[history.block(...)](https://github.com/ReactTraining/history/blob/master/docs/blocking-transitions.md)
+for more information.
 
 #### createUrl
 

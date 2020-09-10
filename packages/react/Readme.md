@@ -6,7 +6,7 @@ for the [nano-router](../router).
 ## Instalation
 
 ```sh
-npm install @nano-router/react
+npm install @nano-router/react history
 ```
 
 ## Usage
@@ -26,17 +26,22 @@ const routes = new Routes(
 ### Add the router to your application
 
 ```js
-import React from "react";
-import { BrowserRouter } from "@nano-router/react";
+import React, { useMemo } from "react";
+import { Router } from "@nano-router/react";
+const browserHistory = createBrowserHistory();
 
 import { routes } from "./routes";
 import { RootView } from "./RootView";
 
-const App = () => (
-  <BrowserRouter routes={routes}>
-    <RootRoute />
-  </BrowserRouter>
-);
+const App = () => {
+  const history = useMemo(() => createBrowserHistory());
+
+  return (
+    <Router history={history} routes={routes}>
+      <RootRoute />
+    </Router>
+  );
+}
 
 render(<App />, document.getElementById("app"));
 ```
@@ -100,44 +105,44 @@ const PostEdit = () => {
 
 ## API
 
-### BrowserRouter
-
-A router provider configured for using the browser history API.
-
-```js
-import { BrowserRouter } from "@nano-router/react";
-
-const App = () => <BrowserRouter routes={routes}>...</BrowserRouter>;
-```
-
-### MemoryRouter
-
-An in-memory router provider usually used for testing.
-
-```js
-import { MemoryRouter } from "@nano-router/react";
-
-const App = () => (
-  <MemoryRouter routes={routes} initialPath="/posts">
-    ...
-  </MemoryRouter>
-);
-```
-
-Notice that the initial path is options and defaults to `/`.
-
 ### Router
 
-A generic router provider that takes a given history.
+A router provider that takes a [history](https://www.npmjs.com/package/history) instance.
+
+Creating a router for the browser history:
 
 ```js
+import React, { useMemo } from 'react'
 import { Router } from "@nano-router/react";
 
-const App = () => (
-  <Router routes={routes} history={customHistory}>
+const App = () => {
+  const history = useMemo(() => createBrowserHistory());
+
+  return (
+    <Router history={history} routes={routes}>
     ...
-  </Router>
-);
+    </Router>
+  );
+}
+```
+
+Creating a router for a memory history useful for testing:
+
+```js
+import React, { useMemo } from 'react'
+import { Router } from "@nano-router/react";
+
+const App = () => {
+  const history = useMemo(() => createMemoryHistory({
+    initialEntries: ['/posts']
+  }));
+
+  return (
+    <Router history={history} routes={routes}>
+    ...
+    </Router>
+  );
+}
 ```
 
 ### useLink
