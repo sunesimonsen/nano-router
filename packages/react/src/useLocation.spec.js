@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useMemo } from "react";
+import { createMemoryHistory } from "history";
 import expect, { mount, unmount, simulate } from "./expect";
 
-import { Routes, Route, MemoryRouter, useLocation, useRouter } from "./index";
+import { Routes, Route, Router, useLocation, useRouter } from "./index";
 
 const routes = new Routes(new Route("posts/edit", "/posts/:id"));
 
@@ -31,14 +32,22 @@ const SetMessage = () => {
   );
 };
 
-const App = () => (
-  <div>
-    <MemoryRouter routes={routes} initialPath="/posts/42?message=hello#h2">
-      <RouteLocation />
-      <SetMessage />
-    </MemoryRouter>
-  </div>
-);
+const App = () => {
+  const history = useMemo(
+    () =>
+      createMemoryHistory({ initialEntries: ["/posts/42?message=hello#h2"] }),
+    []
+  );
+
+  return (
+    <div>
+      <Router history={history} routes={routes}>
+        <RouteLocation />
+        <SetMessage />
+      </Router>
+    </div>
+  );
+};
 
 describe("useLocation", () => {
   let component;

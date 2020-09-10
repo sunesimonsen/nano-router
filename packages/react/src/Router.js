@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect, useMemo } from "react"; import { createMemoryHistory } from 'history';
 import { RouterContext } from "./RouterContext";
 import { Router as NanoRouter } from "@nano-router/router";
 
