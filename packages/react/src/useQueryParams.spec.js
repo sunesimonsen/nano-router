@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useMemo } from "react";
+import { createMemoryHistory } from "history";
 import expect, { mount, unmount } from "./expect";
 
-import { Routes, Route, MemoryRouter, useQueryParams } from "./index";
+import { Routes, Route, Router, useQueryParams } from "./index";
 
 const routes = new Routes(new Route("posts/edit", "/posts/:id"));
 
@@ -12,11 +13,16 @@ const RouteQueryParams = () => {
 };
 
 const App = () => {
+  const history = useMemo(
+    () => createMemoryHistory({ initialEntries: ["/posts/42?message=hello"] }),
+    []
+  );
+
   return (
     <div>
-      <MemoryRouter routes={routes} initialPath="/posts/42?message=hello">
+      <Router history={history} routes={routes}>
         <RouteQueryParams />
-      </MemoryRouter>
+      </Router>
     </div>
   );
 };

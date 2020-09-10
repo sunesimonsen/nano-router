@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
+import { createMemoryHistory } from "history";
 import expect, { mount, unmount, simulate } from "./expect";
 
 import {
   Routes,
   Route,
-  MemoryRouter,
+  Router,
   useRouteName,
   useRouter,
   usePrompt,
@@ -73,16 +74,21 @@ const RootView = () => {
 };
 
 const App = () => {
+  const history = useMemo(
+    () => createMemoryHistory({ initialEntries: ["/posts/new"] }),
+    []
+  );
+
   return (
     <div>
-      <MemoryRouter routes={routes} initialPath="/posts/new">
+      <Router history={history} routes={routes}>
         <RootView />
-      </MemoryRouter>
+      </Router>
     </div>
   );
 };
 
-describe("useRouteName", () => {
+describe("usePrompt", () => {
   let component;
 
   beforeEach(() => {

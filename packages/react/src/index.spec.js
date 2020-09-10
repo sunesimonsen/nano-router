@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useMemo } from "react";
+import { createMemoryHistory } from "history";
 import expect, { mount, unmount, simulate } from "./expect";
 
 import {
   Routes,
   Route,
-  MemoryRouter,
+  Router,
   useRouteName,
   useRouter,
   useParams,
@@ -69,12 +70,17 @@ const RootView = () => {
 };
 
 const App = () => {
+  const history = useMemo(
+    () => createMemoryHistory({ initialPath: "/posts" }),
+    []
+  );
+
   return (
     <div>
-      <MemoryRouter routes={routes} initialPath="/posts">
+      <Router history={history} routes={routes}>
         <RootView />
         <RouteName />
-      </MemoryRouter>
+      </Router>
     </div>
   );
 };

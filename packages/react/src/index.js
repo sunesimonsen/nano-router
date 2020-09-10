@@ -1,6 +1,5 @@
 export { Routes, Route } from "@nano-router/router";
-export { BrowserRouter } from "./BrowserRouter";
-export { MemoryRouter } from "./MemoryRouter";
+export { Router } from "./Router";
 export { useRouter } from "./useRouter";
 export { useRouteName } from "./useRouteName";
 export { useParams } from "./useParams";
