@@ -1,6 +1,6 @@
 {
   "name": "@nano-router/router",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "The nano-router",
   "keywords": [
     "browser",
@@ -14,8 +14,8 @@
   "module": "lib/index.js",
   "sideEffects": false,
   "dependencies": {
-    "@nano-router/routes": "^1.5.0",
-    "@nano-router/url": "^1.5.0",
+    "@nano-router/routes": "^1.8.0",
+    "@nano-router/url": "^1.8.0",
     "querystring": "^0.2.0"
   },
   "devDependencies": {
