@@ -1,6 +1,6 @@
 # Nano Router
 
-A framework agnostic minimalistic router with focus on named routes.
+A framework agnostic minimalistic router with a focus on named routes.
 
 This package is meant as a basis for creating framework specific routers like the [React integration](../react).
 
