@@ -8,7 +8,7 @@
     "test": "lerna run test",
     "build": "lerna run build",
     "format": "prettier --write '**/*.{js,md}'",
-    "update-toc": "for f in `ls packages/*/Readme.md`; do markdown-toc -i $f; done; npm run format",
+    "update-toc": "for f in `ls packages/*/*.md`; do markdown-toc -i $f; done; npm run format",
     "lint": "eslint . && prettier --check '**/*.{js,md}'",
     "ci": "npm run lint && npm test",
     "release": "npm run build; lerna publish"
