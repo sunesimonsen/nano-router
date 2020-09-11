@@ -56,7 +56,7 @@ export class Router {
     }
 
     return createUrl({
-      basename: route.stringify(params),
+      pathname: route.stringify(params),
       queryParams,
       hash,
     });
