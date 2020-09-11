@@ -7,9 +7,9 @@
   "scripts": {
     "test": "lerna run test",
     "build": "lerna run build",
-    "format": "prettier --write '**/*.{js,md}'",
+    "format": "prettier --write '**/*.{js,md,json}'",
     "update-toc": "for f in `ls packages/*/*.md`; do markdown-toc -i $f; done; npm run format",
-    "lint": "eslint . && prettier --check '**/*.{js,md}'",
+    "lint": "eslint . && prettier --check '**/*.{js,md,json}'",
     "ci": "npm run lint && npm test",
     "release": "npm run build; lerna publish"
   },
@@ -20,6 +20,11 @@
   ],
   "author": "Sune Simonsen",
   "license": "MIT",
+  "bugs": "https://github.com/sunesimonsen/nano-router/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunesimonsen/nano-router"
+  },
   "devDependencies": {
     "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",

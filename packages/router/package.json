@@ -10,6 +10,11 @@
   ],
   "author": "Sune Simonsen <sune@we-knowhow.dk>",
   "license": "MIT",
+  "bugs": "https://github.com/sunesimonsen/nano-router/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunesimonsen/nano-router"
+  },
   "main": "src/index.js",
   "module": "lib/index.js",
   "sideEffects": false,

@@ -15,6 +15,11 @@
   ],
   "author": "Sune Simonsen",
   "license": "MIT",
+  "bugs": "https://github.com/sunesimonsen/nano-router/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunesimonsen/nano-router"
+  },
   "sideEffects": false,
   "dependencies": {
     "@nano-router/path": "^1.9.0"
