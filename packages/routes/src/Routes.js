@@ -23,6 +23,6 @@ export class Routes {
   }
 
   byName(name) {
-    return this.routes.find((route) => route.name === name);
+    return this.routes.find((route) => route.name === name) || null;
   }
 }

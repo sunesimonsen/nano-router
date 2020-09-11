@@ -9,7 +9,7 @@ describe("createUrl", () => {
   it("allows you to specify a hash", () => {
     expect(
       createUrl({
-        basename: "/posts/new",
+        pathname: "/posts/new",
         queryParams: { foo: "bar", one: 1 },
         hash: "#hash",
       }),
@@ -21,7 +21,7 @@ describe("createUrl", () => {
   it("allows you to specify query parameters", () => {
     expect(
       createUrl({
-        basename: "/posts/new",
+        pathname: "/posts/new",
         queryParams: { foo: "bar", one: 1 },
       }),
       "to equal",
@@ -33,7 +33,7 @@ describe("createUrl", () => {
     expect(
       createUrl({
         origin: "https://www.example.com",
-        basename: "/posts/new",
+        pathname: "/posts/new",
         queryParams: { foo: "bar", one: 1 },
       }),
       "to equal",
@@ -41,11 +41,11 @@ describe("createUrl", () => {
     );
   });
 
-  it("allows you to replace variables in the basename", () => {
+  it("allows you to replace variables in the pathname", () => {
     expect(
       createUrl({
         origin: "https://www.example.com",
-        basename: "/posts/edit/:id",
+        pathname: "/posts/edit/:id",
         params: { id: 123 },
         queryParams: { foo: "bar", one: 1 },
       }),

@@ -3,18 +3,15 @@ import { PathPattern } from "@nano-router/path";
 
 export const createUrl = ({
   origin = "",
-  basename = "/",
+  pathname = "/",
   hash = "",
   params,
   queryParams,
 }) =>
   origin +
-  stringifyPathPattern(basename, params) +
+  new PathPattern(pathname).stringify(params) +
   objectToSearch(queryParams) +
   hash;
-
-export const stringifyPathPattern = (pattern, params) =>
-  new PathPattern(pattern).stringify(params);
 
 export const objectToSearch = (queryParams) => {
   const search = (queryParams && "?" + querystring.encode(queryParams)) || "";
