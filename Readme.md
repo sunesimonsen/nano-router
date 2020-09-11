@@ -41,7 +41,7 @@ A framework agnostic minimalistic router with a focus on named routes.
 [path size bundle]: https://flat.badgen.net/bundlephobia/minzip/@nano-router/path
 [path size link]: https://bundlephobia.com/result?p=@nano-router/path
 [path dependency status]: https://flat.badgen.net/david/dep/sunesimonsen/nano-router/packages/path
-[path dependency link]: https://david-dm.org/sunesimonsen/nano-router/path?path=packages/path
+[path dependency link]: https://david-dm.org/sunesimonsen/nano-router?path=packages/path
 
 ## MIT License
 
