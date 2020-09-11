@@ -1,6 +1,6 @@
 {
   "name": "@nano-router/path",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Simple path patterns for matching and stringifying",
   "main": "src/index.js",
   "module": "src/index.js",
