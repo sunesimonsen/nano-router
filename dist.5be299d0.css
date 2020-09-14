@@ -1,0 +1,235 @@
+/*!
+ * Copyright Zendesk, Inc.
+ *
+ * Use of this source code is governed under the Apache License, Version 2.0
+ * found at http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+html{
+  line-height:1.15;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+}
+
+main{
+  display:block;
+}
+
+h1{
+  font-size:2em;
+  margin:.67em 0;
+}
+
+hr{
+  box-sizing:content-box;
+  height:0;
+  overflow:visible;
+}
+
+pre{
+  font-family:monospace,monospace;
+  font-size:1em;
+}
+
+a{
+  background-color:transparent;
+}
+
+abbr[title]{
+  border-bottom:none;
+  text-decoration:underline;
+  -webkit-text-decoration:underline dotted;
+          text-decoration:underline dotted;
+}
+
+b,strong{
+  font-weight:bolder;
+}
+
+code,kbd,samp{
+  font-family:monospace,monospace;
+  font-size:1em;
+}
+
+small{
+  font-size:80%;
+}
+
+sub,sup{
+  font-size:75%;
+  line-height:0;
+  position:relative;
+  vertical-align:baseline;
+}
+
+sub{
+  bottom:-.25em;
+}
+
+sup{
+  top:-.5em;
+}
+
+img{
+  border-style:none;
+}
+
+button,input,optgroup,select,textarea{
+  font-size:100%;
+  line-height:1.15;
+  margin:0;
+}
+
+button,input{
+  overflow:visible;
+}
+
+button,select{
+  text-transform:none;
+}
+
+[type=button],[type=reset],[type=submit],button{
+  -webkit-appearance:button;
+}
+
+[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{
+  border-style:none;
+  padding:0;
+}
+
+[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{
+  outline:1px dotted ButtonText;
+}
+
+fieldset{
+  padding:.35em .75em .625em;
+}
+
+legend{
+  box-sizing:border-box;
+  color:inherit;
+  display:table;
+  max-width:100%;
+  padding:0;
+  white-space:normal;
+}
+
+progress{
+  vertical-align:baseline;
+}
+
+textarea{
+  overflow:auto;
+}
+
+[type=checkbox],[type=radio]{
+  box-sizing:border-box;
+  padding:0;
+}
+
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{
+  height:auto;
+}
+
+[type=search]{
+  -webkit-appearance:textfield;
+  outline-offset:-2px;
+}
+
+[type=search]::-webkit-search-decoration{
+  -webkit-appearance:none;
+}
+
+::-webkit-file-upload-button{
+  -webkit-appearance:button;
+  font:inherit;
+}
+
+details{
+  display:block;
+}
+
+summary{
+  display:list-item;
+}
+
+[hidden],template{
+  display:none;
+}
+
+html{
+  background-color:#fff;
+  min-height:100%;
+  box-sizing:border-box;
+  overflow-y:scroll;
+  line-height:20px;
+  color:#2f3941;
+  font-feature-settings:"kern", "kern";
+  -webkit-font-kerning:normal;
+          font-kerning:normal;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,Arial,sans-serif;
+  font-size:14px;
+}
+
+*{ font-weight:inherit; }
+
+*,:after,:before{ box-sizing:inherit; }
+
+a{ color:#1f73b7; }
+
+a,ins,u{ text-decoration:none; }
+
+a:focus,a:hover{
+  text-decoration:underline;
+  color:#1f73b7;
+}
+
+a:focus{ outline:none; }
+
+b{ font-weight:600; }
+
+button{
+  cursor:pointer;
+  padding:0;
+}
+
+button,input,optgroup,select,textarea{
+  line-height:inherit;
+  font-family:inherit;
+}
+
+code{ font-size:.95em; }
+
+code,kbd,pre,samp{ font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; }
+
+em{ font-style:inherit; }
+
+fieldset,iframe{ border:0; }
+
+h1,h2,h3,h4,h5,h6{ font-size:inherit; }
+
+blockquote,dd,dl,fieldset,figure,h1,h2,h3,h4,h5,h6,hr,ol,p,pre,ul{
+  margin:0;
+  padding:0;
+}
+
+hr{
+  border:none;
+  border-top:1px solid;
+}
+
+ol,ul{ list-style:none; }
+
+img{ max-width:100%; }
+
+strong{ font-weight:inherit; }
+
+svg{ max-height:100%; }
+
+[tabindex="-1"]:focus{ outline:none !important; }
+
+
+/*# sourceMappingURL=/dist.5be299d0.css.map */
