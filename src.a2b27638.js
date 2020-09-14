@@ -39229,7 +39229,7 @@ exports.routes = void 0;
 
 var _react = require("@nano-router/react");
 
-const routes = new _react.Routes(new _react.Route("posts/edit", "/posts/:postId"), new _react.Route("users/view", "/users/:userId"), new _react.Route("users/posts", "/users/:userId/posts"), new _react.Route("users/photos", "/users/:userId/photos"), new _react.Route("users/photos/view", "/users/:userId/photos/:photoId"), new _react.Route("users/todos", "/users/:userId/todos"), new _react.Route("users", "/"));
+const routes = new _react.Routes(new _react.Route("posts/edit", "/nano-router/posts/:postId"), new _react.Route("users/view", "/nano-router/users/:userId"), new _react.Route("users/posts", "/nano-router/users/:userId/posts"), new _react.Route("users/photos", "/nano-router/users/:userId/photos"), new _react.Route("users/photos/view", "/nano-router/users/:userId/photos/:photoId"), new _react.Route("users/todos", "/nano-router/users/:userId/todos"), new _react.Route("users", "/nano-router"));
 exports.routes = routes;
 },{"@nano-router/react":"node_modules/@nano-router/react/lib/index.js"}],"node_modules/@zendeskgarden/react-typography/dist/index.esm.js":[function(require,module,exports) {
 "use strict";
@@ -56513,7 +56513,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60640" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57123" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
