@@ -397,4 +397,4 @@ var e=arguments[3];Object.defineProperty(exports,"__esModule",{value:!0}),export
   display: flex;
 `,p=()=>{const r=(0,e.useRef)(),i=(0,e.useMemo)(()=>(0,n.createBrowserHistory)());return e.default.createElement(d,{ref:r},e.default.createElement(t.Router,{history:i,routes:u.routes},e.default.createElement(o.ThemeProvider,{focusVisibleRef:r},e.default.createElement(l.ErrorBoundary,null,e.default.createElement(a.RootView,null)))))};exports.App=p,(0,r.render)(e.default.createElement(p,null),document.getElementById("app"));
 },{"react":"HdMw","react-dom":"X9zx","@nano-router/react":"bZXZ","history":"fbfI","@zendeskgarden/react-theming":"j096","./routes.js":"PKXj","./components/RootView":"irKa","./components/ErrorBoundary":"ZByt","styled-components":"OuUI"}]},{},["H99C"], null)
-//# sourceMappingURL=/src.60944b40.js.map
+//# sourceMappingURL=https://sunesimonsen.github.io/nano-router/src.60944b40.js.map
