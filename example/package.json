@@ -6,12 +6,15 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build --public-url 'https://sunesimonsen.github.io/nano-router/' index.html",
+    "gh-pages": "gh-pages -d dist"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "@svgr/parcel-plugin-svgr": "^5.4.0",
+    "gh-pages": "^3.1.0",
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
