@@ -123,7 +123,7 @@ const PostEdit = () => {
 
 For a more complete example see:
 
-- [application](https://sunesimonsen.github.io/nano-router/)
+- [application](https://nano-router.surge.sh/)
 - [source](../../example)
 
 ## MIT License
