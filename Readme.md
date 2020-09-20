@@ -1,4 +1,4 @@
-# Nano Router
+# Nano Router ![Checks](https://github.com/sunesimonsen/nano-router/workflows/Checks/badge.svg)
 
 A framework agnostic minimalistic router with a focus on named routes.
 

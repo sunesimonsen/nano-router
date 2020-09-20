@@ -17,7 +17,7 @@ const Container = styled.div`
 
 export const App = () => {
   const rootViewRef = useRef();
-  const history = useMemo(() => createBrowserHistory());
+  const history = useMemo(() => createBrowserHistory(), []);
 
   return (
     <Container ref={rootViewRef}>

@@ -2,10 +2,11 @@
   "name": "@nano-router/routes",
   "version": "1.10.0",
   "description": "Objects to setup routes",
-  "main": "./src/index.js",
+  "main": "./dist/bundle.cjs.js",
   "module": "lib/index.js",
   "scripts": {
-    "test": "mocha src"
+    "test": "mocha src",
+    "build": "rollup -c rollup.config.js"
   },
   "keywords": [
     "React",
@@ -26,9 +27,13 @@
   },
   "devDependencies": {
     "mocha": "^8.1.1",
+    "rollup": "^2.27.1",
     "unexpected": "^11.14.0"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "engines": {
+    "node": ">=10"
   }
 }

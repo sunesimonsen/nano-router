@@ -15,9 +15,13 @@
     "type": "git",
     "url": "https://github.com/sunesimonsen/nano-router"
   },
-  "main": "src/index.js",
+  "main": "dist/bundle.cjs.js",
   "module": "lib/index.js",
   "sideEffects": false,
+  "scripts": {
+    "test": "mocha src",
+    "build": "rollup -c rollup.config.js"
+  },
   "dependencies": {
     "@nano-router/routes": "^1.10.0",
     "@nano-router/url": "^1.10.0",
@@ -26,6 +30,7 @@
   "devDependencies": {
     "history": "^5.0.0",
     "mocha": "^8.1.1",
+    "rollup": "^2.27.1",
     "sinon": "^9.0.3",
     "unexpected": "^11.14.0",
     "unexpected-sinon": "^10.11.2"
@@ -35,5 +40,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "engines": {
+    "node": ">=10"
   }
 }
