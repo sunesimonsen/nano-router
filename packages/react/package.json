@@ -2,11 +2,11 @@
   "name": "@nano-router/react",
   "version": "1.11.0",
   "description": "React integration for @nano-router/router",
-  "main": "lib/index.js",
+  "main": "dist/bundle.cjs.js",
   "module": "lib/index.js",
   "scripts": {
     "test": "mocha src",
-    "build": "babel --out-dir lib --quiet src"
+    "build": "babel --out-dir lib --quiet src && rollup -c rollup.config.js"
   },
   "keywords": [
     "router",
@@ -36,6 +36,7 @@
     "mocha-dominate": "^0.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "rollup": "^2.27.1",
     "unexpected": "^11.14.0",
     "unexpected-dom": "^4.18.0",
     "unexpected-reaction": "^2.16.0"
@@ -45,5 +46,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "engines": {
+    "node": ">=10"
   }
 }
