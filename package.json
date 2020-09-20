@@ -5,6 +5,7 @@
   "description": "A tiny modern router",
   "main": "./lib/index.js",
   "scripts": {
+    "bootstrap": "CI=false lerna bootstrap",
     "test": "lerna run test",
     "build": "lerna run build",
     "format": "prettier --write '**/*.{js,md,json}'",
