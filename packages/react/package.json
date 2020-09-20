@@ -23,7 +23,8 @@
   },
   "sideEffects": false,
   "peerDependencies": {
-    "history": "^5.0.0"
+    "history": "^5.0.0",
+    "react": "^16.13.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
