@@ -1,5 +1,4 @@
-# Nano Router 
-[![Checks](https://github.com/sunesimonsen/nano-router/workflows/Checks/badge.svg)](https://github.com/sunesimonsen/nano-router/actions?query=workflow%3AChecks+branch%3Amaster)
+# Nano Router [![Checks](https://github.com/sunesimonsen/nano-router/workflows/Checks/badge.svg)](https://github.com/sunesimonsen/nano-router/actions?query=workflow%3AChecks+branch%3Amaster)
 
 A framework agnostic minimalistic router with a focus on named routes.
 
