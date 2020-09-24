@@ -18,7 +18,7 @@
     "surge": "^0.21.6"
   },
   "dependencies": {
-    "@nano-router/react": "^1.14.0",
+    "@nano-router/react": "^1.15.0",
     "@zendeskgarden/css-bedrock": "^8.0.1",
     "@zendeskgarden/react-accordions": "^8.21.0",
     "@zendeskgarden/react-buttons": "^8.21.0",
