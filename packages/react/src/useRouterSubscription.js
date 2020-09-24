@@ -1,14 +1,4 @@
-import { useEffect } from "react";
-import { useRouter } from "./useRouter";
+import { useContext } from "react";
+import { RouterLocationContext } from "./RouterContext";
 
-export const useRouterSubscription = (listener) => {
-  const router = useRouter();
-
-  useEffect(() => {
-    const unsubscribe = router.listen(listener);
-
-    return () => {
-      unsubscribe();
-    };
-  }, [router, listener]);
-};
+export const useRouterSubscription = () => useContext(RouterLocationContext);
