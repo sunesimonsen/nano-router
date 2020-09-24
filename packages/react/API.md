@@ -165,8 +165,10 @@ const Form = () => {
   };
 
   const onSave = () => {
-    confirmation.remove();
-    router.navigate({ route: "posts" });
+    router.navigate({
+      route: "posts",
+      state: { skipPrompt: true }, // Skipping all prompts
+    });
   };
 
   return (
@@ -177,6 +179,21 @@ const Form = () => {
     </form>
   );
 };
+```
+
+Notice that you can also remove a confirmation the following way:
+
+```js
+confirmation.remove();
+```
+
+But usually you just skip prompts when navigating after a save:
+
+```js
+router.navigate({
+  route: "posts",
+  state: { skipPrompt: true }, // Skipping all prompts
+});
 ```
 
 ## useQueryParams

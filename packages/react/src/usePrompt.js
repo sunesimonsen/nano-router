@@ -20,28 +20,34 @@ export const usePrompt = (isActive) => {
   useEffect(() => {
     if (isActive && !isRemovedRef.current) {
       const unblock = router.block((tx) => {
-        setConfirmation({
-          isVisible: true,
-          reject: () => {
-            setConfirmation({
-              isVisible: false,
-              remove: () => {
-                unblock();
-              },
-            });
-          },
-          approve: () => {
-            unblock();
-            tx.retry();
-            isRemovedRef.current = true;
-            setConfirmation({
-              isVisible: false,
-              remove: () => {
-                unblock();
-              },
-            });
-          },
-        });
+        const state = tx.location.state;
+        if (state && state.skipPrompt) {
+          unblock();
+          tx.retry();
+        } else {
+          setConfirmation({
+            isVisible: true,
+            reject: () => {
+              setConfirmation({
+                isVisible: false,
+                remove: () => {
+                  unblock();
+                },
+              });
+            },
+            approve: () => {
+              unblock();
+              tx.retry();
+              isRemovedRef.current = true;
+              setConfirmation({
+                isVisible: false,
+                remove: () => {
+                  unblock();
+                },
+              });
+            },
+          });
+        }
       });
 
       setConfirmation({
