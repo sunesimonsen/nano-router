@@ -1,6 +1,7 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useMemo } from "react";
 import { RouterContext } from "./RouterContext";
 import { Router as NanoRouter } from "@nano-router/router";
+import { RouterSubscription } from "./RouterSubscription";
 
 export const Router = ({ routes, history, children }) => {
   const router = useMemo(() => new NanoRouter({ routes, history }), [
@@ -8,15 +9,9 @@ export const Router = ({ routes, history, children }) => {
     history,
   ]);
 
-  useEffect(() => {
-    const unsubscribe = router.listen();
-
-    return () => {
-      unsubscribe();
-    };
-  }, [router]);
-
   return (
-    <RouterContext.Provider value={router}>{children}</RouterContext.Provider>
+    <RouterContext.Provider value={router}>
+      <RouterSubscription>{children}</RouterSubscription>
+    </RouterContext.Provider>
   );
 };
