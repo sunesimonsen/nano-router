@@ -22,7 +22,7 @@ const PostsPanel = () => {
   );
 
   useEffect(() => {
-    if (state === "UPDATE_SUCCESS") {
+    if (state && state.flash === "UPDATE_SUCCESS") {
       const timer = setTimeout(() => {
         // Clear success message
         router.navigate({
@@ -49,7 +49,7 @@ const PostsPanel = () => {
 
   return (
     <>
-      {state === "UPDATE_SUCCESS" && (
+      {state && state.flash === "UPDATE_SUCCESS" && (
         <Alert type="success">Post succesfully created</Alert>
       )}
       <Accordion isBare level={3}>

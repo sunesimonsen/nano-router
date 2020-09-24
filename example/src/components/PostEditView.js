@@ -79,12 +79,10 @@ const PostForm = ({ post }) => {
       },
     });
 
-    confirmation.remove();
-
     router.navigate({
       route: "users/posts",
       params: { userId: post.userId },
-      state: "UPDATE_SUCCESS",
+      state: { skipPrompt: true, flash: "UPDATE_SUCCESS" },
     });
   };
 
