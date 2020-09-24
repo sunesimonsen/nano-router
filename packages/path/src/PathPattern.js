@@ -2,6 +2,7 @@ const trimSlashes = (path) => path.replace(/^\/|\/$/g, "");
 
 export class PathPattern {
   constructor(pattern) {
+    this.hasTrainlingSlash = pattern.endsWith("/");
     this.pattern = trimSlashes(pattern).split("/");
   }
 
@@ -33,7 +34,9 @@ export class PathPattern {
   }
 
   stringify(values = {}) {
-    return (
+    const trailingSlash = this.hasTrainlingSlash ? "/" : "";
+
+    const path =
       "/" +
       this.pattern
         .map((patternSegment) => {
@@ -52,7 +55,12 @@ export class PathPattern {
             return patternSegment;
           }
         })
-        .join("/")
-    );
+        .join("/");
+
+    if (path === "/") {
+      return path;
+    }
+
+    return path + trailingSlash;
   }
 }

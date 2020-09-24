@@ -61,10 +61,10 @@ describe("PathPattern", () => {
   });
 
   describe("stringify", () => {
-    it("always builds a root relative path with no trailing slash", () => {
+    it("remembers trailing slashes from the pattern", () => {
       const pattern = new PathPattern("posts/new/");
 
-      expect(pattern.stringify(), "to equal", "/posts/new");
+      expect(pattern.stringify(), "to equal", "/posts/new/");
     });
 
     it("fails if you don't supply a variable", () => {
