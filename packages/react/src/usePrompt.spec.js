@@ -32,10 +32,9 @@ const NewView = () => {
   const onSave = () => {
     // Save
     // Success
-    confirmation.remove();
-
     router.navigate({
       route: "posts",
+      state: { skipPrompt: true },
     });
   };
 
