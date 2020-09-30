@@ -124,13 +124,12 @@ Where every route gets a name and a path pattern.
 The first route where the path pattern matches the current location gets chosen.
 So if the path name is `/posts/42` then the `posts/edit` route will be chosen.
 
-To create the history object, you use the [@nano-router/history](../history) to create either an browser history object or a memory history object used for testing:
+To create the history object, you use the
+[history](https://www.npmjs.com/package/history) module to create either an
+browser history object or a memory history object used for testing:
 
 ```js
-import {
-  createBrowserHistory,
-  createMemoryHistory,
-} from "@nano-router/history";
+import { createBrowserHistory, createMemoryHistory } from "history";
 
 const browserHistory = createBrowserHistory();
 // or
