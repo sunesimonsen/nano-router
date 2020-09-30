@@ -44,7 +44,7 @@ configuration.
 ```js
 import React, { useMemo } from "react";
 import { Router } from "@nano-router/react";
-const browserHistory = createBrowserHistory();
+import { createBrowserHistory } from "history";
 
 import { routes } from "./routes";
 import { RootView } from "./RootView";
