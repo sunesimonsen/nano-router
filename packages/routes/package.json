@@ -3,7 +3,7 @@
   "version": "1.15.0",
   "description": "Objects to setup routes",
   "main": "./dist/bundle.cjs.js",
-  "module": "lib/index.js",
+  "module": "src/index.js",
   "scripts": {
     "test": "mocha src",
     "build": "rollup -c rollup.config.js"

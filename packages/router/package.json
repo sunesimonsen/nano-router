@@ -16,7 +16,7 @@
     "url": "https://github.com/sunesimonsen/nano-router"
   },
   "main": "dist/bundle.cjs.js",
-  "module": "lib/index.js",
+  "module": "src/index.js",
   "sideEffects": false,
   "scripts": {
     "test": "mocha src",
