@@ -1,8 +1,15 @@
-import React, { useMemo } from "react";
+import React, { useEffect } from "react";
 import { createMemoryHistory } from "history";
-import expect, { mount, unmount, simulate } from "./expect";
+import expect, { act, mount, unmount, simulate } from "./expect";
 
-import { Routes, Route, Router, useRouteName, useLink } from "./index";
+import {
+  Routes,
+  Route,
+  Router,
+  useRouter,
+  useRouteName,
+  useLink,
+} from "./index";
 
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),
@@ -28,37 +35,45 @@ const PostsView = () => {
 };
 
 const RootView = () => {
+  const router = useRouter();
   const routeName = useRouteName();
+
+  useEffect(() => {
+    if (routeName === "default") {
+      router.navigate({ route: "posts", replace: true });
+    }
+  }, [router, routeName]);
 
   switch (routeName) {
     case "posts/new":
       return <NewView />;
-    default:
+    case "posts":
       return <PostsView />;
   }
+
+  return null; // redirect
 };
 
-const App = () => {
-  const history = useMemo(
-    () => createMemoryHistory({ initialEntries: ["/posts"] }),
-    []
-  );
-
-  return (
-    <div>
-      <Router history={history} routes={routes}>
-        <RootView />
-        <RouteName />
-      </Router>
-    </div>
-  );
-};
+const App = () => (
+  <>
+    <RootView />
+    <RouteName />
+  </>
+);
 
 describe("useRouteName", () => {
-  let component;
+  let component, history;
 
   beforeEach(() => {
-    component = mount(<App />);
+    history = createMemoryHistory({ initialEntries: ["/posts"] });
+
+    component = mount(
+      <div>
+        <Router history={history} routes={routes}>
+          <App />
+        </Router>
+      </div>
+    );
   });
 
   afterEach(() => {
@@ -88,6 +103,24 @@ describe("useRouteName", () => {
         "to have text",
         "posts/new"
       ).and("to contain test id", "new-view");
+    });
+  });
+
+  describe("when navigating to a unknown page", () => {
+    beforeEach(() => {
+      act(() => {
+        history.push("/nowhere", {});
+      });
+    });
+
+    it("uses the default route and the app redirects", () => {
+      expect(
+        component,
+        "queried for test id",
+        "route-name",
+        "to have text",
+        "posts"
+      );
     });
   });
 });

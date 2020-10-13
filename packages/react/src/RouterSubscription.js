@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { RouterLocationContext } from "./RouterContext";
 import { useRouter } from "./useRouter";
 
@@ -11,7 +11,7 @@ export const RouterSubscription = ({ children }) => {
     queryParams: router.queryParams,
   });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const unsubscribe = router.listen(() => {
       setMatch({
         route: router.route,
