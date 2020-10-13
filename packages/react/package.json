@@ -1,6 +1,6 @@
 {
   "name": "@nano-router/react",
-  "version": "1.15.5",
+  "version": "1.15.6",
   "description": "React integration for @nano-router/router",
   "main": "dist/bundle.cjs.js",
   "module": "lib/index.js",
