@@ -37,7 +37,7 @@ See [@nano-router/routes](../routes/API.md#Routes).
 
 #### history
 
-The [history](../history) instance given in the constructor.
+The [history](https://www.npmjs.com/package/history) instance given in the constructor.
 
 ```js
 router.history.back();
@@ -45,10 +45,10 @@ router.history.back();
 
 #### location
 
-The current [history](../history) location.
+The current [history](https://www.npmjs.com/package/history) location.
 
 ```js
-const { pathname, search, hash } = router.location;
+const { pathname, search, hash, state } = router.location;
 ```
 
 #### params
@@ -293,7 +293,7 @@ The state default to `null` and can be any kind of value.
 The state is available on the route after navigation:
 
 ```js
-const state = route.history.state;
+const state = router.location.state;
 
 if (state && state.type === "flash") {
   showFlash(state.message);
