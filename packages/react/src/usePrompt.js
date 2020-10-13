@@ -1,24 +1,15 @@
-import { useRef, useMemo, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "./useRouter";
+
+const inactiveConfirmation = { isVisible: false };
 
 export const usePrompt = (isActive) => {
   const router = useRouter();
-  const isRemovedRef = useRef(false);
 
-  const inVisibleConfirmation = useMemo(
-    () => ({
-      isVisible: false,
-      remove: () => {
-        isRemovedRef.current = true;
-      },
-    }),
-    []
-  );
-
-  const [confirmation, setConfirmation] = useState(inVisibleConfirmation);
+  const [confirmation, setConfirmation] = useState(inactiveConfirmation);
 
   useEffect(() => {
-    if (isActive && !isRemovedRef.current) {
+    if (isActive) {
       const unblock = router.block((tx) => {
         const state = tx.location.state;
         if (state && state.skipPrompt) {
@@ -28,42 +19,26 @@ export const usePrompt = (isActive) => {
           setConfirmation({
             isVisible: true,
             reject: () => {
-              setConfirmation({
-                isVisible: false,
-                remove: () => {
-                  unblock();
-                },
-              });
+              setConfirmation(inactiveConfirmation);
             },
             approve: () => {
               unblock();
               tx.retry();
-              isRemovedRef.current = true;
-              setConfirmation({
-                isVisible: false,
-                remove: () => {
-                  unblock();
-                },
-              });
+              setConfirmation(inactiveConfirmation);
             },
           });
         }
       });
 
-      setConfirmation({
-        isVisible: false,
-        remove: () => {
-          unblock();
-        },
-      });
+      setConfirmation(inactiveConfirmation);
 
       return () => {
         unblock();
       };
     } else {
-      setConfirmation(inVisibleConfirmation);
+      setConfirmation(inactiveConfirmation);
     }
-  }, [router, isActive, inVisibleConfirmation]);
+  }, [router, isActive]);
 
   return confirmation;
 };

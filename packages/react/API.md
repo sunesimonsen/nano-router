@@ -182,13 +182,7 @@ const Form = () => {
 };
 ```
 
-Notice that you can also remove a confirmation the following way:
-
-```js
-confirmation.remove();
-```
-
-But usually you just skip prompts when navigating after a save:
+If you want to skip any prompts when navigating after a save:
 
 ```js
 router.navigate({
