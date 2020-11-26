@@ -321,7 +321,7 @@ if (state && state.type === "flash") {
 Navigation to external routes is also supported, here we navigate to `https://www.example.com/blog/42`.
 
 ```js
-router.navigate({route: 'blog', params: {id 42}} )
+router.navigate({ route: "blog", params: { id: 42 } });
 ```
 
 Finally any route can be opened in another target frame:
