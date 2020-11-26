@@ -1,4 +1,4 @@
-import { Routes, Route } from "@nano-router/react";
+import { Routes, Route, ExternalRoute } from "@nano-router/react";
 
 export const routes = new Routes(
   new Route("posts/edit", "/posts/:postId"),
@@ -7,5 +7,13 @@ export const routes = new Routes(
   new Route("users/photos", "/users/:userId/photos"),
   new Route("users/photos/view", "/users/:userId/photos/:photoId"),
   new Route("users/todos", "/users/:userId/todos"),
-  new Route("users", "/")
+  new Route("users", "/"),
+  new ExternalRoute(
+    "github",
+    "https://github.com/sunesimonsen/nano-router/tree/master"
+  ),
+  new ExternalRoute(
+    "github/example",
+    "https://github.com/sunesimonsen/nano-router/tree/master/example"
+  )
 );

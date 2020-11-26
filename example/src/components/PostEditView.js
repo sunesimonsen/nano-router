@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useData } from "../hooks/useData";
-import { useParams, useRouter, usePrompt } from "@nano-router/react";
+import { useLink, useParams, useRouter, usePrompt } from "@nano-router/react";
 
 import { Field, Input, Label, Textarea } from "@zendeskgarden/react-forms";
 import { Button } from "@zendeskgarden/react-buttons";
@@ -28,9 +28,10 @@ const Form = styled.div`
 
 const ActionBar = styled.div`
   display: inline-grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   grid-gap: 10px;
   justify-self: end;
+  align-items: center;
 }`;
 
 const Confirm = ({ confirmation }) => (
@@ -54,6 +55,7 @@ const Confirm = ({ confirmation }) => (
 
 const PostForm = ({ post }) => {
   const router = useRouter();
+  const showGithubPage = useLink("github");
   const [title, setTitle] = useState(post.title);
   const [body, setBody] = useState(post.body);
   const isDirty = title !== post.title || body !== post.body;
@@ -101,6 +103,7 @@ const PostForm = ({ post }) => {
         />
       </Field>
       <ActionBar>
+        <a {...showGithubPage}>External navigation is also blocked</a>
         <Button onClick={onCancel}>Cancel</Button>
         <Button onClick={onUpdate} isPrimary>
           Update
