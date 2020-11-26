@@ -7,6 +7,7 @@
     - [Constructor](#constructor)
     - [match](#match)
     - [stringify](#stringify)
+- [ExternalRoute](#externalroute)
 - [Routers](#routers)
   - [Methods](#methods-1)
     - [Constructor](#constructor-1)
