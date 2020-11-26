@@ -23,7 +23,7 @@
   },
   "sideEffects": false,
   "peerDependencies": {
-    "history": "^5.0.0",
+    "@nano-router/history": "^1.15.4",
     "react": "16"
   },
   "devDependencies": {
@@ -31,7 +31,7 @@
     "@babel/core": "^7.11.4",
     "@babel/preset-react": "^7.10.4",
     "@babel/register": "^7.10.5",
-    "history": "^5.0.0",
+    "@nano-router/history": "^1.15.4",
     "jsdom": "^14.1.0",
     "mocha": "^8.1.1",
     "mocha-dominate": "^0.1.1",

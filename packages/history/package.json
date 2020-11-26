@@ -1,0 +1,26 @@
+{
+  "name": "@nano-router/history",
+  "version": "1.15.7",
+  "description": "Manage session history with JavaScript",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "scripts": {
+    "test": "mocha src"
+  },
+  "keywords": [
+    "history",
+    "routing"
+  ],
+  "author": "Sune Simonsen <sune@we-knowhow.dk>",
+  "license": "MIT",
+  "sideEffects": false,
+  "devDependencies": {
+    "mocha": "^8.1.1",
+    "sinon": "^9.0.3",
+    "unexpected": "^11.14.0",
+    "unexpected-sinon": "^10.11.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

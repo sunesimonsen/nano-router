@@ -3,6 +3,7 @@
 <!-- toc -->
 
 - [Route](#route)
+- [ExternalRoute](#externalroute)
 - [Routes](#routes)
 - [Router](#router)
   - [Fields](#fields)
@@ -26,6 +27,10 @@
 ## Route
 
 See [@nano-router/routes](../routes/API.md#Route).
+
+## ExternalRoute
+
+See [@nano-router/routes](../routes/API.md#ExternalRoute).
 
 ## Routes
 
@@ -107,12 +112,13 @@ The constructor takes two arguments, the routes and a history.
 The routes can be constructed the following way:
 
 ```js
-import { Routes, Route } from "@nano-router/router";
+import { Routes, Route, ExternalRoute } from "@nano-router/router";
 
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),
   new Route("posts/edit", "/posts/:id"),
-  new Route("posts", "/posts")
+  new Route("posts", "/posts"),
+  new ExternalRoute("blog", "https://www.example.com/blog/:id")
 );
 ```
 
@@ -129,7 +135,10 @@ To create the history object, you use the
 browser history object or a memory history object used for testing:
 
 ```js
-import { createBrowserHistory, createMemoryHistory } from "history";
+import {
+  createBrowserHistory,
+  createMemoryHistory,
+} from "@nano-router/history";
 
 const browserHistory = createBrowserHistory();
 // or
@@ -211,6 +220,14 @@ To create an URL to the new route:
 const newPostUrl = router.createUrl("posts/new");
 ```
 
+It also support creating URLs for external routes:
+
+```js
+const blogUrl = router.createUrl({ route: "blog", params: { id: 42 } });
+```
+
+This will create this URL: `https://www.example.com/blog/42`.
+
 #### forward
 
 Moves the router one entry forward in the history:
@@ -253,6 +270,7 @@ Parameters:
 - hash: URL fragment
 - state: the history state object
 - replace: true if the current location should be replaced
+- target: the frame target to navigate in
 
 If only a string is given, it will be used as the route name.
 
@@ -298,4 +316,16 @@ const state = router.location.state;
 if (state && state.type === "flash") {
   showFlash(state.message);
 }
+```
+
+Navigation to external routes is also supported, here we navigate to `https://www.example.com/blog/42`.
+
+```js
+router.navigate({route: 'blog', params: {id 42}} )
+```
+
+Finally any route can be opened in another target frame:
+
+```js
+router.navigate({ route: "posts", target: "_blank" });
 ```

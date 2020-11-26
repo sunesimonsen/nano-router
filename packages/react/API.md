@@ -32,7 +32,7 @@ Creating a router for the browser history:
 ```js
 import React, { useMemo } from "react";
 import { Router } from "@nano-router/react";
-import { createBrowserHistory } from "history";
+import { createBrowserHistory } from "@nano-router/history";
 
 const App = () => {
   const history = useMemo(() => createBrowserHistory());

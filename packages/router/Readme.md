@@ -29,7 +29,10 @@ npm install @nano-router/router history
 ### Setup the history
 
 ```js
-import { createBrowserHistory, createMemoryHistory } from "history";
+import {
+  createBrowserHistory,
+  createMemoryHistory,
+} from "@nano-router/history";
 
 const browserHistory = createBrowserHistory();
 // or

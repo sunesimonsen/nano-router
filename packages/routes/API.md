@@ -52,6 +52,11 @@ Create a path from the route path pattern and the given parameters:
 expect(route.stringify({ id: 42 }), "to equal", "/posts/42");
 ```
 
+## ExternalRoute
+
+Exactly like [Route](#route) but marked to be external. External routes results
+in full browser reloads.
+
 ## Routers
 
 ### Methods

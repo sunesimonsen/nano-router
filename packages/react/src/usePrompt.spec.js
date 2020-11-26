@@ -1,10 +1,11 @@
 import React, { useState, useMemo } from "react";
-import { createMemoryHistory } from "history";
+import { createMemoryHistory } from "@nano-router/history";
 import expect, { mount, unmount, simulate } from "./expect";
 
 import {
   Routes,
   Route,
+  ExternalRoute,
   Router,
   useRouteName,
   useRouter,
@@ -14,7 +15,8 @@ import {
 
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),
-  new Route("posts", "/posts")
+  new Route("posts", "/posts"),
+  new ExternalRoute("external", "https://www.example.com/blog/:id")
 );
 
 const NewView = () => {
@@ -24,6 +26,7 @@ const NewView = () => {
   const confirmation = usePrompt(isDirty);
 
   const showPosts = useLink("posts");
+  const showExternal = useLink({ route: "external", params: { id: 42 } });
 
   const onChange = (e) => {
     setName(e.target.value);
@@ -56,6 +59,9 @@ const NewView = () => {
       </button>
       <a data-test-id="show-list" {...showPosts}>
         Show list
+      </a>
+      <a data-test-id="external" {...showExternal}>
+        External
       </a>
     </div>
   );
@@ -111,6 +117,19 @@ describe("usePrompt", () => {
     });
   });
 
+  describe("when navigation is blocked to an external route", () => {
+    beforeEach(() => {
+      simulate(component, [
+        { type: "change", target: "[data-test-id=name]", value: "Sune" },
+        { type: "click", target: "[data-test-id=external]" },
+      ]);
+    });
+
+    it("shows a confirmation", () => {
+      expect(component, "to contain test id", "approve");
+    });
+  });
+
   describe("when block navigation is confirmed", () => {
     beforeEach(() => {
       simulate(component, [
@@ -120,7 +139,7 @@ describe("usePrompt", () => {
       ]);
     });
 
-    it("shows a confirmation", () => {
+    it("navigates", () => {
       expect(component, "to contain test id", "posts-list");
     });
   });
