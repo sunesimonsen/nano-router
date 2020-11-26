@@ -25,7 +25,7 @@ See [@nano-router/routes](../routes/API.md#Routes).
 
 ## Router
 
-A router provider that takes a [history](https://www.npmjs.com/package/history) instance.
+A router provider that takes a [history](../history/Readme.md) instance.
 
 Creating a router for the browser history:
 

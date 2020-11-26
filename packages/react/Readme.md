@@ -19,7 +19,7 @@ for the [nano-router](../router).
 ## Instalation
 
 ```sh
-npm install @nano-router/react history
+npm install @nano-router/history @nano-router/react
 ```
 
 ## Usage

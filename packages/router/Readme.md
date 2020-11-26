@@ -21,7 +21,7 @@ This package is meant as a basis for creating framework specific routers like th
 ## Instalation
 
 ```sh
-npm install @nano-router/router history
+npm install @nano-router/history @nano-router/router
 ```
 
 ## Usage
