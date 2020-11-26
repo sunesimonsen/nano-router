@@ -11,6 +11,7 @@ A framework agnostic minimalistic router with a focus on named routes.
 | [`@nano-router/routes`](packages/routes) | [![npm version][routes npm version]][routes npm link] | [![Bundle Size][routes size bundle]][routes size link] | [![Dependency Status][routes dependency status]][routes dependency link] |
 | [`@nano-router/url`](packages/url)       | [![npm version][url npm version]][url npm link]       | [![Bundle Size][url size bundle]][url size link]       | [![Dependency Status][url dependency status]][url dependency link]       |
 | [`@nano-router/path`](packages/path)     | [![npm version][path npm version]][path npm link]     | [![Bundle Size][path size bundle]][path size link]     | [![Dependency Status][path dependency status]][path dependency link]     |
+| [`@nano-router/history`](packages/history)     | [![npm version][history npm version]][history npm link]     | [![Bundle Size][history size bundle]][history size link]     | [![Dependency Status][history dependency status]][history dependency link]     |
 
 [react npm version]: https://flat.badgen.net/npm/v/@nano-router/react
 [react npm link]: https://www.npmjs.com/package/@nano-router/react
@@ -42,6 +43,12 @@ A framework agnostic minimalistic router with a focus on named routes.
 [path size link]: https://bundlephobia.com/result?p=@nano-router/path
 [path dependency status]: https://flat.badgen.net/david/dep/sunesimonsen/nano-router/packages/path
 [path dependency link]: https://david-dm.org/sunesimonsen/nano-router?path=packages/path
+[history npm version]: https://flat.badgen.net/npm/v/@nano-router/history
+[history npm link]: https://www.npmjs.com/package/@nano-router/history
+[history size bundle]: https://flat.badgen.net/bundlephobia/minzip/@nano-router/history
+[history size link]: https://bundlephobia.com/result?p=@nano-router/history
+[history dependency status]: https://flat.badgen.net/david/dep/sunesimonsen/nano-router/packages/history
+[history dependency link]: https://david-dm.org/sunesimonsen/nano-router?path=packages/history
 
 ## MIT License
 
