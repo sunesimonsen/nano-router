@@ -30,14 +30,17 @@ const pathPattern = "/posts/:id";
 const route = new Route(routeName, pathPattern);
 ```
 
-The path pattern is as simple as you can imagine. You have a normal path where you can have named variables in the path with the this syntax: `:variable`, nothing else is possible.
+The path pattern is as simple as you can imagine. You have a normal path where
+you can have named variables in the path with the this syntax: `:variable`,
+nothing else is possible.
 
 See [@nano-router/path](../path/API.md) for more information about the path
 patterns.
 
 #### match
 
-Matches a given path against the route. If it path matches the route it returns the path parameters:
+Matches a given path against the route. If it path matches the route it returns
+the path parameters:
 
 ```js
 expect(route.match("/posts/42"), "to equal", { id: "42" });
@@ -57,6 +60,44 @@ expect(route.stringify({ id: 42 }), "to equal", "/posts/42");
 
 Exactly like [Route](#route) but marked to be external. External routes results
 in full browser reloads.
+
+### Methods
+
+#### Constructor
+
+Create a new external route with the given name and pattern.
+
+```js
+const routeName = "blog";
+const pathPattern = "https://www.example.com/blog/:id";
+const route = new ExternalRoute(routeName, pathPattern);
+```
+
+The path pattern is as simple as you can imagine. You have a normal path where
+you can have named variables in the path with the this syntax: `:variable`,
+nothing else is possible.
+
+See [@nano-router/path](../path/API.md) for more information about the path
+patterns.
+
+#### match
+
+Matches a given URL against the route. If it URL matches the route it returns
+the path parameters:
+
+```js
+expect(route.match("https://www.example.com/posts/42"), "to equal", { id: "42" });
+```
+
+If the given URL doesn't match the route `null` is returned.
+
+#### stringify
+
+Create a URL from the route pattern and the given parameters:
+
+```js
+expect(route.stringify({ id: 42 }), "to equal", "https://www.example.com/posts/42");
+```
 
 ## Routers
 
