@@ -35,6 +35,7 @@ export function createMemoryHistory(options) {
 
   let action = "POP";
   let location = entries[index];
+  let openedWindow = null;
   const listeners = createEvents();
   const blockers = createEvents();
 
@@ -75,18 +76,22 @@ export function createMemoryHistory(options) {
     }
   }
 
-  function pushLocation(url) {
-    const nextAction = "PUSH";
-    const nextLocation = getNextLocation(location, url);
-
+  function pushLocation(url, target) {
     function retry() {
       pushLocation(url);
     }
 
-    if (allowTx(blockers, nextAction, nextLocation, retry)) {
-      entries[index] = nextLocation;
-      action = nextAction;
-      location = nextLocation;
+    if (target && target !== "_self") {
+      openedWindow = { url, target };
+    } else {
+      const nextAction = "PUSH";
+      const nextLocation = getNextLocation(location, url);
+
+      if (allowTx(blockers, nextAction, nextLocation, retry)) {
+        entries[index] = nextLocation;
+        action = nextAction;
+        location = nextLocation;
+      }
     }
   }
 
@@ -128,6 +133,9 @@ export function createMemoryHistory(options) {
     },
     get location() {
       return location;
+    },
+    get openedWindow() {
+      return openedWindow;
     },
     push,
     replace,

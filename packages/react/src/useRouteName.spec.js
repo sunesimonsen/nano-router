@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { createMemoryHistory } from "history";
+import { createMemoryHistory } from "@nano-router/history";
 import expect, { act, mount, unmount, simulate } from "./expect";
 
 import {

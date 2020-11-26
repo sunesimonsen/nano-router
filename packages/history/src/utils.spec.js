@@ -3,10 +3,18 @@ import { parseUrl } from "./utils";
 
 describe("parseUrl", () => {
   [
-    ["/foo/bar/baz", { href: "/foo/bar/baz", pathname: "/foo/bar/baz" }],
+    [
+      "/foo/bar/baz",
+      { href: "/foo/bar/baz", pathname: "/foo/bar/baz", search: "", hash: "" },
+    ],
     [
       "/foo/bar/baz#hash",
-      { href: "/foo/bar/baz#hash", pathname: "/foo/bar/baz", hash: "#hash" },
+      {
+        href: "/foo/bar/baz#hash",
+        pathname: "/foo/bar/baz",
+        search: "",
+        hash: "#hash",
+      },
     ],
     [
       "/foo/bar/baz?qux=quux#hash",

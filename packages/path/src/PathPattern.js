@@ -1,23 +1,47 @@
-const trimSlashes = (path) => path.replace(/^\/|\/$/g, "");
+const splitPattern = (pattern) => {
+  let prefix = "";
+
+  const protocolIndex = pattern.indexOf("//");
+  if (protocolIndex !== -1) {
+    const prefixIndex = pattern.indexOf("/", protocolIndex + 2);
+
+    if (prefixIndex > 0) {
+      prefix = pattern.slice(0, prefixIndex);
+      pattern = pattern.slice(prefixIndex);
+    }
+  }
+
+  return {
+    prefix,
+    segments: pattern.split("/"),
+  };
+};
 
 export class PathPattern {
   constructor(pattern) {
-    this.hasTrainlingSlash = pattern.endsWith("/");
-    this.pattern = trimSlashes(pattern).split("/");
+    this.pattern = splitPattern(pattern);
   }
 
   match(path) {
-    const pathSegments = trimSlashes(path).split("/");
+    const pattern = this.pattern;
+    const { prefix, segments } = splitPattern(path);
 
-    if (this.pattern.length !== pathSegments.length) {
+    if (pattern.prefix !== prefix) {
+      return null;
+    }
+
+    const patternSegments = pattern.segments.filter(Boolean);
+    const pathSegments = segments.filter(Boolean);
+
+    if (patternSegments.length !== pathSegments.length) {
       return null;
     }
 
     const match = {};
 
-    for (let i = 0; i < this.pattern.length; i++) {
+    for (let i = 0; i < patternSegments.length; i++) {
       const pathSegment = pathSegments[i];
-      const patternSegment = this.pattern[i];
+      const patternSegment = patternSegments[i];
 
       if (patternSegment.startsWith(":")) {
         if (!pathSegment) {
@@ -34,11 +58,11 @@ export class PathPattern {
   }
 
   stringify(values = {}) {
-    const trailingSlash = this.hasTrainlingSlash ? "/" : "";
+    const { prefix, segments } = this.pattern;
 
     const path =
-      "/" +
-      this.pattern
+      prefix +
+      segments
         .map((patternSegment) => {
           if (patternSegment.startsWith(":")) {
             const variableName = patternSegment.slice(1);
@@ -57,10 +81,6 @@ export class PathPattern {
         })
         .join("/");
 
-    if (path === "/") {
-      return path;
-    }
-
-    return path + trailingSlash;
+    return path;
   }
 }

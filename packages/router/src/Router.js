@@ -36,9 +36,10 @@ export class Router {
       hash = this.location.hash,
       state,
       replace = false,
+      target,
     } = options;
 
-    return { route, params, queryParams, hash, state, replace };
+    return { route, params, queryParams, hash, state, replace, target };
   }
 
   createUrl(routeNameOrOptions) {
@@ -64,14 +65,42 @@ export class Router {
 
   navigate(routeNameOrOptions) {
     const options = this.createRouteOptions(routeNameOrOptions);
-    const url = this.createUrl(options);
 
-    const { replace, state } = options;
+    const {
+      route: routeName,
+      params,
+      queryParams,
+      hash,
+      replace,
+      target,
+    } = options;
 
-    if (replace) {
-      this.history.replace(url, state);
+    const route = this.routes.byName(routeName);
+
+    if (!route) {
+      throw new Error(`Unknown route: ${routeName}`);
+    }
+
+    const url = createUrl({
+      pathname: route.stringify(params),
+      queryParams,
+      hash,
+    });
+
+    if (target && target !== "_self") {
+      this.history.pushLocation(url, target);
+    } else if (route.external) {
+      if (replace) {
+        this.history.replaceLocation(url);
+      } else {
+        this.history.pushLocation(url);
+      }
     } else {
-      this.history.push(url, state);
+      if (replace) {
+        this.history.replace(url, options.state);
+      } else {
+        this.history.push(url, options.state);
+      }
     }
   }
 

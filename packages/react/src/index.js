@@ -1,5 +1,5 @@
 export { Router } from "./Router";
-export { Routes, Route } from "@nano-router/router";
+export { Routes, Route, ExternalRoute } from "@nano-router/router";
 export { useLink } from "./useLink";
 export { useLocation } from "./useLocation";
 export { useParams } from "./useParams";

@@ -222,6 +222,36 @@ describe("memory", () => {
       });
     });
 
+    describe("when given a target", () => {
+      beforeEach(() => {
+        history.pushLocation(
+          "https://example.com/posts/edit/123?hello=you#anchor",
+          "_blank"
+        );
+      });
+
+      it("simulates opening up a window", () => {
+        expect(history.openedWindow, "to equal", {
+          url: "https://example.com/posts/edit/123?hello=you#anchor",
+          target: "_blank",
+        });
+      });
+
+      it("doesn't affect the current history", () => {
+        expect(transitionSpy, "was not called");
+
+        expect(history.action, "to equal", "POP");
+
+        expect(history.location, "to satisfy", {
+          pathname: "/posts",
+          search: "",
+          hash: "",
+          state: null,
+          href: "/posts",
+        });
+      });
+    });
+
     describe("when navitation is blocked", () => {
       it("doesn't navigate", () => {
         history.block(() => {});
@@ -238,6 +268,22 @@ describe("memory", () => {
           hash: "",
           state: null,
           href: "/posts",
+        });
+      });
+
+      describe("when given a target", () => {
+        it("doesn't block opening the window", () => {
+          history.block(() => {});
+
+          history.pushLocation(
+            "https://example.com/posts/edit/123?hello=you#anchor",
+            "_blank"
+          );
+
+          expect(history.openedWindow, "to equal", {
+            url: "https://example.com/posts/edit/123?hello=you#anchor",
+            target: "_blank",
+          });
         });
       });
     });

@@ -155,16 +155,20 @@ export function createBrowserHistory(options = {}) {
     }
   }
 
-  function pushLocation(url) {
-    const nextAction = "PUSH";
-    const nextLocation = getNextLocation(location, url);
-
+  function pushLocation(url, target) {
     function retry() {
       pushLocation(url);
     }
 
-    if (allowTx(blockers, nextAction, nextLocation, retry)) {
-      window.location.assign(url);
+    if (target && target !== "_self") {
+      window.open(url, target, "noopener");
+    } else {
+      const nextAction = "PUSH";
+      const nextLocation = getNextLocation(location, url);
+
+      if (allowTx(blockers, nextAction, nextLocation, retry)) {
+        window.location.assign(url);
+      }
     }
   }
 

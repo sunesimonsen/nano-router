@@ -41,11 +41,8 @@ export function parseUrl(url) {
 
   if (url) {
     let path = url;
-    if (!path.startsWith("/")) {
-      const protocolIndex = url.indexOf("//");
-      if (protocolIndex === -1) {
-        throw new Error(`Url ${url} doesn't start with a protocol`);
-      }
+    const protocolIndex = url.indexOf("//");
+    if (protocolIndex !== -1) {
       const pathIndex = url.indexOf("/", protocolIndex + 2);
       path = url.slice(pathIndex);
     }

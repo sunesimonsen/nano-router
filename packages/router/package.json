@@ -28,7 +28,7 @@
     "querystring": "^0.2.0"
   },
   "devDependencies": {
-    "history": "^5.0.0",
+    "@nano-router/history": "^1.15.4",
     "mocha": "^8.1.1",
     "rollup": "^2.27.1",
     "sinon": "^9.0.3",
@@ -36,7 +36,7 @@
     "unexpected-sinon": "^10.11.2"
   },
   "peerDependencies": {
-    "history": "^5.0.0"
+    "@nano-router/history": "^1.15.4"
   },
   "publishConfig": {
     "access": "public"
