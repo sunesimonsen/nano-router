@@ -86,7 +86,9 @@ Matches a given URL against the route. If it URL matches the route it returns
 the path parameters:
 
 ```js
-expect(route.match("https://www.example.com/posts/42"), "to equal", { id: "42" });
+expect(route.match("https://www.example.com/posts/42"), "to equal", {
+  id: "42",
+});
 ```
 
 If the given URL doesn't match the route `null` is returned.
@@ -96,7 +98,11 @@ If the given URL doesn't match the route `null` is returned.
 Create a URL from the route pattern and the given parameters:
 
 ```js
-expect(route.stringify({ id: 42 }), "to equal", "https://www.example.com/posts/42");
+expect(
+  route.stringify({ id: 42 }),
+  "to equal",
+  "https://www.example.com/posts/42"
+);
 ```
 
 ## Routers
