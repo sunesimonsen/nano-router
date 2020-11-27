@@ -21,6 +21,12 @@ const NewView = () => <div data-test-id="new-view" />;
 
 const PostsView = () => {
   const showNewPost = useLink("posts/new");
+
+  const showNewPostInNewWindow = useLink({
+    route: "posts/new",
+    target: "_blank",
+  });
+
   const showExternal = useLink({ route: "external", params: { id: 42 } });
 
   return (
@@ -30,6 +36,9 @@ const PostsView = () => {
       </a>
       <a data-test-id="new" {...showNewPost}>
         New post
+      </a>
+      <a data-test-id="new-open" {...showNewPostInNewWindow}>
+        New post (new window)
       </a>
     </>
   );
@@ -75,6 +84,22 @@ describe("useLink", () => {
   it("sets the href", () => {
     expect(component, "queried for test id", "new", "to have attributes", {
       href: "/posts/new",
+    });
+  });
+
+  describe("when a target is specified", () => {
+    it("sets the href, rel and target", () => {
+      expect(
+        component,
+        "queried for test id",
+        "new-open",
+        "to have attributes",
+        {
+          href: "/posts/new",
+          target: "_blank",
+          rel: "noopener",
+        }
+      );
     });
   });
 

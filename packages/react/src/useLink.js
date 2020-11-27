@@ -24,5 +24,11 @@ export const useLink = (routeNameOrOptions) => {
     [router, routeNameOrOptions]
   );
 
-  return { href, onClick };
+  const target = routeNameOrOptions.target;
+
+  if (typeof target === "string") {
+    return { href, rel: "noopener", target };
+  } else {
+    return { href, onClick };
+  }
 };
