@@ -2,10 +2,11 @@
   "name": "@nano-router/history",
   "version": "2.0.0",
   "description": "Manage session history with JavaScript",
-  "main": "src/index.js",
+  "main": "dist/bundle.cjs.js",
   "module": "src/index.js",
   "scripts": {
-    "test": "mocha src"
+    "test": "mocha src",
+    "build": "rollup -c rollup.config.js"
   },
   "keywords": [
     "history",
@@ -16,6 +17,7 @@
   "sideEffects": false,
   "devDependencies": {
     "mocha": "^8.1.1",
+    "rollup": "^2.27.1",
     "sinon": "^9.0.3",
     "unexpected": "^11.14.0",
     "unexpected-sinon": "^10.11.2"
