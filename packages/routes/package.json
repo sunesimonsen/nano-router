@@ -1,6 +1,6 @@
 {
   "name": "@nano-router/routes",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Objects to setup routes",
   "main": "./dist/bundle.cjs.js",
   "module": "src/index.js",
