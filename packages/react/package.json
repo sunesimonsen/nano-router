@@ -23,7 +23,7 @@
   },
   "sideEffects": false,
   "peerDependencies": {
-    "@nano-router/history": "^1.15.4",
+    "@nano-router/history": "^2.0.1",
     "react": "16"
   },
   "devDependencies": {

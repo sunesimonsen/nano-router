@@ -36,7 +36,7 @@
     "unexpected-sinon": "^10.11.2"
   },
   "peerDependencies": {
-    "@nano-router/history": "^1.15.4"
+    "@nano-router/history": "^2.0.1"
   },
   "publishConfig": {
     "access": "public"
