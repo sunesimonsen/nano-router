@@ -1,6 +1,6 @@
 {
   "name": "@nano-router/react",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "React integration for @nano-router/router",
   "main": "dist/bundle.cjs.js",
   "module": "lib/index.js",
@@ -43,7 +43,7 @@
     "unexpected-reaction": "^2.16.0"
   },
   "dependencies": {
-    "@nano-router/router": "^2.0.1"
+    "@nano-router/router": "^2.0.2"
   },
   "publishConfig": {
     "access": "public"
