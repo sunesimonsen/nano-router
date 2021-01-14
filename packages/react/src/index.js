@@ -1,9 +1,9 @@
-export { Router } from "./Router";
+export { Router } from "./Router.js";
 export { Routes, Route, ExternalRoute } from "@nano-router/router";
-export { useLink } from "./useLink";
-export { useLocation } from "./useLocation";
-export { useParams } from "./useParams";
-export { usePrompt } from "./usePrompt";
-export { useQueryParams } from "./useQueryParams";
-export { useRouteName } from "./useRouteName";
-export { useRouter } from "./useRouter";
+export { useLink } from "./useLink.js";
+export { useLocation } from "./useLocation.js";
+export { useParams } from "./useParams.js";
+export { usePrompt } from "./usePrompt.js";
+export { useQueryParams } from "./useQueryParams.js";
+export { useRouteName } from "./useRouteName.js";
+export { useRouter } from "./useRouter.js";

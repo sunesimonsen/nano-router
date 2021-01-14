@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useRouter } from "./useRouter";
+import { useRouter } from "./useRouter.js";
 
 const inactiveConfirmation = { isVisible: false };
 

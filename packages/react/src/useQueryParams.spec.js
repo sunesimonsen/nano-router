@@ -1,8 +1,8 @@
 import React, { useMemo } from "react";
 import { createMemoryHistory } from "@nano-router/history";
-import expect, { mount, unmount } from "./expect";
+import expect, { mount, unmount } from "./expect.js";
 
-import { Routes, Route, Router, useQueryParams } from "./index";
+import { Routes, Route, Router, useQueryParams } from "./index.js";
 
 const routes = new Routes(new Route("posts/edit", "/posts/:id"));
 

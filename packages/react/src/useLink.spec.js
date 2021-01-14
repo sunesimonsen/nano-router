@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { createMemoryHistory } from "@nano-router/history";
-import expect, { mount, unmount, simulate } from "./expect";
+import expect, { mount, unmount, simulate } from "./expect.js";
 
 import {
   Routes,
@@ -9,7 +9,7 @@ import {
   Router,
   useRouteName,
   useLink,
-} from "./index";
+} from "./index.js";
 
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),

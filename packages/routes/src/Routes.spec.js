@@ -1,5 +1,5 @@
 import expect from "unexpected";
-import { Routes, Route } from "./index";
+import { Routes, Route } from "./index.js";
 
 const routes = new Routes(
   new Route("new", "/posts/new"),

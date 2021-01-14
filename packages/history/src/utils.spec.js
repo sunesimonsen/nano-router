@@ -1,5 +1,5 @@
 import expect from "unexpected";
-import { parseUrl } from "./utils";
+import { parseUrl } from "./utils.js";
 
 describe("parseUrl", () => {
   [

@@ -1,5 +1,5 @@
 import { useCallback, useMemo } from "react";
-import { useRouter } from "./useRouter";
+import { useRouter } from "./useRouter.js";
 
 const shouldNavigate = (e) =>
   !e.defaultPrevented &&
