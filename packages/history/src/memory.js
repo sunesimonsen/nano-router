@@ -5,7 +5,7 @@ import {
   parseUrl,
   getNextLocation,
   ensureRootRelative,
-} from "./utils";
+} from "./utils.js";
 
 function clamp(n, lowerBound, upperBound) {
   return Math.min(Math.max(n, lowerBound), upperBound);

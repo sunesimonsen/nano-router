@@ -5,7 +5,7 @@ import {
   ensureRootRelative,
   promptBeforeUnload,
   isDev,
-} from "./utils";
+} from "./utils.js";
 
 const BeforeUnloadEventType = "beforeunload";
 const PopStateEventType = "popstate";

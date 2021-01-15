@@ -1,1 +1,1 @@
-export { PathPattern } from "./PathPattern";
+export { PathPattern } from "./PathPattern.js";

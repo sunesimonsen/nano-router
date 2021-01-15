@@ -1,7 +1,7 @@
 import unexpected from "unexpected";
 import unexpectedSinon from "unexpected-sinon";
 import sinon from "sinon";
-import { createMemoryHistory } from "./memory";
+import { createMemoryHistory } from "./memory.js";
 
 const expect = unexpected.clone().use(unexpectedSinon);
 

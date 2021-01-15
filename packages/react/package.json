@@ -2,8 +2,12 @@
   "name": "@nano-router/react",
   "version": "2.0.2",
   "description": "React integration for @nano-router/router",
-  "main": "dist/bundle.cjs.js",
+  "main": "dist/bundle.cjs",
   "module": "lib/index.js",
+  "exports": {
+    "import": "./dist/bundle.mjs",
+    "require": "./dist/bundle.cjs"
+  },
   "scripts": {
     "test": "mocha src",
     "build": "babel --out-dir lib --quiet src && rollup -c rollup.config.js"
@@ -32,6 +36,7 @@
     "@babel/preset-react": "^7.10.4",
     "@babel/register": "^7.10.5",
     "@nano-router/history": "^2.0.1",
+    "esm": "^3.2.25",
     "jsdom": "^14.1.0",
     "mocha": "^8.1.1",
     "mocha-dominate": "^0.1.1",

@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
-import { RouterContext } from "./RouterContext";
+import { RouterContext } from "./RouterContext.js";
 import { Router as NanoRouter } from "@nano-router/router";
-import { RouterSubscription } from "./RouterSubscription";
+import { RouterSubscription } from "./RouterSubscription.js";
 
 export const Router = ({ routes, history, children }) => {
   const router = useMemo(() => new NanoRouter({ routes, history }), [

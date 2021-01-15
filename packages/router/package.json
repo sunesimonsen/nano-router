@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "@nano-router/router",
   "version": "2.0.2",
   "description": "The nano-router",
@@ -15,8 +16,12 @@
     "type": "git",
     "url": "https://github.com/sunesimonsen/nano-router"
   },
-  "main": "dist/bundle.cjs.js",
+  "main": "dist/bundle.cjs",
   "module": "src/index.js",
+  "exports": {
+    "import": "./src/index.js",
+    "require": "./dist/bundle.cjs"
+  },
   "sideEffects": false,
   "scripts": {
     "test": "mocha src",

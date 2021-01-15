@@ -1,7 +1,13 @@
 export default {
   input: "lib/index.js",
-  output: {
-    file: "dist/bundle.cjs.js",
-    format: "cjs",
-  },
+  output: [
+    {
+      file: "dist/bundle.cjs",
+      format: "cjs",
+    },
+    {
+      file: "dist/bundle.mjs",
+      format: "es",
+    },
+  ],
 };

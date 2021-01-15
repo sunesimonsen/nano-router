@@ -1,2 +1,2 @@
-export { createMemoryHistory } from "./memory";
-export { createBrowserHistory } from "./browser";
+export { createMemoryHistory } from "./memory.js";
+export { createBrowserHistory } from "./browser.js";

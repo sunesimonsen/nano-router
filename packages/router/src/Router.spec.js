@@ -2,7 +2,7 @@ import unexpected from "unexpected";
 import unexpectedSinon from "unexpected-sinon";
 import sinon from "sinon";
 import { createMemoryHistory } from "@nano-router/history";
-import { Router, Routes, Route, ExternalRoute } from "./index";
+import { Router, Routes, Route, ExternalRoute } from "./index.js";
 
 const expect = unexpected.clone().use(unexpectedSinon);
 
