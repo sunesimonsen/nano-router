@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@nano-router/history",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Manage session history with JavaScript",
   "main": "dist/bundle.cjs",
   "module": "src/index.js",
