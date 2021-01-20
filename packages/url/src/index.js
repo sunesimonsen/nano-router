@@ -1,4 +1,5 @@
-import querystring from "querystring";
+import decode from "querystring/decode.js";
+import encode from "querystring/encode.js";
 import { PathPattern } from "@nano-router/path";
 
 export const createUrl = ({
@@ -14,9 +15,9 @@ export const createUrl = ({
   hash;
 
 export const objectToSearch = (queryParams) => {
-  const search = (queryParams && "?" + querystring.encode(queryParams)) || "";
+  const search = (queryParams && "?" + encode(queryParams)) || "";
   return search === "?" ? "" : search;
 };
 
 export const searchToObject = (search) =>
-  search ? querystring.decode(search.slice(1)) : {};
+  search ? decode(search.slice(1)) : {};
