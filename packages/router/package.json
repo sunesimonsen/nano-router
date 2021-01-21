@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@nano-router/router",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "The nano-router",
   "keywords": [
     "browser",
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@nano-router/routes": "^2.3.0",
-    "@nano-router/url": "^2.3.0",
+    "@nano-router/url": "^2.4.0",
     "querystring": "^0.2.0"
   },
   "devDependencies": {
