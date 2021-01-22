@@ -19,6 +19,7 @@
         "devDependencies": [
           "**/*.spec.js",
           "**/expect.js",
+          "rollup.config.js"
         ],
         "optionalDependencies": false,
         "peerDependencies": true
