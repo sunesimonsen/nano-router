@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@nano-router/router",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "The nano-router",
   "keywords": [
     "browser",
