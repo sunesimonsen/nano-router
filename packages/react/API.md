@@ -86,9 +86,9 @@ current route.
 import { useLink } from "@nano-router/react";
 
 const PostList = () => {
-  const showNewPostView = useLink("posts/new");
+  const showNewPost = useLink("posts/new");
 
-  return <a {...showNewPostView}>Create</a>;
+  return <a {...showNewPost}>Create</a>;
 };
 ```
 
@@ -96,13 +96,26 @@ You can get more control over the destination by providing an object:
 
 ```js
 const PostList = () => {
-  const showEditPostView = useLink({
+  const showEditPost = useLink({
     route: "posts/edit",
     params: { id: 42 },
     queryParams: { showSettings: true },
   });
 
-  return <a {...showEditPostView}>Create</a>;
+  return <a {...showEditPost}>Create</a>;
+};
+```
+
+Alternatively you can just supply the a `url`:
+
+```js
+const PostList = () => {
+  const showPost = useLink({
+    url: "https://www.example.com/blog/42",
+    target: "_blank",
+  });
+
+  return <a {...showPost}>Create</a>;
 };
 ```
 

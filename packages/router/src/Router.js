@@ -14,7 +14,7 @@ export class Router {
       "listen",
       "updateState",
       "createUrl",
-      "createRouteOptions",
+      "_createRouteOptions",
       "navigate",
     ].forEach((method) => {
       this[method] = this[method].bind(this);
@@ -23,11 +23,15 @@ export class Router {
     this.updateState();
   }
 
-  createRouteOptions(routeNameOrOptions) {
+  _createRouteOptions(routeNameOrOptions) {
     const options =
       typeof routeNameOrOptions === "string"
         ? { route: routeNameOrOptions }
         : routeNameOrOptions;
+
+    if (options.url) {
+      return { external: true, ...options };
+    }
 
     const {
       route: routeName = this.route,
@@ -55,13 +59,13 @@ export class Router {
   }
 
   createUrl(routeNameOrOptions) {
-    const { url } = this.createRouteOptions(routeNameOrOptions);
+    const { url } = this._createRouteOptions(routeNameOrOptions);
 
     return url;
   }
 
   navigate(routeNameOrOptions) {
-    const { url, replace, target, state, external } = this.createRouteOptions(
+    const { url, replace, target, state, external } = this._createRouteOptions(
       routeNameOrOptions
     );
 

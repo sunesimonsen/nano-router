@@ -324,8 +324,15 @@ Navigation to external routes is also supported, here we navigate to `https://ww
 router.navigate({ route: "blog", params: { id: 42 } });
 ```
 
+Alternatively you can also just supply the `url`.
+
+```js
+router.navigate({ url: "https://www.example.com/blog/42" });
+```
+
 Finally any route can be opened in another target frame:
 
 ```js
 router.navigate({ route: "posts", target: "_blank" });
+router.navigate({ url: "https://www.example.com/blog/42", target: "_blank" });
 ```
