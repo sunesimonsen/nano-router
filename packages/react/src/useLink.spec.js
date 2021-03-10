@@ -27,12 +27,20 @@ const PostsView = () => {
     target: "_blank",
   });
 
-  const showExternal = useLink({ route: "external", params: { id: 42 } });
+  const showExternalRoute = useLink({ route: "external", params: { id: 42 } });
+
+  const showExternalUrl = useLink({
+    url: "https://www.example.com/examples?hello=you#anchor",
+    target: "_blank",
+  });
 
   return (
     <>
-      <a data-test-id="external" {...showExternal}>
+      <a data-test-id="external" {...showExternalRoute}>
         External
+      </a>
+      <a data-test-id="external-url" {...showExternalUrl}>
+        External URL
       </a>
       <a data-test-id="new" {...showNewPost}>
         New post
@@ -131,5 +139,18 @@ describe("useLink", () => {
     expect(component, "queried for test id", "external", "to have attributes", {
       href: "https://www.example.com/blog/42",
     });
+  });
+
+  it("supports external URLs", () => {
+    expect(
+      component,
+      "queried for test id",
+      "external-url",
+      "to have attributes",
+      {
+        href: "https://www.example.com/examples?hello=you#anchor",
+        target: "_blank",
+      }
+    );
   });
 });

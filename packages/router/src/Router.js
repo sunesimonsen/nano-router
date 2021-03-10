@@ -14,7 +14,7 @@ export class Router {
       "listen",
       "updateState",
       "createUrl",
-      "createRouteOptions",
+      "_createRouteOptions",
       "navigate",
     ].forEach((method) => {
       this[method] = this[method].bind(this);
@@ -23,55 +23,23 @@ export class Router {
     this.updateState();
   }
 
-  createRouteOptions(routeNameOrOptions) {
+  _createRouteOptions(routeNameOrOptions) {
     const options =
       typeof routeNameOrOptions === "string"
         ? { route: routeNameOrOptions }
         : routeNameOrOptions;
 
+    if (options.url) {
+      return { external: true, ...options };
+    }
+
     const {
-      route = this.route,
+      route: routeName = this.route,
       params = this.params,
       queryParams = this.queryParams,
       hash = this.location.hash,
       state,
       replace = false,
-      target,
-    } = options;
-
-    return { route, params, queryParams, hash, state, replace, target };
-  }
-
-  createUrl(routeNameOrOptions) {
-    const {
-      route: routeName,
-      params,
-      queryParams,
-      hash,
-    } = this.createRouteOptions(routeNameOrOptions);
-
-    const route = this.routes.byName(routeName);
-
-    if (!route) {
-      throw new Error(`Unknown route: ${routeName}`);
-    }
-
-    return createUrl({
-      pathname: route.stringify(params),
-      queryParams,
-      hash,
-    });
-  }
-
-  navigate(routeNameOrOptions) {
-    const options = this.createRouteOptions(routeNameOrOptions);
-
-    const {
-      route: routeName,
-      params,
-      queryParams,
-      hash,
-      replace,
       target,
     } = options;
 
@@ -87,9 +55,23 @@ export class Router {
       hash,
     });
 
+    return { external: route.external, url, state, replace, target };
+  }
+
+  createUrl(routeNameOrOptions) {
+    const { url } = this._createRouteOptions(routeNameOrOptions);
+
+    return url;
+  }
+
+  navigate(routeNameOrOptions) {
+    const { url, replace, target, state, external } = this._createRouteOptions(
+      routeNameOrOptions
+    );
+
     if (target && target !== "_self") {
       this.history.pushLocation(url, target);
-    } else if (route.external) {
+    } else if (external) {
       if (replace) {
         this.history.replaceLocation(url);
       } else {
@@ -97,9 +79,9 @@ export class Router {
       }
     } else {
       if (replace) {
-        this.history.replace(url, options.state);
+        this.history.replace(url, state);
       } else {
-        this.history.push(url, options.state);
+        this.history.push(url, state);
       }
     }
   }

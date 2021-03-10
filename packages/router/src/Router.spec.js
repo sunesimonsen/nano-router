@@ -336,13 +336,106 @@ describe("Router", () => {
       });
     });
 
+    describe("when the route is url", () => {
+      describe("and a new location is pushed", () => {
+        it("updates the memory history but doesn't call the listeners", () => {
+          router.navigate({
+            url: "https://www.example.com/examples?hello=you#anchor",
+          });
+
+          expect(transitionSpy, "was not called");
+
+          expect(router, "to satisfy", {
+            location: {
+              href: "/posts",
+              search: "",
+              hash: "",
+              pathname: "/posts",
+              state: null,
+            },
+            history: {
+              action: "PUSH",
+              location: {
+                href: "https://www.example.com/examples?hello=you#anchor",
+                search: "?hello=you",
+                hash: "#anchor",
+                pathname: "/examples",
+                state: null,
+              },
+            },
+          });
+        });
+      });
+
+      describe("and the current location is replaced", () => {
+        it("updates the memory history but doesn't call the listeners", () => {
+          router.navigate({
+            url: "https://www.example.com/examples?hello=you#anchor",
+            replace: true,
+          });
+
+          expect(transitionSpy, "was not called");
+
+          expect(router, "to satisfy", {
+            location: {
+              href: "/posts",
+              search: "",
+              hash: "",
+              pathname: "/posts",
+              state: null,
+            },
+            history: {
+              action: "REPLACE",
+              location: {
+                href: "https://www.example.com/examples?hello=you#anchor",
+                search: "?hello=you",
+                hash: "#anchor",
+                pathname: "/examples",
+                state: null,
+              },
+            },
+          });
+        });
+      });
+
+      describe("when navigation is blocked", () => {
+        it("doesn't navigation", () => {
+          router.block(() => {});
+
+          router.navigate({
+            url: "https://www.example.com/examples?hello=you#anchor",
+          });
+
+          expect(router, "to satisfy", {
+            route: "posts",
+            params: {},
+            location: {
+              href: "/posts",
+              search: "",
+              hash: "",
+              pathname: "/posts",
+              state: null,
+            },
+            history: {
+              location: {
+                href: "/posts",
+                search: "",
+                hash: "",
+                pathname: "/posts",
+                state: null,
+              },
+            },
+          });
+
+          expect(transitionSpy, "was not called");
+        });
+      });
+    });
+
     describe("when given a target", () => {
       beforeEach(() => {
         router.navigate({
-          route: "posts/edit",
-          params: { id: 123 },
-          queryParams: { hello: "you" },
-          hash: "#anchor",
+          url: "https://www.example.com/examples?hello=you#anchor",
           target: "_blank",
         });
       });
@@ -350,7 +443,7 @@ describe("Router", () => {
       it("navigates in that target", () => {
         expect(router.history, "to satisfy", {
           openedWindow: {
-            url: "/posts/edit/123?hello=you#anchor",
+            url: "https://www.example.com/examples?hello=you#anchor",
             target: "_blank",
           },
         });
