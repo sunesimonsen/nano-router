@@ -5,7 +5,7 @@ for the [nano-router](../router).
 
 <!-- toc -->
 
-- [Instalation](#instalation)
+- [Installation](#installation)
 - [Usage](#usage)
   - [Setup your routes](#setup-your-routes)
   - [Add the router to your application](#add-the-router-to-your-application)
@@ -16,7 +16,7 @@ for the [nano-router](../router).
 
 <!-- tocstop -->
 
-## Instalation
+## Installation
 
 ```sh
 npm install @nano-router/history @nano-router/react
@@ -50,11 +50,11 @@ import { routes } from "./routes";
 import { RootView } from "./RootView";
 
 const App = () => {
-  const history = useMemo(() => createBrowserHistory());
+  const history = useMemo(() => createBrowserHistory(), []);
 
   return (
     <Router history={history} routes={routes}>
-      <RootRoute />
+      <RootView />
     </Router>
   );
 };
@@ -84,6 +84,7 @@ const RootView = () => {
       return <PostList />;
     default:
       router.navigate({ route: "posts", replace: true });
+      return null;
   }
 };
 ```
