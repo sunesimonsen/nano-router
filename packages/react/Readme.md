@@ -84,6 +84,7 @@ const RootView = () => {
       return <PostList />;
     default:
       router.navigate({ route: "posts", replace: true });
+      return null;
   }
 };
 ```
