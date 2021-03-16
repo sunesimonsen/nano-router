@@ -5,7 +5,7 @@ for the [nano-router](../router).
 
 <!-- toc -->
 
-- [Instalation](#instalation)
+- [Installation](#installation)
 - [Usage](#usage)
   - [Setup your routes](#setup-your-routes)
   - [Add the router to your application](#add-the-router-to-your-application)
@@ -16,7 +16,7 @@ for the [nano-router](../router).
 
 <!-- tocstop -->
 
-## Instalation
+## Installation
 
 ```sh
 npm install @nano-router/history @nano-router/react
@@ -54,7 +54,7 @@ const App = () => {
 
   return (
     <Router history={history} routes={routes}>
-      <RootRoute />
+      <RootView />
     </Router>
   );
 };
