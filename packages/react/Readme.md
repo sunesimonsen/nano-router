@@ -50,7 +50,7 @@ import { routes } from "./routes";
 import { RootView } from "./RootView";
 
 const App = () => {
-  const history = useMemo(() => createBrowserHistory());
+  const history = useMemo(() => createBrowserHistory(), []);
 
   return (
     <Router history={history} routes={routes}>
