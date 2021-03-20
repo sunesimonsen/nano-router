@@ -10,15 +10,11 @@ export class Router {
       this[method] = this.history[method].bind(history);
     });
 
-    [
-      "listen",
-      "updateState",
-      "createUrl",
-      "_createRouteOptions",
-      "navigate",
-    ].forEach((method) => {
+    ["listen", "updateState", "createUrl", "navigate"].forEach((method) => {
       this[method] = this[method].bind(this);
     });
+
+    this._createRouteOptions = this._createRouteOptions.bind(this);
 
     this.updateState();
   }
