@@ -50,6 +50,7 @@ Creating a router for a memory history useful for testing:
 ```js
 import React, { useMemo } from "react";
 import { Router } from "@nano-router/react";
+import { createMemoryHistory } from "@nano-router/history";
 
 const App = () => {
   const history = useMemo(() =>
