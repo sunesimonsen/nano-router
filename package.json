@@ -42,7 +42,8 @@
   },
   "workspaces": {
     "packages": [
-      "packages/*"
+      "packages/*",
+      "examples/*"
     ]
   },
   "engines": {
