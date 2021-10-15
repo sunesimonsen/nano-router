@@ -61,9 +61,8 @@ export class Router {
   }
 
   navigate(routeNameOrOptions) {
-    const { url, replace, target, state, external } = this._createRouteOptions(
-      routeNameOrOptions
-    );
+    const { url, replace, target, state, external } =
+      this._createRouteOptions(routeNameOrOptions);
 
     if (target && target !== "_self") {
       this.history.pushLocation(url, target);

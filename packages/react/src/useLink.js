@@ -9,10 +9,10 @@ const shouldNavigate = (e) =>
 export const useLink = (routeNameOrOptions) => {
   const router = useRouter();
 
-  const href = useMemo(() => router.createUrl(routeNameOrOptions), [
-    router,
-    routeNameOrOptions,
-  ]);
+  const href = useMemo(
+    () => router.createUrl(routeNameOrOptions),
+    [router, routeNameOrOptions]
+  );
 
   const onClick = useCallback(
     (e) => {

@@ -41,9 +41,11 @@ export const UserDetails = ({ userId }) => {
   const showTodos = useLink({ route: "users/todos", params: { userId } });
   const showPhotos = useLink({ route: "users/photos", params: { userId } });
 
-  const { data: user, loading, error } = useData(
-    `https://jsonplaceholder.typicode.com/users/${userId}`
-  );
+  const {
+    data: user,
+    loading,
+    error,
+  } = useData(`https://jsonplaceholder.typicode.com/users/${userId}`);
 
   if (error) throw error;
   if (loading) return <LoadingPanel />;
