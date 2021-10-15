@@ -117,9 +117,11 @@ const PostForm = ({ post }) => {
 export const PostEditView = () => {
   const { postId } = useParams();
 
-  const { data: post, loading, error } = useData(
-    `https://jsonplaceholder.typicode.com/posts/${postId}`
-  );
+  const {
+    data: post,
+    loading,
+    error,
+  } = useData(`https://jsonplaceholder.typicode.com/posts/${postId}`);
 
   if (error) throw error;
   if (loading) return null;

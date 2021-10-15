@@ -26,9 +26,11 @@ const Container = styled.div`
 
 export const UsersTable = () => {
   const router = useRouter();
-  const { data: users, loading, error } = useData(
-    "https://jsonplaceholder.typicode.com/users"
-  );
+  const {
+    data: users,
+    loading,
+    error,
+  } = useData("https://jsonplaceholder.typicode.com/users");
 
   if (error) throw error;
 

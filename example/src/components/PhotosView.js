@@ -45,9 +45,11 @@ export const PhotosView = () => {
     params: { userId },
   });
 
-  const { data: photos, loading, error } = useData(
-    `https://jsonplaceholder.typicode.com/users/${userId}/photos`
-  );
+  const {
+    data: photos,
+    loading,
+    error,
+  } = useData(`https://jsonplaceholder.typicode.com/users/${userId}/photos`);
 
   if (error) throw error;
   if (loading) return null;

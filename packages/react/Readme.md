@@ -93,31 +93,31 @@ const RootView = () => {
 
 ```js
 import React, { useState } from "react";
-import { router, useParams } from "@nano-router/react"
-import { savePost } from './postService'
+import { router, useParams } from "@nano-router/react";
+import { savePost } from "./postService";
 
 const PostEdit = () => {
-  const { id } = useParam()
-  const router = useRouter()
-  const [body, setBody] = useState('')
+  const { id } = useParam();
+  const router = useRouter();
+  const [body, setBody] = useState("");
 
   const onSave = () => {
-    await savePost({ id, body })
+    await savePost({ id, body });
 
     router.navigate({
-      route: 'posts',
-      state: { type: 'notification', message: 'POST_CREATED_SUCCESS' }
-    })
-  }
+      route: "posts",
+      state: { type: "notification", message: "POST_CREATED_SUCCESS" },
+    });
+  };
 
   return (
     <form>
       <label>Post</label>
-      <textarea value={body} onChange={e => setBody(e.target.value)}/>
+      <textarea value={body} onChange={(e) => setBody(e.target.value)} />
       <button onClick={onSave}>Save</button>
     </form>
-  )
-}
+  );
+};
 ```
 
 ## Example

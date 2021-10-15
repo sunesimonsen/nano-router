@@ -17,9 +17,11 @@ const PostsPanel = () => {
   const router = useRouter();
   const { state } = useLocation();
 
-  const { data: posts, loading, error } = useData(
-    `https://jsonplaceholder.typicode.com/users/${userId}/posts`
-  );
+  const {
+    data: posts,
+    loading,
+    error,
+  } = useData(`https://jsonplaceholder.typicode.com/users/${userId}/posts`);
 
   useEffect(() => {
     if (state && state.flash === "UPDATE_SUCCESS") {
