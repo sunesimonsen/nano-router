@@ -13,8 +13,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14.x
-    - run: npm install
-    - run: npm run lint
+    - run: yarn
+    - run: yarn lint
       env:
         CI: true
 
@@ -32,9 +32,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run bootstrap
-    - run: npm run build
-    - run: npm test
+    - run: yarn
+    - run: yarn build
+    - run: yarn test
       env:
         CI: true

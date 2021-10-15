@@ -5,14 +5,13 @@
   "description": "A tiny modern router",
   "main": "./lib/index.js",
   "scripts": {
-    "bootstrap": "lerna bootstrap",
     "test": "lerna run test",
     "build": "lerna run build",
     "format": "prettier --write '**/*.{js,md,json}'",
-    "update-toc": "for f in `ls packages/*/*.md`; do markdown-toc -i $f; done; npm run format",
+    "update-toc": "for f in `ls packages/*/*.md`; do markdown-toc -i $f; done; yarn format",
     "lint": "eslint . && prettier --check '**/*.{js,md,json}'",
-    "ci": "npm run lint && npm test",
-    "release": "npm run build; lerna publish"
+    "ci": "yarn lint && npm test",
+    "release": "yarn build; lerna publish"
   },
   "keywords": [
     "React",
@@ -40,5 +39,13 @@
     "lerna": "^3.22.1",
     "markdown-toc": "^1.2.0",
     "prettier": "^2.1.0"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "engines": {
+    "node": ">=12"
   }
 }
