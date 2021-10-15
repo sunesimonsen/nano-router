@@ -1,6 +1,7 @@
 {
   "type": "module",
-  "name": "@nano-router/example",
+  "private": true,
+  "name": "@nano-router/react-example",
   "version": "1.1.1",
   "description": "An example on how to use nano-router",
   "author": "Sune Simonsen <sune@we-knowhow.dk>",

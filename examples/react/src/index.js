@@ -1,3 +1,5 @@
+import "@zendeskgarden/css-bedrock/dist/index.css";
+
 import React, { useMemo, useRef } from "react";
 import { render } from "react-dom";
 import { Router } from "@nano-router/react";
