@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@nano-router/routes",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "description": "Objects to setup routes",
   "main": "./dist/bundle.cjs",
   "module": "src/index.js",
@@ -28,7 +28,7 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@nano-router/path": "^2.3.0"
+    "@nano-router/path": "^2.7.1"
   },
   "devDependencies": {
     "mocha": "^8.1.1",

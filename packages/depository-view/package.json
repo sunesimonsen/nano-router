@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@nano-router/depository-view",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "description": "@depository/view integration for @nano-router/router",
   "module": "./src/index.js",
   "exports": {
@@ -32,7 +32,7 @@
     "@babel/core": "^7.12.10",
     "@depository/store": "^0.54.0",
     "@depository/view": "^0.54.0",
-    "@nano-router/history": "^2.3.0",
+    "@nano-router/history": "^2.7.1",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
@@ -47,7 +47,7 @@
     "unexpected-dom": "^4.18.0"
   },
   "dependencies": {
-    "@nano-router/router": "^2.7.0"
+    "@nano-router/router": "^2.7.1"
   },
   "publishConfig": {
     "access": "public"
