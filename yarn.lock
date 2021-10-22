@@ -2396,9 +2396,9 @@
     prop-types "^15.5.7"
 
 "@zendeskgarden/react-forms@^8.21.0":
-  version "8.42.2"
-  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-forms/-/react-forms-8.42.2.tgz#fc37c5c8d2a7590f82f353d5c2432caa683e9405"
-  integrity sha512-nI9XJUqq/q6niia64xOglDCH91NHXbJ8XO9fu2nhSSnNuBX6DthHZPZ06cXs24ZXIjiHCvGQS+0Rmne6dNixsA==
+  version "8.43.0"
+  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-forms/-/react-forms-8.43.0.tgz#0d1228ac54000261eaa0f5c5216b843e825f5feb"
+  integrity sha512-Q7au0gRY2hHd7vjjkHtiB125NY3ELBm8uxv4nCKQOWcT+JVkq+rUK7FNumOlAYMivm86hO3+LE7s592lAg1CVQ==
   dependencies:
     "@zendeskgarden/container-field" "^1.3.6"
     "@zendeskgarden/container-utilities" "^0.6.0"
