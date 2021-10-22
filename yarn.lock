@@ -2408,9 +2408,9 @@
     react-merge-refs "^1.1.0"
 
 "@zendeskgarden/react-loaders@^8.21.0":
-  version "8.42.2"
-  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-loaders/-/react-loaders-8.42.2.tgz#4fdf396469baa8f50c9eb3e64d3d33dcbed15803"
-  integrity sha512-vkW8L6kaK6EnyRsRVEDfY4BSa9KOMNv3MZVSd4x9dNqnk87Ms3k1QpqOPfVqZvNdJQjnOO/32M4xQt51yuDEUQ==
+  version "8.43.0"
+  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-loaders/-/react-loaders-8.43.0.tgz#98621b4e80e51967c0837d77d7cb1821816b0f87"
+  integrity sha512-PRRd2SV1ZWlYOYP6NS4RojCF2LvzuyvZO6RSQOeLZPiIr1rb2eBc/iUYzT5iavLJEh+yaoWH9BpJsTQ46ipAgQ==
   dependencies:
     "@zendeskgarden/container-schedule" "^1.3.7"
     polished "^4.0.0"
