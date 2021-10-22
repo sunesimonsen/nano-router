@@ -2462,9 +2462,9 @@
     prop-types "^15.5.7"
 
 "@zendeskgarden/react-typography@^8.21.0":
-  version "8.42.2"
-  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-typography/-/react-typography-8.42.2.tgz#bae6894a6c2c80cb920b4c18b961eb86ee18500e"
-  integrity sha512-mUEmREM3b+O2JN2lMlURPEmND7QtcZadbvZGfPWlIhMgTpgrbKuKFLm/z1AcWXM1Ogea8Hxkzj2Joq8X2GFXdQ==
+  version "8.43.0"
+  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-typography/-/react-typography-8.43.0.tgz#fb03a1bd1ff4cba3133af8b8f70b204f56dc2ef6"
+  integrity sha512-IdVhwv13YHw95qa8NbL8oll88vgkJH7a2tRNeIuu1E4b8XfBVfEb1x8j0eWvuO8VquVGQbsUMF3SffKUxKxDvA==
   dependencies:
     "@zendeskgarden/container-scrollregion" "^0.1.0"
     polished "^4.0.0"
