@@ -976,30 +976,30 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@depository/cache@^0.54.0":
-  version "0.54.0"
-  resolved "https://registry.yarnpkg.com/@depository/cache/-/cache-0.54.0.tgz#bc5b2d6164313a02046334d34f89f468571f83da"
-  integrity sha512-uAu6PoLQDz6Zpg6r6od+Q37QLU2m40wBk1eRtPJPe3D5RbAwvZdOc4e5ZGgNF0Id9VUWp5i85Ed8KU0Redeksw==
+"@depository/cache@^0.55.0":
+  version "0.55.0"
+  resolved "https://registry.yarnpkg.com/@depository/cache/-/cache-0.55.0.tgz#41a68c9b2006d05ecca21472416d574a2db56af5"
+  integrity sha512-qn/u22d8woHcm5/s518P+i/8NX4w9MG4FWYTX6QBaNgKL6yb0zqgzehBtJXNzZx3vCZfJ//5UYg+oYKc/JpyzA==
   dependencies:
-    "@depository/path" "^0.54.0"
-    "@depository/shallow-equal" "^0.54.0"
+    "@depository/path" "^0.55.0"
+    "@depository/shallow-equal" "^0.55.0"
 
-"@depository/path@^0.54.0":
-  version "0.54.0"
-  resolved "https://registry.yarnpkg.com/@depository/path/-/path-0.54.0.tgz#666cc740fc23a4a78421ae1d46f77b81d42667b4"
-  integrity sha512-2y9Qm+ZAnSkJ23XtKcyUIhCSjSm9yzNIKGjOl9dRCZUZK3ML4gIRcQzLj8WWQtSHwMcq6JXRCB4qCupfNYAYpQ==
+"@depository/path@^0.55.0":
+  version "0.55.0"
+  resolved "https://registry.yarnpkg.com/@depository/path/-/path-0.55.0.tgz#b4fb89985394ef51390e5880e6e6f055083405b4"
+  integrity sha512-50bMob6WzR/aNfsKxYAaKx1Vw71Xdl7edM2rLx7TKrf/RlNgSvmQ9Q/DWMcxzuHEGz2zQb6FEUJ+dOAj0v9GnQ==
 
-"@depository/shallow-equal@^0.54.0":
-  version "0.54.0"
-  resolved "https://registry.yarnpkg.com/@depository/shallow-equal/-/shallow-equal-0.54.0.tgz#d73059e84fc510f301f594d21a96caaf1fc2100d"
-  integrity sha512-6M+P4bxlOQW9FjxQ7lYxmvQtjyvh/NrikPni9HsVKVsZyVZw9K8abPeomMCcNmuoqt+gYDRZboabNfga+Uuolw==
+"@depository/shallow-equal@^0.55.0":
+  version "0.55.0"
+  resolved "https://registry.yarnpkg.com/@depository/shallow-equal/-/shallow-equal-0.55.0.tgz#aa854a07a8950a33664c0329d235fa829fd6c811"
+  integrity sha512-hrD1/44rc1bXbBQiLKIewm5DIq9CFXEPAmoYYQXEjUpnITonZWkj4+/75jzyGA0gldcF2kCQFErhDNO1VmiJ6g==
 
-"@depository/store@^0.54.0":
-  version "0.54.0"
-  resolved "https://registry.yarnpkg.com/@depository/store/-/store-0.54.0.tgz#0cfb6e9275f91745aa794a6eaac05d43abe5cd3a"
-  integrity sha512-fKagz4/GtNHWxNDxOcxf538W8picuyOlfEbvRbLE2Q+LbN/aAZmhWT3Cv94ofxY4I+pMG+o00RBe1xS77s1H3Q==
+"@depository/store@^0.55.0":
+  version "0.55.0"
+  resolved "https://registry.yarnpkg.com/@depository/store/-/store-0.55.0.tgz#83ffeeba40408c1c595a2d513acc03019e75c17e"
+  integrity sha512-2jmiqR09TVKN7XiHDNPMeHD4/S3nwSI7SX1JwNKLQcBItzJbGMtSO5XFcMgtnpJavYx07u9rhZ3mYymfOBvRTw==
   dependencies:
-    "@depository/cache" "^0.54.0"
+    "@depository/cache" "^0.55.0"
 
 "@depository/view@^0.54.0":
   version "0.54.0"
