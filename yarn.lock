@@ -2399,9 +2399,9 @@
     react-merge-refs "^1.1.0"
 
 "@zendeskgarden/react-buttons@^8.21.0":
-  version "8.42.2"
-  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-buttons/-/react-buttons-8.42.2.tgz#aead3a14dd9bec543f443c4ae7caa5c61f954923"
-  integrity sha512-kWKYLuIf55mz+3LnnrivEd3bvowhEwbqPn9zBvaXtyGh6YbWmm+ycz3ZjoKACbw6HBOZcjTnThdXaVxw1af3Pw==
+  version "8.43.0"
+  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-buttons/-/react-buttons-8.43.0.tgz#faa44e20565cc6ac63a311aeccf54489bf9c31cb"
+  integrity sha512-0zwWIYIs9vVyLfSPpBdL3OVEAApL90RtsITjDiSl4J9YIwMOOFiDQxVSmK7RIufG/qfEFrphHohBLskD++7L3A==
   dependencies:
     "@zendeskgarden/container-buttongroup" "^0.3.8"
     "@zendeskgarden/container-keyboardfocus" "^0.4.7"
