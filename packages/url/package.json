@@ -30,7 +30,7 @@
     "querystring": "^0.2.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^11.1.0",
     "mocha": "^8.1.1",
     "rollup": "^2.27.1",
