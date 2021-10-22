@@ -10905,10 +10905,10 @@ unexpected-dom@^4.18.0:
     extend "^3.0.1"
     magicpen-prism "^4.0.0"
 
-unexpected-reaction@^2.16.0:
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/unexpected-reaction/-/unexpected-reaction-2.16.0.tgz#15a3c1c84ba016b0b203aa243c88fd0187b462e3"
-  integrity sha512-Xmm1gk0xRhbQnhdH3k2mV2kn3L24zr7DEw6d/tdks59rzt046JehPflk7BGCfcPBfTfige4sgYtyuX6Iq6dc8Q==
+unexpected-reaction@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/unexpected-reaction/-/unexpected-reaction-3.0.0.tgz#3d6b27d0d5641a64ae16e5bf5b59a9deee5d8bc2"
+  integrity sha512-hdGigCJz6Y3iA6JSt3v7+C5onQqPadVpIoWnqaq8WJENidPlNkisC7uqiQ3sJ9bbOIuuWLS2lz7DlkLKO9t6Zw==
   dependencies:
     react-dom-testing "^1.9.0"
 
