@@ -44,7 +44,7 @@ export default [
   {
     input: "src/index.js",
     output: {
-      file: "dist/nano-router-depository-view.min.js",
+      file: "dist/nano-router-depository-view.esm.min.js",
       format: "esm",
     },
     plugins: plugins.concat(minifyPlugins),
