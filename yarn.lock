@@ -2374,9 +2374,9 @@
   integrity sha512-vX7vDJVQoyYFUshYXXX5QE2fL9M6K2bnxTeB2IVyEIaGRYEi20xjoY6cuO1uAQ7RaIRGCSyZFKgWW+/IrlQMKg==
 
 "@zendeskgarden/react-accordions@^8.21.0":
-  version "8.42.2"
-  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-accordions/-/react-accordions-8.42.2.tgz#c9b3ff5668cc3d01e1f31b727588dcc5a45c965c"
-  integrity sha512-fHDhH7P7pkitL1f+JX0W07O925ceENTxqKQAGHjbRRaAtsnw9cExn4jLIsg+CxS3FnaBvfOXqNAEIrZtvxP1YQ==
+  version "8.44.0"
+  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-accordions/-/react-accordions-8.44.0.tgz#569418b004e79fb2ffa68675829e390374b69ed7"
+  integrity sha512-T9QfWzcGB2v8DX51i5zlsd0Dpr/WM1wacz45aHJo9y4fHFn2bGzPpK2mhV0a56TBzCK4VqxjVpVxj28q+NZ3NQ==
   dependencies:
     "@zendeskgarden/container-accordion" "^1.0.3"
     "@zendeskgarden/container-utilities" "^0.6.0"
