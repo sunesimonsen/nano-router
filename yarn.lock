@@ -2374,9 +2374,9 @@
   integrity sha512-vX7vDJVQoyYFUshYXXX5QE2fL9M6K2bnxTeB2IVyEIaGRYEi20xjoY6cuO1uAQ7RaIRGCSyZFKgWW+/IrlQMKg==
 
 "@zendeskgarden/react-accordions@^8.21.0":
-  version "8.42.2"
-  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-accordions/-/react-accordions-8.42.2.tgz#c9b3ff5668cc3d01e1f31b727588dcc5a45c965c"
-  integrity sha512-fHDhH7P7pkitL1f+JX0W07O925ceENTxqKQAGHjbRRaAtsnw9cExn4jLIsg+CxS3FnaBvfOXqNAEIrZtvxP1YQ==
+  version "8.44.1"
+  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-accordions/-/react-accordions-8.44.1.tgz#f80da2c63be2dcc22a38938ada0c15cdc88fcd76"
+  integrity sha512-OH0QKlJ/QdIISG8W8pfDapQWUVX4PvIQyc4DsC8XqpFKhim7sa4ldKprjcX95xS4llhSFUN+9EqCoHKHv2i0iw==
   dependencies:
     "@zendeskgarden/container-accordion" "^1.0.3"
     "@zendeskgarden/container-utilities" "^0.6.0"
@@ -10899,10 +10899,10 @@ unexpected-reaction@^3.0.0:
   dependencies:
     react-dom-testing "^1.9.0"
 
-unexpected-sinon@^10.11.2:
-  version "10.11.2"
-  resolved "https://registry.yarnpkg.com/unexpected-sinon/-/unexpected-sinon-10.11.2.tgz#43005d659068c393964397168271597757d62176"
-  integrity sha512-N2KIKPweTVs6AK8cDKQTUwu0fGWyGt+cI/UJZ/eltAyOKgsHL9eILttdGfpZjI/iMYcHcbtUwIlXoHfmh6EcBw==
+unexpected-sinon@^11.0.1:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/unexpected-sinon/-/unexpected-sinon-11.0.1.tgz#7c0ce6be442979d6e987a77e9a9f67db96a95662"
+  integrity sha512-7BdD4zY2QiN+N5n6ISHMyoej9K3mMQzEbt3OC1a1mZy8dag8zgwi1FUUT/f7KMONMamgChuf6MJzw/b4Mru2yw==
 
 unexpected@^11.14.0:
   version "11.15.1"
