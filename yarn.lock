@@ -4366,15 +4366,15 @@ diacritics-map@^0.1.0:
   resolved "https://registry.yarnpkg.com/diacritics-map/-/diacritics-map-0.1.0.tgz#6dfc0ff9d01000a2edf2865371cac316e94977af"
   integrity sha1-bfwP+dAQAKLt8oZTccrDFulJd68=
 
-diff@4.0.2, diff@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
-  integrity sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
-
 diff@5.0.0, diff@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-5.0.0.tgz#7ed6ad76d859d030787ec35855f5b1daf31d852b"
   integrity sha512-/VTCrvm5Z0JGty/BWHljh+BAiw3IK+2j87NGMu8Nwc/f48WoDAC395uomO9ZD117ZOBaHmkX1oyLvkVM/aIT3w==
+
+diff@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
+  integrity sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
 
 diffie-hellman@^5.0.0:
   version "5.0.3"
@@ -7015,7 +7015,7 @@ magicpen-prism@^4.0.0:
   dependencies:
     prismjs "^1.21.0"
 
-magicpen@^6.2.1:
+magicpen@^6.2.4:
   version "6.2.4"
   resolved "https://registry.yarnpkg.com/magicpen/-/magicpen-6.2.4.tgz#9ee059a48c2ea1f4e224239710be573de9fb4d71"
   integrity sha512-rT4JcgakSrmR9/qPY/EsDSvKH4+nQuFfSQ34Djnj0Zx9jJ+c3REOz+K3CITvRZcmAcCFM6jJO7wSiHlMEXYy3A==
@@ -10919,17 +10919,17 @@ unexpected-sinon@^11.0.1:
   resolved "https://registry.yarnpkg.com/unexpected-sinon/-/unexpected-sinon-11.0.1.tgz#7c0ce6be442979d6e987a77e9a9f67db96a95662"
   integrity sha512-7BdD4zY2QiN+N5n6ISHMyoej9K3mMQzEbt3OC1a1mZy8dag8zgwi1FUUT/f7KMONMamgChuf6MJzw/b4Mru2yw==
 
-unexpected@^11.14.0:
-  version "11.15.1"
-  resolved "https://registry.yarnpkg.com/unexpected/-/unexpected-11.15.1.tgz#86654c8f429a660f23bd78bbfb2f63cd3e334f31"
-  integrity sha512-s3XfLMEKRPioyuC5cqOCl2oCgGEg4fLhIuFHcUf0IExkGXTafPlLrkcvWV76woFrXpdxWGShYpDDQXBA3lOUcA==
+unexpected@^12.0.3:
+  version "12.0.3"
+  resolved "https://registry.yarnpkg.com/unexpected/-/unexpected-12.0.3.tgz#8bee493314f3d5130c6967994e7a7cf1a1feaae9"
+  integrity sha512-Ty/tdwJSuVji71fM3sxxYSPvEOlYiljwvrTucaOLRw1L752JZXKsTP9bxVLCud793zrofonvl+X+mseRC8wtag==
   dependencies:
     array-changes "3.0.1"
     array-changes-async "3.0.1"
     detect-indent "3.0.1"
-    diff "4.0.2"
+    diff "^5.0.0"
     greedy-interval-packer "1.2.0"
-    magicpen "^6.2.1"
+    magicpen "^6.2.4"
     ukkonen "^1.4.0"
     unexpected-bluebird "2.9.34-longstack2"
 
