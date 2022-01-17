@@ -7001,10 +7001,10 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.4"
 
-magicpen-prism@^4.0.0:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/magicpen-prism/-/magicpen-prism-4.1.1.tgz#0d1ad0d3a4d92f377b081c1534390cbef4b3d1cd"
-  integrity sha512-WiW87nVxaipTFw2EO6Vp4KJ/PIyVtfrE33T8x8NqaYYj+eUrVxcnJS+GY/ioD+MwH4EnU1xBSnLxHcGFLAKrhw==
+magicpen-prism@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/magicpen-prism/-/magicpen-prism-5.0.0.tgz#ddd0e9235610c3077f842d820e52ea1ae5332aa1"
+  integrity sha512-qA7MzOaQLJcVQJpP3eTOoT9JmX2O4chokqwNeG7iV57OiPATwcgqxBWEjUvr0lWBpn4+1IWFTZihfICR3WB9sA==
   dependencies:
     prismjs "^1.21.0"
 
@@ -10892,13 +10892,13 @@ unexpected-bluebird@2.9.34-longstack2:
   resolved "https://registry.yarnpkg.com/unexpected-bluebird/-/unexpected-bluebird-2.9.34-longstack2.tgz#49acac753b0556ded6025210ee96182307d2b2c9"
   integrity sha1-SaysdTsFVt7WAlIQ7pYYIwfSssk=
 
-unexpected-dom@^4.18.0:
-  version "4.18.0"
-  resolved "https://registry.yarnpkg.com/unexpected-dom/-/unexpected-dom-4.18.0.tgz#40a5285912518314788f1be29f3c27b4c4d9ee3e"
-  integrity sha512-L8Q3fVU5MgPXJLF1GcKXFMBPRfCRieNyBgtEpzvpxUys6kaAWgD5eHKgyZi8YmtpDP8T6vaNAkxZNX9aGdd2yA==
+unexpected-dom@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/unexpected-dom/-/unexpected-dom-5.0.1.tgz#ac8ad6be4c75b8e0388edba45914c2f73fdff673"
+  integrity sha512-0OxITCZOXbifqJ2sMxiGXN+5sHV0T8TlebSEjtS/LexZN8lRRLkj+A7Qf0+PV/CGungoJsEvv5d5Vz1VSuQEdw==
   dependencies:
     extend "^3.0.1"
-    magicpen-prism "^4.0.0"
+    magicpen-prism "^5.0.0"
 
 unexpected-reaction@^3.0.0:
   version "3.0.0"

@@ -44,7 +44,7 @@
     "react-dom": "^16.13.1",
     "rollup": "^2.27.1",
     "unexpected": "^12.0.3",
-    "unexpected-dom": "^4.18.0",
+    "unexpected-dom": "^5.0.1",
     "unexpected-reaction": "^3.0.0"
   },
   "dependencies": {
