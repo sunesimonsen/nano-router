@@ -2360,6 +2360,14 @@
     "@babel/runtime" "^7.8.4"
     "@reach/auto-id" "^0.16.0"
 
+"@zendeskgarden/container-utilities@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@zendeskgarden/container-utilities/-/container-utilities-0.7.0.tgz#c9c6952a8724debd9120d646db3676c8bb894f72"
+  integrity sha512-6KFIQ0gylHuCTbYyXGCZfL0kwVSchMzr8yA4Vt11NZx4FvfvcbUpPIKI8fvJdJWRQjlyfN7z49Pavfr0N39OFQ==
+  dependencies:
+    "@babel/runtime" "^7.8.4"
+    "@reach/auto-id" "^0.16.0"
+
 "@zendeskgarden/css-bedrock@^8.0.1":
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/@zendeskgarden/css-bedrock/-/css-bedrock-8.0.1.tgz#3810ed52b0542b8976c27e766b57b48720a25d97"
@@ -2442,11 +2450,11 @@
     react-uid "^2.3.1"
 
 "@zendeskgarden/react-tables@^8.21.0":
-  version "8.42.2"
-  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-tables/-/react-tables-8.42.2.tgz#c9cabc3083c0939a8bae2e62750a6002c220f9bc"
-  integrity sha512-/v/rAoa8otvUeET3+botscwuBgYzDx9Lqt//syXZWySF82M+dFIS8UCy1N5E4eI1PeI8Yreq94h6eyu9wNWtpA==
+  version "8.47.2"
+  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-tables/-/react-tables-8.47.2.tgz#e7e46085d65800fbe0202294cc09df959d322c30"
+  integrity sha512-ITxnnvBa5icNKC4dROcpJLrGftMDxT/R79wTCmiY2u/segMVZ/qHhnzSt8gM4cfeAL44JqD7NV5FqUioihGKEg==
   dependencies:
-    "@zendeskgarden/container-utilities" "^0.6.0"
+    "@zendeskgarden/container-utilities" "^0.7.0"
     dom-helpers "^5.1.0"
     polished "^4.0.0"
     prop-types "^15.5.7"
