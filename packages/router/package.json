@@ -38,7 +38,7 @@
     "rollup": "^2.27.1",
     "sinon": "^9.0.3",
     "unexpected": "^11.14.0",
-    "unexpected-sinon": "^10.11.2"
+    "unexpected-sinon": "^11.0.1"
   },
   "peerDependencies": {
     "@nano-router/history": "^2.0.1"
