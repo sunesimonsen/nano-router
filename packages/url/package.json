@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@nano-router/url",
-  "version": "2.8.0",
+  "version": "2.10.0",
   "description": "Methods to create urls",
   "main": "dist/url.cjs",
   "module": "src/index.js",
@@ -26,7 +26,7 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@nano-router/path": "^2.7.1",
+    "@nano-router/path": "^2.10.0",
     "querystring": "^0.2.0"
   },
   "devDependencies": {
