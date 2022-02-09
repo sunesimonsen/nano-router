@@ -1169,10 +1169,10 @@
   dependencies:
     "@depository/cache" "^0.60.0"
 
-"@depository/view@^0.54.0":
-  version "0.54.0"
-  resolved "https://registry.yarnpkg.com/@depository/view/-/view-0.54.0.tgz#a5fff3880aa9d02e63c238037e4cec502236992d"
-  integrity sha512-lNkZkkkgD9T+3WRq01TQXjP+QfPm9Eh/JX/ukwFJ3dmvOxz6GIMM8T4ds9Hyg+QJCEWsytaVaoOkD05QqFaOsw==
+"@depository/view@^0.60.0":
+  version "0.60.0"
+  resolved "https://registry.yarnpkg.com/@depository/view/-/view-0.60.0.tgz#96e07696ee4ea0c3f61ac1de7f52b10343740079"
+  integrity sha512-0uCIZ+1hRidwvSRMhq4K/JaKTjcuYmajflatH3D6wMYcBlBvRuNffMXx1TQsaMnN+Utpvlyu0Luit31t3fWN8w==
   dependencies:
     htm "^3.0.4"
 
