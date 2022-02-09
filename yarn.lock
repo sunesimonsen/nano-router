@@ -3,9 +3,9 @@
 
 
 "@babel/cli@^7.10.5":
-  version "7.16.8"
-  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.16.8.tgz#44b9be7706762bfa3bff8adbf746da336eb0ab7c"
-  integrity sha512-FTKBbxyk5TclXOGmwYyqelqP5IF6hMxaeJskd85jbR5jBfYlwqgwAbJwnixi1ZBbTqKfFuAA95mdmUFeSRwyJA==
+  version "7.17.0"
+  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.17.0.tgz#9b932d8f08a2e218fcdd9bba456044eb0a2e0b2c"
+  integrity sha512-es10YH/ejXbg551vtnmEzIPe3MQRNOS644o3pf8vUr1tIeNzVNlP8BBvs1Eh7roh5A+k2fEHUas+ZptOWHA1fQ==
   dependencies:
     commander "^4.0.1"
     convert-source-map "^1.1.0"
@@ -1144,35 +1144,35 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
-"@depository/cache@^0.55.0":
-  version "0.55.0"
-  resolved "https://registry.yarnpkg.com/@depository/cache/-/cache-0.55.0.tgz#41a68c9b2006d05ecca21472416d574a2db56af5"
-  integrity sha512-qn/u22d8woHcm5/s518P+i/8NX4w9MG4FWYTX6QBaNgKL6yb0zqgzehBtJXNzZx3vCZfJ//5UYg+oYKc/JpyzA==
+"@depository/cache@^0.60.0":
+  version "0.60.0"
+  resolved "https://registry.yarnpkg.com/@depository/cache/-/cache-0.60.0.tgz#525df156a1ab734d1de35fd3b25e75f5dc4a7f69"
+  integrity sha512-7eImWKFU0qwAZ/lFrU634hgBC2FuyxsdGZSsatVLJdnFU8zbgSChqKWjEeZvexH/MmtLo9Lwk7iVhduNDCZi2Q==
   dependencies:
-    "@depository/path" "^0.55.0"
-    "@depository/shallow-equal" "^0.55.0"
+    "@depository/path" "^0.60.0"
+    "@depository/shallow-equal" "^0.60.0"
 
-"@depository/path@^0.55.0":
-  version "0.55.0"
-  resolved "https://registry.yarnpkg.com/@depository/path/-/path-0.55.0.tgz#b4fb89985394ef51390e5880e6e6f055083405b4"
-  integrity sha512-50bMob6WzR/aNfsKxYAaKx1Vw71Xdl7edM2rLx7TKrf/RlNgSvmQ9Q/DWMcxzuHEGz2zQb6FEUJ+dOAj0v9GnQ==
+"@depository/path@^0.60.0":
+  version "0.60.0"
+  resolved "https://registry.yarnpkg.com/@depository/path/-/path-0.60.0.tgz#7947dcd2861397d3b415c580f153379c22c1a090"
+  integrity sha512-QEfnhs2kVykoY9pikVRVOpvDt3YukLU1FCdTPEdz9PWFukDsPAyK3l4viWvfLb6K2gJdBeOqakU2V0TuQ8ehDQ==
 
-"@depository/shallow-equal@^0.55.0":
-  version "0.55.0"
-  resolved "https://registry.yarnpkg.com/@depository/shallow-equal/-/shallow-equal-0.55.0.tgz#aa854a07a8950a33664c0329d235fa829fd6c811"
-  integrity sha512-hrD1/44rc1bXbBQiLKIewm5DIq9CFXEPAmoYYQXEjUpnITonZWkj4+/75jzyGA0gldcF2kCQFErhDNO1VmiJ6g==
+"@depository/shallow-equal@^0.60.0":
+  version "0.60.0"
+  resolved "https://registry.yarnpkg.com/@depository/shallow-equal/-/shallow-equal-0.60.0.tgz#3e4bb16862b1ec3bb2aaff6d5be5e8b005be2548"
+  integrity sha512-WTQRxBjH0BAIF+1xknpgAmKkDf02UEIkqlz5W2o9JeoPZAzki2+yyBI+qqKOGdVYvF+zfKD6TzTscqr4uwCyLw==
 
-"@depository/store@^0.55.0":
-  version "0.55.0"
-  resolved "https://registry.yarnpkg.com/@depository/store/-/store-0.55.0.tgz#83ffeeba40408c1c595a2d513acc03019e75c17e"
-  integrity sha512-2jmiqR09TVKN7XiHDNPMeHD4/S3nwSI7SX1JwNKLQcBItzJbGMtSO5XFcMgtnpJavYx07u9rhZ3mYymfOBvRTw==
+"@depository/store@^0.60.0":
+  version "0.60.0"
+  resolved "https://registry.yarnpkg.com/@depository/store/-/store-0.60.0.tgz#18d7348a2057b149a48fed21ecf71a124b758ae9"
+  integrity sha512-5bSrTdtYHePPME8Rab01gq/GT3WJfL0IEUM6vKhVSffiXjCByp6zqJMnDeiLOVUrX1Apxj/PVxaueB88N4yECw==
   dependencies:
-    "@depository/cache" "^0.55.0"
+    "@depository/cache" "^0.60.0"
 
-"@depository/view@^0.54.0":
-  version "0.54.0"
-  resolved "https://registry.yarnpkg.com/@depository/view/-/view-0.54.0.tgz#a5fff3880aa9d02e63c238037e4cec502236992d"
-  integrity sha512-lNkZkkkgD9T+3WRq01TQXjP+QfPm9Eh/JX/ukwFJ3dmvOxz6GIMM8T4ds9Hyg+QJCEWsytaVaoOkD05QqFaOsw==
+"@depository/view@^0.60.0":
+  version "0.60.0"
+  resolved "https://registry.yarnpkg.com/@depository/view/-/view-0.60.0.tgz#96e07696ee4ea0c3f61ac1de7f52b10343740079"
+  integrity sha512-0uCIZ+1hRidwvSRMhq4K/JaKTjcuYmajflatH3D6wMYcBlBvRuNffMXx1TQsaMnN+Utpvlyu0Luit31t3fWN8w==
   dependencies:
     htm "^3.0.4"
 
@@ -3815,7 +3815,7 @@ color@^3.0.0:
     color-convert "^1.9.3"
     color-string "^1.6.0"
 
-colors@^1.1.2, colors@^1.4.0:
+colors@1.4.0, colors@^1.1.2:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.4.0.tgz#c50491479d4c1bdaed2c9ced32cf7c7dc2360f78"
   integrity sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==
@@ -10623,13 +10623,13 @@ surge-ignore@0.2.0:
   resolved "https://registry.yarnpkg.com/surge-ignore/-/surge-ignore-0.2.0.tgz#5a7f8a20a71188cf9e75a2cfe8eb182de90daf3b"
   integrity sha1-Wn+KIKcRiM+edaLP6OsYLekNrzs=
 
-surge@^0.21.6:
-  version "0.21.7"
-  resolved "https://registry.yarnpkg.com/surge/-/surge-0.21.7.tgz#30fa45ac7eea9ae0e14f7acf12b78feae4a34970"
-  integrity sha512-XcMY2Z3I4kBZ1zVTOkeKmTcnAy/r9Mnu87+/3fAaN6ZCVnNy4Qtdh6ai77NwyORIltRP1cOn05sAi+nYoy5taQ==
+surge@^0.23.1:
+  version "0.23.1"
+  resolved "https://registry.yarnpkg.com/surge/-/surge-0.23.1.tgz#3cb283edad4e632e27162c633863ef4a915b961d"
+  integrity sha512-w92meVuKxqO1up0JpSe2iVSiVTv7E7t1qDA9fZhCSZx/+6Q85I3Y2LCoZIcWLpMm9BM0iB843NAWAwdScTR4Uw==
   dependencies:
     cli-table3 "^0.5.1"
-    colors "^1.4.0"
+    colors "1.4.0"
     inquirer "^6.2.2"
     is-domain "0.0.1"
     minimist "1.2.3"
