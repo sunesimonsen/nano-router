@@ -2234,17 +2234,10 @@
   dependencies:
     type-detect "4.0.8"
 
-"@sinonjs/fake-timers@^7.0.4":
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/@sinonjs/fake-timers/-/fake-timers-7.1.2.tgz#2524eae70c4910edccf99b2f4e6efc5894aff7b5"
-  integrity sha512-iQADsW4LBMISqZ6Ci1dupJL9pprqwcVFTcOsEmQOEhW+KLCVn/Y4Jrvg2k19fIHCp+iFprriYPTdRcQR8NbUPg==
-  dependencies:
-    "@sinonjs/commons" "^1.7.0"
-
-"@sinonjs/fake-timers@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@sinonjs/fake-timers/-/fake-timers-9.0.0.tgz#6854809cd058c6e25b3da2fa063153eaea4ffc72"
-  integrity sha512-+shXA2X7KNP7H7qNbQTJ3SA+NQc0pZDSBrdvFSRwF8sAo/ohw+ZQFD8Moc+gnz51+1eRXtEQBpKWPiQ4jsRC/w==
+"@sinonjs/fake-timers@>=5", "@sinonjs/fake-timers@^9.0.0":
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/@sinonjs/fake-timers/-/fake-timers-9.1.0.tgz#8c92c56f195e0bed4c893ba59c8e3d55831ca0df"
+  integrity sha512-M8vapsv9qQupMdzrVzkn5rb9jG7aUTEPAZdMtME2PuBaefksFZVE2C1g4LBRTkF/k3nRDNbDc5tp5NFC1PEYxA==
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
@@ -2604,9 +2597,9 @@
     react-transition-group "^4.4.2"
 
 "@zendeskgarden/react-notifications@^8.21.0":
-  version "8.47.2"
-  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-notifications/-/react-notifications-8.47.2.tgz#0d415950417668d4d93272529e57b3aecfc07654"
-  integrity sha512-El95lAuuKTCm2NS3FBJIMrbWAy2kpAfR8iR0/qm3twS45YqMhZeUBG6HfKhyJLZ5pFtKYG08EAgrRtMoNXDLww==
+  version "8.48.1"
+  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-notifications/-/react-notifications-8.48.1.tgz#3ebfea05a313475458991bf2a2fb61e6d99e0851"
+  integrity sha512-kGK2JvrflfUYAsd080HLNHfKLazuvP1P/IqFHG4a/brprSZVA1zVc8IcvAzEEiRsUtLGYVN2BAT1DQObn8JqDA==
   dependencies:
     polished "^4.1.1"
     prop-types "^15.5.7"
@@ -2624,19 +2617,19 @@
     prop-types "^15.5.7"
 
 "@zendeskgarden/react-theming@^8.21.0":
-  version "8.42.2"
-  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-theming/-/react-theming-8.42.2.tgz#98520bc7d191d8d2a6dc0a37511cdb25f7fd99b5"
-  integrity sha512-KkiDrg/1RBaj9NLFGj64jlYIDht8NPLOqg3kMfeQr5/JHO8y/Lb9yid5sakJBh9BLFTxyL8fxyGf4s/gsCSiNQ==
+  version "8.48.2"
+  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-theming/-/react-theming-8.48.2.tgz#cdb77b2e1a7e880e495266989ef9fc9615bfcb9e"
+  integrity sha512-0srA+oAJk4QrMW1kWCBLHgtWWdoU3DHzUYX0NQM5Mhe7Ct+VB4cfk3BasOuMvjO/jDCHjp24+vataeXhnT8i9A==
   dependencies:
     "@zendeskgarden/container-focusvisible" "^0.4.6"
-    "@zendeskgarden/container-utilities" "^0.6.0"
+    "@zendeskgarden/container-utilities" "^0.7.0"
     polished "^4.0.0"
     prop-types "^15.5.7"
 
 "@zendeskgarden/react-typography@^8.21.0":
-  version "8.47.2"
-  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-typography/-/react-typography-8.47.2.tgz#5fe1c3c8a8db03277ad0e6394a00c44c6c653bf3"
-  integrity sha512-zRuxCkiSt0fbJqRVKvvzstAyjE0lhzlWCaSNdnQKuQGI1cR9V0a57P035k4suIH0q6ul0dvXsZTDhLQAq8zSPQ==
+  version "8.48.1"
+  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-typography/-/react-typography-8.48.1.tgz#7a72ebf145de104c147c05032d4c6856ad0d02a0"
+  integrity sha512-LlZQ9Yy0+hwF8GoOkSLRbxOVL3fAFISJtR9Y31pw3e2lsS+eAlIW9MfrKCDH5oesQbOrYvGIvrsYQvJ0TkDAqg==
   dependencies:
     "@zendeskgarden/container-scrollregion" "^0.1.0"
     polished "^4.0.0"
@@ -3815,7 +3808,7 @@ color@^3.0.0:
     color-convert "^1.9.3"
     color-string "^1.6.0"
 
-colors@^1.1.2, colors@^1.4.0:
+colors@1.4.0, colors@^1.1.2:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.4.0.tgz#c50491479d4c1bdaed2c9ced32cf7c7dc2360f78"
   integrity sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==
@@ -7780,13 +7773,13 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
-nise@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/nise/-/nise-5.1.0.tgz#713ef3ed138252daef20ec035ab62b7a28be645c"
-  integrity sha512-W5WlHu+wvo3PaKLsJJkgPup2LrsXCcm7AWwyNZkUnn5rwPkuPBi3Iwk5SQtN0mv+K65k7nKKjwNQ30wg3wLAQQ==
+nise@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/nise/-/nise-5.1.1.tgz#ac4237e0d785ecfcb83e20f389185975da5c31f3"
+  integrity sha512-yr5kW2THW1AkxVmCnKEh4nbYkJdB3I7LUkiUgOvEkOp414mc2UMaHMA7pjq1nYowhdoJZGwEKGaQVbxfpWj10A==
   dependencies:
-    "@sinonjs/commons" "^1.7.0"
-    "@sinonjs/fake-timers" "^7.0.4"
+    "@sinonjs/commons" "^1.8.3"
+    "@sinonjs/fake-timers" ">=5"
     "@sinonjs/text-encoding" "^0.7.1"
     just-extend "^4.0.2"
     path-to-regexp "^1.7.0"
@@ -10086,15 +10079,15 @@ simple-swizzle@^0.2.2:
     is-arrayish "^0.3.1"
 
 sinon@^13.0.0:
-  version "13.0.0"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-13.0.0.tgz#3701f90204a1baa7457a3da70c9adcf335e92056"
-  integrity sha512-3tjMDB/tY04b06Bnb4aMKQfNrau2C9HET+R4HVWfv2KegDVLGg4wnBqjVepvxR7S7R1GTwDZzEv52tpFipt6yA==
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-13.0.1.tgz#2a568beca2084c48985dd98e276e065c81738e3c"
+  integrity sha512-8yx2wIvkBjIq/MGY1D9h1LMraYW+z1X0mb648KZnKSdvLasvDu7maa0dFaNYdTDczFgbjNw2tOmWdTk9saVfwQ==
   dependencies:
     "@sinonjs/commons" "^1.8.3"
     "@sinonjs/fake-timers" "^9.0.0"
     "@sinonjs/samsam" "^6.1.1"
     diff "^5.0.0"
-    nise "^5.1.0"
+    nise "^5.1.1"
     supports-color "^7.2.0"
 
 slash@^2.0.0:
@@ -10623,13 +10616,13 @@ surge-ignore@0.2.0:
   resolved "https://registry.yarnpkg.com/surge-ignore/-/surge-ignore-0.2.0.tgz#5a7f8a20a71188cf9e75a2cfe8eb182de90daf3b"
   integrity sha1-Wn+KIKcRiM+edaLP6OsYLekNrzs=
 
-surge@^0.21.6:
-  version "0.21.7"
-  resolved "https://registry.yarnpkg.com/surge/-/surge-0.21.7.tgz#30fa45ac7eea9ae0e14f7acf12b78feae4a34970"
-  integrity sha512-XcMY2Z3I4kBZ1zVTOkeKmTcnAy/r9Mnu87+/3fAaN6ZCVnNy4Qtdh6ai77NwyORIltRP1cOn05sAi+nYoy5taQ==
+surge@^0.23.1:
+  version "0.23.1"
+  resolved "https://registry.yarnpkg.com/surge/-/surge-0.23.1.tgz#3cb283edad4e632e27162c633863ef4a915b961d"
+  integrity sha512-w92meVuKxqO1up0JpSe2iVSiVTv7E7t1qDA9fZhCSZx/+6Q85I3Y2LCoZIcWLpMm9BM0iB843NAWAwdScTR4Uw==
   dependencies:
     cli-table3 "^0.5.1"
-    colors "^1.4.0"
+    colors "1.4.0"
     inquirer "^6.2.2"
     is-domain "0.0.1"
     minimist "1.2.3"
