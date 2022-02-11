@@ -2597,9 +2597,9 @@
     react-transition-group "^4.4.2"
 
 "@zendeskgarden/react-notifications@^8.21.0":
-  version "8.47.2"
-  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-notifications/-/react-notifications-8.47.2.tgz#0d415950417668d4d93272529e57b3aecfc07654"
-  integrity sha512-El95lAuuKTCm2NS3FBJIMrbWAy2kpAfR8iR0/qm3twS45YqMhZeUBG6HfKhyJLZ5pFtKYG08EAgrRtMoNXDLww==
+  version "8.48.1"
+  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-notifications/-/react-notifications-8.48.1.tgz#3ebfea05a313475458991bf2a2fb61e6d99e0851"
+  integrity sha512-kGK2JvrflfUYAsd080HLNHfKLazuvP1P/IqFHG4a/brprSZVA1zVc8IcvAzEEiRsUtLGYVN2BAT1DQObn8JqDA==
   dependencies:
     polished "^4.1.1"
     prop-types "^15.5.7"
