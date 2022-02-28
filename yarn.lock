@@ -2617,12 +2617,12 @@
     prop-types "^15.5.7"
 
 "@zendeskgarden/react-theming@^8.21.0":
-  version "8.42.2"
-  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-theming/-/react-theming-8.42.2.tgz#98520bc7d191d8d2a6dc0a37511cdb25f7fd99b5"
-  integrity sha512-KkiDrg/1RBaj9NLFGj64jlYIDht8NPLOqg3kMfeQr5/JHO8y/Lb9yid5sakJBh9BLFTxyL8fxyGf4s/gsCSiNQ==
+  version "8.48.2"
+  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-theming/-/react-theming-8.48.2.tgz#cdb77b2e1a7e880e495266989ef9fc9615bfcb9e"
+  integrity sha512-0srA+oAJk4QrMW1kWCBLHgtWWdoU3DHzUYX0NQM5Mhe7Ct+VB4cfk3BasOuMvjO/jDCHjp24+vataeXhnT8i9A==
   dependencies:
     "@zendeskgarden/container-focusvisible" "^0.4.6"
-    "@zendeskgarden/container-utilities" "^0.6.0"
+    "@zendeskgarden/container-utilities" "^0.7.0"
     polished "^4.0.0"
     prop-types "^15.5.7"
 
