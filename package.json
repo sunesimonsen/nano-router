@@ -11,7 +11,7 @@
     "update-toc": "for f in `ls packages/*/*.md`; do markdown-toc -i $f; done; yarn format",
     "lint": "eslint . && prettier --check '**/*.{js,md,json}'",
     "ci": "yarn lint && npm test",
-    "release": "yarn build; lerna publish"
+    "release": "node-publisher release"
   },
   "keywords": [
     "React",
@@ -38,6 +38,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "lerna": "^4.0.0",
     "markdown-toc": "^1.2.0",
+    "node-publisher": "^1.5.2",
     "prettier": "^2.1.0"
   },
   "workspaces": {
