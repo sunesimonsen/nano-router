@@ -11257,9 +11257,9 @@ unexpected-sinon@^11.0.1:
   integrity sha512-7BdD4zY2QiN+N5n6ISHMyoej9K3mMQzEbt3OC1a1mZy8dag8zgwi1FUUT/f7KMONMamgChuf6MJzw/b4Mru2yw==
 
 unexpected@^12.0.3:
-  version "12.0.3"
-  resolved "https://registry.yarnpkg.com/unexpected/-/unexpected-12.0.3.tgz#8bee493314f3d5130c6967994e7a7cf1a1feaae9"
-  integrity sha512-Ty/tdwJSuVji71fM3sxxYSPvEOlYiljwvrTucaOLRw1L752JZXKsTP9bxVLCud793zrofonvl+X+mseRC8wtag==
+  version "12.0.4"
+  resolved "https://registry.yarnpkg.com/unexpected/-/unexpected-12.0.4.tgz#a8b7f06c96be1261f00c39487d122aa716519416"
+  integrity sha512-2wv1N9/g2Vavbc1xAbo5hUQTlpQJZgRHiQ5+EUF5PWoJWI+5N/XmMMtJ506//WaAGchTrm46+9kNdw29CKUQ2Q==
   dependencies:
     array-changes "3.0.1"
     array-changes-async "3.0.1"
