@@ -22,7 +22,7 @@
   "dependencies": {
     "@nano-router/history": "^2.11.0",
     "@nano-router/react": "^2.11.0",
-    "@zendeskgarden/css-bedrock": "^8.0.1",
+    "@zendeskgarden/css-bedrock": "^9.0.0",
     "@zendeskgarden/react-accordions": "^8.21.0",
     "@zendeskgarden/react-buttons": "^8.21.0",
     "@zendeskgarden/react-forms": "^8.21.0",
