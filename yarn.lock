@@ -2539,12 +2539,12 @@
   integrity sha512-vX7vDJVQoyYFUshYXXX5QE2fL9M6K2bnxTeB2IVyEIaGRYEi20xjoY6cuO1uAQ7RaIRGCSyZFKgWW+/IrlQMKg==
 
 "@zendeskgarden/react-accordions@^8.21.0":
-  version "8.44.1"
-  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-accordions/-/react-accordions-8.44.1.tgz#f80da2c63be2dcc22a38938ada0c15cdc88fcd76"
-  integrity sha512-OH0QKlJ/QdIISG8W8pfDapQWUVX4PvIQyc4DsC8XqpFKhim7sa4ldKprjcX95xS4llhSFUN+9EqCoHKHv2i0iw==
+  version "8.48.2"
+  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-accordions/-/react-accordions-8.48.2.tgz#e53639cd8d657e2d869e9392750f6b05f54f7fac"
+  integrity sha512-4iiOcEyn7qZipKQCYNnyz1DaAAqoyQ0rUTix+1D1bbAm+SyA3OsX0NU4EFowYYKs0Xb+5IADb4uS5YUNxORF0Q==
   dependencies:
     "@zendeskgarden/container-accordion" "^1.0.3"
-    "@zendeskgarden/container-utilities" "^0.6.0"
+    "@zendeskgarden/container-utilities" "^0.7.0"
     lodash.debounce "^4.0.8"
     polished "^4.0.0"
     prop-types "^15.5.7"
