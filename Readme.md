@@ -4,8 +4,8 @@ A framework agnostic minimalistic router with a focus on named routes.
 
 ## Packages
 
-| Package                                    | Version                                                 | Size                                                     | Dependencies                                                               |
-| ------------------------------------------ | ------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Package                                    | Version                                                 | Size                                                     | Dependencies                                                             |
+| ------------------------------------------ | ------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------ |
 | [`@nano-router/react`](packages/react)     | [![npm version][react npm version]][react npm link]     | [![Bundle Size][react size bundle]][react size link]     | [![Dependency count][react dependency count]][react dependency link]     |
 | [`@nano-router/router`](packages/router)   | [![npm version][router npm version]][router npm link]   | [![Bundle Size][router size bundle]][router size link]   | [![Dependency count][router dependency count]][router dependency link]   |
 | [`@nano-router/routes`](packages/routes)   | [![npm version][routes npm version]][routes npm link]   | [![Bundle Size][routes size bundle]][routes size link]   | [![Dependency count][routes dependency count]][routes dependency link]   |
