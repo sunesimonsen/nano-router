@@ -6,48 +6,48 @@ A framework agnostic minimalistic router with a focus on named routes.
 
 | Package                                    | Version                                                 | Size                                                     | Dependencies                                                               |
 | ------------------------------------------ | ------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [`@nano-router/react`](packages/react)     | [![npm version][react npm version]][react npm link]     | [![Bundle Size][react size bundle]][react size link]     | [![Dependency Status][react dependency status]][react dependency link]     |
-| [`@nano-router/router`](packages/router)   | [![npm version][router npm version]][router npm link]   | [![Bundle Size][router size bundle]][router size link]   | [![Dependency Status][router dependency status]][router dependency link]   |
-| [`@nano-router/routes`](packages/routes)   | [![npm version][routes npm version]][routes npm link]   | [![Bundle Size][routes size bundle]][routes size link]   | [![Dependency Status][routes dependency status]][routes dependency link]   |
-| [`@nano-router/url`](packages/url)         | [![npm version][url npm version]][url npm link]         | [![Bundle Size][url size bundle]][url size link]         | [![Dependency Status][url dependency status]][url dependency link]         |
-| [`@nano-router/path`](packages/path)       | [![npm version][path npm version]][path npm link]       | [![Bundle Size][path size bundle]][path size link]       | [![Dependency Status][path dependency status]][path dependency link]       |
-| [`@nano-router/history`](packages/history) | [![npm version][history npm version]][history npm link] | [![Bundle Size][history size bundle]][history size link] | [![Dependency Status][history dependency status]][history dependency link] |
+| [`@nano-router/react`](packages/react)     | [![npm version][react npm version]][react npm link]     | [![Bundle Size][react size bundle]][react size link]     | [![Dependency count][react dependency count]][react dependency link]     |
+| [`@nano-router/router`](packages/router)   | [![npm version][router npm version]][router npm link]   | [![Bundle Size][router size bundle]][router size link]   | [![Dependency count][router dependency count]][router dependency link]   |
+| [`@nano-router/routes`](packages/routes)   | [![npm version][routes npm version]][routes npm link]   | [![Bundle Size][routes size bundle]][routes size link]   | [![Dependency count][routes dependency count]][routes dependency link]   |
+| [`@nano-router/url`](packages/url)         | [![npm version][url npm version]][url npm link]         | [![Bundle Size][url size bundle]][url size link]         | [![Dependency count][url dependency count]][url dependency link]         |
+| [`@nano-router/path`](packages/path)       | [![npm version][path npm version]][path npm link]       | [![Bundle Size][path size bundle]][path size link]       | [![Dependency count][path dependency count]][path dependency link]       |
+| [`@nano-router/history`](packages/history) | [![npm version][history npm version]][history npm link] | [![Bundle Size][history size bundle]][history size link] | [![Dependency count][history dependency count]][history dependency link] |
 
 [react npm version]: https://flat.badgen.net/npm/v/@nano-router/react
 [react npm link]: https://www.npmjs.com/package/@nano-router/react
 [react size bundle]: https://flat.badgen.net/bundlephobia/minzip/@nano-router/react
 [react size link]: https://bundlephobia.com/result?p=@nano-router/react
-[react dependency status]: https://flat.badgen.net/david/dep/sunesimonsen/nano-router/packages/react
+[react dependency count]: https://flat.badgen.net/bundlephobia/dependency-count/@nano-router/react
 [react dependency link]: https://david-dm.org/sunesimonsen/nano-router?path=packages/react
 [router npm version]: https://flat.badgen.net/npm/v/@nano-router/router
 [router npm link]: https://www.npmjs.com/package/@nano-router/router
 [router size bundle]: https://flat.badgen.net/bundlephobia/minzip/@nano-router/router
 [router size link]: https://bundlephobia.com/result?p=@nano-router/router
-[router dependency status]: https://flat.badgen.net/david/dep/sunesimonsen/nano-router/packages/router
+[router dependency count]: https://flat.badgen.net/bundlephobia/dependency-count/@nano-router/router
 [router dependency link]: https://david-dm.org/sunesimonsen/nano-router?path=packages/router
 [routes npm version]: https://flat.badgen.net/npm/v/@nano-router/routes
 [routes npm link]: https://www.npmjs.com/package/@nano-router/routes
 [routes size bundle]: https://flat.badgen.net/bundlephobia/minzip/@nano-router/routes
 [routes size link]: https://bundlephobia.com/result?p=@nano-router/routes
-[routes dependency status]: https://flat.badgen.net/david/dep/sunesimonsen/nano-router/packages/routes
+[routes dependency count]: https://flat.badgen.net/bundlephobia/dependency-count/@nano-router/routes
 [routes dependency link]: https://david-dm.org/sunesimonsen/nano-router?path=packages/routes
 [url npm version]: https://flat.badgen.net/npm/v/@nano-router/url
 [url npm link]: https://www.npmjs.com/package/@nano-router/url
 [url size bundle]: https://flat.badgen.net/bundlephobia/minzip/@nano-router/url
 [url size link]: https://bundlephobia.com/result?p=@nano-router/url
-[url dependency status]: https://flat.badgen.net/david/dep/sunesimonsen/nano-router/packages/url
+[url dependency count]: https://flat.badgen.net/bundlephobia/dependency-count/@nano-router/url
 [url dependency link]: https://david-dm.org/sunesimonsen/nano-router?path=packages/url
 [path npm version]: https://flat.badgen.net/npm/v/@nano-router/path
 [path npm link]: https://www.npmjs.com/package/@nano-router/path
 [path size bundle]: https://flat.badgen.net/bundlephobia/minzip/@nano-router/path
 [path size link]: https://bundlephobia.com/result?p=@nano-router/path
-[path dependency status]: https://flat.badgen.net/david/dep/sunesimonsen/nano-router/packages/path
+[path dependency count]: https://flat.badgen.net/bundlephobia/dependency-count/@nano-router/path
 [path dependency link]: https://david-dm.org/sunesimonsen/nano-router?path=packages/path
 [history npm version]: https://flat.badgen.net/npm/v/@nano-router/history
 [history npm link]: https://www.npmjs.com/package/@nano-router/history
 [history size bundle]: https://flat.badgen.net/bundlephobia/minzip/@nano-router/history
 [history size link]: https://bundlephobia.com/result?p=@nano-router/history
-[history dependency status]: https://flat.badgen.net/david/dep/sunesimonsen/nano-router/packages/history
+[history dependency count]: https://flat.badgen.net/bundlephobia/dependency-count/@nano-router/history
 [history dependency link]: https://david-dm.org/sunesimonsen/nano-router?path=packages/history
 
 ## MIT License
