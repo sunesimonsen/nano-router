@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@nano-router/router",
-  "version": "2.10.0",
+  "version": "2.11.0",
   "description": "The nano-router",
   "keywords": [
     "browser",
@@ -33,7 +33,7 @@
     "querystring": "^0.2.0"
   },
   "devDependencies": {
-    "@nano-router/history": "^2.10.0",
+    "@nano-router/history": "^2.11.0",
     "mocha": "^8.1.1",
     "rollup": "^2.27.1",
     "sinon": "^13.0.0",
