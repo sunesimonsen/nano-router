@@ -1144,6 +1144,19 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
+"@dependable/state@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@dependable/state/-/state-0.6.2.tgz#aea78d53c3eed933dc123dfa1af6be6f7cff602b"
+  integrity sha512-AB9Hvk17ouy3buBcXZjRvsLteTqtbmMAj3/5iL2Nr1vVlp7nNJAfsLC80KOAIZZI1NHDp70jBQzzSEy0fSBmDw==
+
+"@dependable/view@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@dependable/view/-/view-0.7.0.tgz#5f46bd297438118062292419b4ede5194005fe6b"
+  integrity sha512-Yh4Nr8BjWud01vulHcOqyC8P3uk69r59cxBjG8dHporArUMHYDjj+dcIaxxBr1ScWJ/k0WXO5ygZhrhGPfToEg==
+  dependencies:
+    "@dependable/state" "^0.6.2"
+    htm "^3.1.1"
+
 "@depository/cache@^0.60.0":
   version "0.60.0"
   resolved "https://registry.yarnpkg.com/@depository/cache/-/cache-0.60.0.tgz#525df156a1ab734d1de35fd3b25e75f5dc4a7f69"
@@ -6047,6 +6060,11 @@ htm@^3.0.0, htm@^3.0.4:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/htm/-/htm-3.1.0.tgz#0c305493b60da9f6ed097a2aaf4c994bd85ea022"
   integrity sha512-L0s3Sid5r6YwrEvkig14SK3Emmc+kIjlfLhEGn2Vy3bk21JyDEes4MoDsbJk6luaPp8bugErnxPz86ZuAw6e5Q==
+
+htm@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/htm/-/htm-3.1.1.tgz#49266582be0dc66ed2235d5ea892307cc0c24b78"
+  integrity sha512-983Vyg8NwUE7JkZ6NmOqpCZ+sh1bKv2iYTlUkzlWmA5JD2acKoxd4KVxbMmxX/85mtfdnDmTFoNKcg5DGAvxNQ==
 
 html-encoding-sniffer@^1.0.2:
   version "1.0.2"

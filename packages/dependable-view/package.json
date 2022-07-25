@@ -1,17 +1,17 @@
 {
   "type": "module",
-  "name": "@nano-router/depository-view",
+  "name": "@nano-router/dependable-view",
   "version": "2.11.0",
-  "description": "@depository/view integration for @nano-router/router",
-  "module": "./dist/nano-router-depository-view.esm.min.js",
+  "description": "@dependable/view integration for @nano-router/router",
+  "module": "./dist/nano-router-dependable-view.esm.min.js",
   "exports": {
-    ".": "./dist/nano-router-depository-view.esm.min.js"
+    ".": "./dist/nano-router-dependable-view.esm.min.js"
   },
   "scripts": {
     "test": "mocha src",
     "build": "rm -rf dist && rollup -c rollup.config.js"
   },
-  "keywords": ["router", "depository", "minimal", "tiny"],
+  "keywords": ["router", "dependable", "minimal", "tiny"],
   "author": "Sune Simonsen <sune@we-knowhow.dk>",
   "license": "MIT",
   "bugs": "https://github.com/sunesimonsen/nano-router/issues",
@@ -21,15 +21,14 @@
   },
   "sideEffects": false,
   "peerDependencies": {
-    "@depository/view": "^0.60.0"
+    "@dependable/state": "^0.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
-    "@depository/store": "^0.60.0",
-    "@depository/view": "^0.60.0",
+    "@dependable/view": "^0.7.0",
+    "@dependable/state": "^0.6.2",
     "@nano-router/history": "^2.11.0",
     "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "babel-plugin-htm": "^3.0.0",
     "jsdom": "^19.0.0",
@@ -37,7 +36,6 @@
     "mocha-dominate": "^2.0.0",
     "rollup": "^2.27.1",
     "rollup-plugin-terser": "^7.0.2",
-    "sinon": "^13.0.0",
     "unexpected": "^12.0.3",
     "unexpected-dom": "^5.0.1"
   },
