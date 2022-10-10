@@ -33,7 +33,7 @@
     "@depository/store": "^0.60.0",
     "@depository/view": "^0.60.0",
     "@nano-router/history": "^2.11.0",
-    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-babel": "^6.0.0",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "babel-plugin-htm": "^3.0.0",
