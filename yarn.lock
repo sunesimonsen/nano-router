@@ -2639,9 +2639,9 @@
     react-uid "^2.3.1"
 
 "@zendeskgarden/react-tables@^8.21.0":
-  version "8.48.1"
-  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-tables/-/react-tables-8.48.1.tgz#933c6f0140f3e8dffbcb3066c5b67bb2f99f702b"
-  integrity sha512-SbMNES2Vhid/ozHbC3u7hTFNzcVbYP/f9QqfgK86pXC/CiI0n2KtkNhfy+UWNcConVPZjSLU5P+XuDHcYtRWvg==
+  version "8.60.0"
+  resolved "https://registry.yarnpkg.com/@zendeskgarden/react-tables/-/react-tables-8.60.0.tgz#057fc8f404a31a6e89117777e4d1f30decb2a47f"
+  integrity sha512-9Y+HhyuhO0gw8R3m4iTKMEhVTnm7ZRzE+fD3pMMYlvcLqAOz88X0/hF+DNVXuAh2lsMtzPtfbryquWaTB0H2iA==
   dependencies:
     "@zendeskgarden/container-utilities" "^0.7.0"
     dom-helpers "^5.1.0"
