@@ -1,3 +1,25 @@
+### v2.11.1 (2022-12-18)
+
+#### Pull requests
+
+- [#105](https://github.com/sunesimonsen/nano-router/pull/105) Bump @zendeskgarden\/css-bedrock from 8.0.1 to 9.0.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#186](https://github.com/sunesimonsen/nano-router/pull/186) Bump @zendeskgarden\/react-tables from 8.48.1 to 8.62.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#183](https://github.com/sunesimonsen/nano-router/pull/183) Bump qs from 6.5.2 to 6.5.3 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#184](https://github.com/sunesimonsen/nano-router/pull/184) Bump decode-uri-component from 0.2.0 to 0.2.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#124](https://github.com/sunesimonsen/nano-router/pull/124) Bump rollup from 2.58.0 to 2.68.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#125](https://github.com/sunesimonsen/nano-router/pull/125) Bump unexpected from 12.0.3 to 12.0.4 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#126](https://github.com/sunesimonsen/nano-router/pull/126) Bump @babel\/register from 7.16.9 to 7.17.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#127](https://github.com/sunesimonsen/nano-router/pull/127) Use node-publisher for releasing ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+#### Commits to master
+
+- [v2.11.1](https://github.com/sunesimonsen/nano-router/commit/bd3fa68db875e577fb6eb5e63e6b5d9071826995) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Don't use david-dm.org for showing dependencies](https://github.com/sunesimonsen/nano-router/commit/7badd6e86df2035e61902f426ef3175812b92094) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Fixed readme formatting](https://github.com/sunesimonsen/nano-router/commit/bdeb776436037b7272df3c195d3522bd20848bbf) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Trying to fix the dependencies badges](https://github.com/sunesimonsen/nano-router/commit/68fbd09a92612a8ccf25114fb466257d39a396e6) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update changelog](https://github.com/sunesimonsen/nano-router/commit/f369dd8e2e59e5788fabc1cf406f01e7798fda70) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [+1 more](https://github.com/sunesimonsen/nano-router/compare/v2.11.0...v2.11.1)
+
 ### v2.11.0 (2022-02-28)
 
 #### Pull requests
