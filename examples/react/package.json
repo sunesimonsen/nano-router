@@ -2,7 +2,7 @@
   "type": "module",
   "private": true,
   "name": "@nano-router/react-example",
-  "version": "2.11.0",
+  "version": "2.11.1",
   "description": "An example on how to use nano-router",
   "author": "Sune Simonsen <sune@we-knowhow.dk>",
   "license": "MIT",
