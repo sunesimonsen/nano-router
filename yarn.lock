@@ -11196,10 +11196,10 @@ uid-number@0.0.6:
   resolved "https://registry.yarnpkg.com/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
   integrity sha1-DqEOgDXo61uOREnwbaHHMGY7qoE=
 
-ukkonen@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/ukkonen/-/ukkonen-1.4.0.tgz#594629234ceccbf7e44187ad9fedbeb4866a2e5f"
-  integrity sha512-g8SLGxflI0/VNH2C8j66KcfJXrU5StJglRQBYPNiChXFlOrqqYM1icOykOAAUgTeBpktaEuCm9hjpPinQ080PA==
+ukkonen@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/ukkonen/-/ukkonen-2.1.0.tgz#7af741397e603462290aa5d4e65e514f400b29f7"
+  integrity sha512-unACtiJBMpL5Q+JKEBYtB88DVClP4Ch42NFkuj7Ck7jcJ4UKkkfvvfGQ2WeaMeuq7OIGLkbm0X7YN+TGP9C5bw==
 
 umask@^1.1.0:
   version "1.1.0"
@@ -11256,10 +11256,10 @@ unexpected-sinon@^11.0.1:
   resolved "https://registry.yarnpkg.com/unexpected-sinon/-/unexpected-sinon-11.0.1.tgz#7c0ce6be442979d6e987a77e9a9f67db96a95662"
   integrity sha512-7BdD4zY2QiN+N5n6ISHMyoej9K3mMQzEbt3OC1a1mZy8dag8zgwi1FUUT/f7KMONMamgChuf6MJzw/b4Mru2yw==
 
-unexpected@^12.0.3:
-  version "12.0.4"
-  resolved "https://registry.yarnpkg.com/unexpected/-/unexpected-12.0.4.tgz#a8b7f06c96be1261f00c39487d122aa716519416"
-  integrity sha512-2wv1N9/g2Vavbc1xAbo5hUQTlpQJZgRHiQ5+EUF5PWoJWI+5N/XmMMtJ506//WaAGchTrm46+9kNdw29CKUQ2Q==
+unexpected@^13.1.0:
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/unexpected/-/unexpected-13.1.0.tgz#fd4299d36d3911d7d8a32152a6461f0046a34791"
+  integrity sha512-5cJNtqeXwuf9hHKl8eD7cZtNhRfcmhNtZmK8XuLg7zQ1K/B7Au860YWblrjd9GnMdmsiYLCrU4mgWLJeBcDt7A==
   dependencies:
     array-changes "3.0.1"
     array-changes-async "3.0.1"
@@ -11267,7 +11267,7 @@ unexpected@^12.0.3:
     diff "^5.0.0"
     greedy-interval-packer "1.2.0"
     magicpen "^6.2.4"
-    ukkonen "^1.4.0"
+    ukkonen "^2.1.0"
     unexpected-bluebird "2.9.34-longstack2"
 
 unicode-canonical-property-names-ecmascript@^2.0.0:
