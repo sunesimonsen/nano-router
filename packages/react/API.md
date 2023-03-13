@@ -67,6 +67,28 @@ const App = () => {
 };
 ```
 
+## Navigate
+
+The `<Navigate>` element changes the location to the given route when rendered. It's a component wrapper around the [`router.navigate`](../router/API.md#navigate) function
+It accepts the same parameters as props.
+
+Example usage:
+
+```js
+<Navigate route="posts/new" />
+```
+
+```js
+<Navigate 
+  route="posts/edit"
+  params={{ id: 42 }}
+  queryParams={{ showSettings: true }}
+  hash="#settings"
+/>
+```
+
+Note this component's intended purpose is redirecting to default routes. See example [Switch on the route name](./Readme.md#switch-on-the-route-name)
+
 ## useLink
 
 A hook for getting link props for a given route.
