@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@nano-router/history": "^2.12.0",
-    "mocha": "^8.1.1",
+    "mocha": "^10.2.0",
     "rollup": "^2.27.1",
     "sinon": "^13.0.0",
     "unexpected": "^13.1.0",
