@@ -70,7 +70,7 @@ const App = () => {
 ## Navigate
 
 The `<Navigate>` element changes the location to the given route when rendered. It's a component wrapper around the [`router.navigate`](../router/API.md#navigate) function
-It accepts the same parameters as props.
+and accepts the same parameters as props.
 
 Example usage:
 
