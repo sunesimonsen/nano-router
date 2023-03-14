@@ -6,7 +6,8 @@ export const Navigate = (props) => {
 
   useEffect(() => {
     navigate(props);
-  }, [navigate, props]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return null;
 };
