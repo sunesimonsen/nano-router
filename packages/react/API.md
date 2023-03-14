@@ -79,7 +79,7 @@ Example usage:
 ```
 
 ```js
-<Navigate 
+<Navigate
   route="posts/edit"
   params={{ id: 42 }}
   queryParams={{ showSettings: true }}
