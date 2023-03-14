@@ -1,5 +1,6 @@
 export { Router } from "./Router.js";
 export { Routes, Route, ExternalRoute } from "@nano-router/router";
+export { Navigate } from "./Navigate.js";
 export { useLink } from "./useLink.js";
 export { useLocation } from "./useLocation.js";
 export { useParams } from "./useParams.js";

@@ -75,13 +75,6 @@ const RootView = () => {
   const router = useRouter();
   const routeName = useRouteName();
 
-  useEffect(() => {
-    // redirect default route
-    if (routeName === "default") {
-      router.navigate({ route: "posts", replace: true });
-    }
-  });
-
   switch (routeName) {
     case "posts/new":
       return <PostNew />;
@@ -90,7 +83,7 @@ const RootView = () => {
     case "posts":
       return <PostList />;
     default:
-      return null;
+      return <Navigate route="posts" replace={true} />;
   }
 };
 ```
