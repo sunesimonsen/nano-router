@@ -1,3 +1,18 @@
+### v2.12.0 (2023-03-14)
+
+#### Pull requests
+
+- [#195](https://github.com/sunesimonsen/nano-router/pull/195) Add Navigate component ([Cristiana Man](mailto:man.cristiana1@gmail.com))
+- [#189](https://github.com/sunesimonsen/nano-router/pull/189) Bump unexpected from 12.0.4 to 13.1.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+
+#### Commits to master
+
+- [v2.12.0](https://github.com/sunesimonsen/nano-router/commit/315c1d2c75510034c16e609797e29317b473115b) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Fix failing test](https://github.com/sunesimonsen/nano-router/commit/fddeb12bc00b1c87d7a01138fa7275487d948210) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Fix formatting](https://github.com/sunesimonsen/nano-router/commit/51dba8c254ca07a92e7e10a71a6ee4a04fc8e0e7) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Fix React default route redirection](https://github.com/sunesimonsen/nano-router/commit/39f7aa8ac4877dd51cbd23858b584f6b53e92b88) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update changelog](https://github.com/sunesimonsen/nano-router/commit/849aef818c6f1afab780a29d486a360c967fd239) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v2.11.1 (2022-12-18)
 
 #### Pull requests
