@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { createMemoryHistory } from "@nano-router/history";
 import expect, { mount, unmount } from "./expect.js";
 
-import { Routes, Route, Router, useRouter, Navigate } from "./index.js";
+import { Routes, Route, Router, useLocation, Navigate } from "./index.js";
 
 const routes = new Routes(
   new Route("posts", "/posts"),
@@ -10,7 +10,7 @@ const routes = new Routes(
 );
 
 const Location = () => {
-  const { location } = useRouter();
+  const location = useLocation();
 
   return <div data-test-id="location">{location.pathname}</div>;
 };
