@@ -35,7 +35,7 @@ import { Router } from "@nano-router/react";
 import { createBrowserHistory } from "@nano-router/history";
 
 const App = () => {
-  const history = useMemo(() => createBrowserHistory());
+  const history = useMemo(() => createBrowserHistory(), []);
 
   return (
     <Router history={history} routes={routes}>
@@ -53,10 +53,9 @@ import { Router } from "@nano-router/react";
 import { createMemoryHistory } from "@nano-router/history";
 
 const App = () => {
-  const history = useMemo(() =>
-    createMemoryHistory({
-      initialEntries: ["/posts"],
-    })
+  const history = useMemo(
+    () => createMemoryHistory({ initialEntries: ["/posts"] }),
+    []
   );
 
   return (
@@ -69,8 +68,10 @@ const App = () => {
 
 ## Navigate
 
-The `<Navigate>` element changes the location to the given route when rendered. It's a component wrapper around the [`router.navigate`](../router/API.md#navigate) function
-and accepts the same parameters as props.
+The `Navigate` component changes the location to the given route when rendered.
+It's a component wrapper around the
+[`router.navigate`](../router/API.md#navigate) function and accepts the same
+parameters as props.
 
 Example usage:
 
@@ -88,6 +89,33 @@ Example usage:
 ```
 
 Note this component's intended purpose is redirecting to default routes. See example [Switch on the route name](./Readme.md#switch-on-the-route-name)
+
+## NestedRouter
+
+The `NestedRouter` component provides a nested router to a component sub-tree. You usually use the component to create memory routing for a sub-tree of the application.
+
+If the nested memory router can't find the route being navigated to, it forward the navigation to the parent router. This allows you to provide isolated navigation patterns in parts of the application, while still having access to the global navigation.
+
+Here we create a nested memory router with a separate set of routes. When you navigate with this React sub-tree this router will be active, if the route isn't found the parent router will be used.
+
+```js
+import React, { useMemo } from "react";
+import { NestedRouter } from "@nano-router/react";
+import { createBrowserHistory } from "@nano-router/history";
+
+const NestedNavigation = () => {
+  const history = useMemo(
+    () => createMemoryHistory({ initialEntries: ["/"] }),
+    []
+  );
+
+  return (
+    <NestedRouter history={history} routes={nestedRoutes}>
+      ...
+    </NestedRouter>
+  );
+};
+```
 
 ## useLink
 

@@ -1,4 +1,5 @@
 export { Router } from "./Router.js";
+export { NestedRouter } from "./NestedRouter.js";
 export { Routes, Route, ExternalRoute } from "@nano-router/router";
 export { Navigate } from "./Navigate.js";
 export { useLink } from "./useLink.js";
