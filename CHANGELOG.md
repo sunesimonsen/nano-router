@@ -1,3 +1,14 @@
+### v2.13.0 (2023-05-16)
+
+#### Pull requests
+
+- [#197](https://github.com/sunesimonsen/nano-router/pull/197) Implemented a NestedRouter React component ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+#### Commits to master
+
+- [v2.13.0](https://github.com/sunesimonsen/nano-router/commit/cd66d077ed3148c7c542fe343de9ad6c5df92c5e) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update changelog](https://github.com/sunesimonsen/nano-router/commit/b5095526bad4d753a43572db1badc78744b6b42b) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v2.12.0 (2023-03-14)
 
 #### Pull requests
