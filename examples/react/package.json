@@ -33,7 +33,7 @@
     "@zendeskgarden/react-theming": "^8.21.0",
     "@zendeskgarden/react-typography": "^8.21.0",
     "@zendeskgarden/svg-icons": "^6.22.0",
-    "mem": "^6.1.0",
+    "mem": "^9.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
