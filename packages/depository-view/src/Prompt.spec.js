@@ -32,13 +32,13 @@ class Confirm {
   constructor() {
     this.onApprove = (e) => {
       e.target.dispatchEvent(
-        new CustomEvent("Approve", { bubbles: true, cancelable: true })
+        new window.CustomEvent("Approve", { bubbles: true, cancelable: true })
       );
     };
 
     this.onReject = (e) => {
       e.target.dispatchEvent(
-        new CustomEvent("Reject", { bubbles: true, cancelable: true })
+        new window.CustomEvent("Reject", { bubbles: true, cancelable: true })
       );
     };
   }
@@ -116,7 +116,7 @@ describe("usePrompt", () => {
   const updateName = (newValue) => {
     const nameInput = container.querySelector("[data-test-id=name]");
     nameInput.value = newValue;
-    nameInput.dispatchEvent(new CustomEvent("change"));
+    nameInput.dispatchEvent(new window.CustomEvent("change"));
 
     return clock.runAllAsync();
   };
@@ -125,7 +125,7 @@ describe("usePrompt", () => {
     const selector = `[data-test-id=${testId}]`;
     expect(container, "to contain elements matching", selector);
     const element = container.querySelector(selector);
-    element.dispatchEvent(new CustomEvent("click"));
+    element.dispatchEvent(new window.CustomEvent("click"));
 
     return clock.runAllAsync();
   };

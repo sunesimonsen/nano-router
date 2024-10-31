@@ -113,7 +113,7 @@ describe("Link", () => {
   describe("when navigating", () => {
     beforeEach(async () => {
       const newLink = container.querySelector("[data-test-id=new]");
-      newLink.dispatchEvent(new CustomEvent("click"));
+      newLink.dispatchEvent(new window.CustomEvent("click"));
 
       await clock.runAllAsync();
     });
@@ -139,7 +139,7 @@ describe("Link", () => {
   describe("when pressing a modifyer key", () => {
     beforeEach(async () => {
       const newLink = container.querySelector("[data-test-id=new]");
-      const event = new CustomEvent("click");
+      const event = new window.CustomEvent("click");
       event.ctrlKey = true;
       event.button = 1;
       newLink.dispatchEvent(event);
