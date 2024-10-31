@@ -13,7 +13,11 @@
     "ci": "npm run lint && npm test",
     "release": "node-publisher release"
   },
-  "keywords": ["React", "router", "simple"],
+  "keywords": [
+    "React",
+    "router",
+    "simple"
+  ],
   "author": "Sune Simonsen",
   "license": "MIT",
   "bugs": "https://github.com/sunesimonsen/nano-router/issues",
@@ -38,7 +42,9 @@
     "prettier": "^2.1.0"
   },
   "workspaces": {
-    "packages": ["packages/*"]
+    "packages": [
+      "packages/*"
+    ]
   },
   "engines": {
     "node": ">=16"
