@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "mocha src",
-    "build": "babel --out-dir lib --quiet src && rollup -c rollup.config.js"
+    "build": "babel --no-babelrc --presets @babel/preset-react --out-dir lib --quiet src && rollup -c rollup.config.js"
   },
   "keywords": [
     "router",
@@ -33,10 +33,10 @@
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.25.9",
     "@babel/preset-react": "^7.10.4",
     "@babel/register": "^7.10.5",
     "@nano-router/history": "^2.12.0",
-    "esm": "^3.2.25",
     "jsdom": "^19.0.0",
     "mocha": "^8.1.1",
     "mocha-dominate": "^2.0.0",

@@ -9,6 +9,11 @@
     "mocha": true,
     "browser": true
   },
+  "settings": {
+    "react": {
+      "version": "^16.13.1"
+    }
+  },
   "rules": {
     "react/prop-types": 0,
     "react/jsx-uses-vars": "error",
