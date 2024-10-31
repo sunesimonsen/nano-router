@@ -41,6 +41,6 @@
     "packages": ["packages/*", "examples/*"]
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=16"
   }
 }
