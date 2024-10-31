@@ -1,3 +1,14 @@
+### v2.15.0 (2024-10-31)
+
+#### Pull requests
+
+- [#216](https://github.com/sunesimonsen/nano-router/pull/216) Test on Node v20 ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+#### Commits to master
+
+- [v2.15.0](https://github.com/sunesimonsen/nano-router/commit/344480264544fdb02fc1f42f67d3adca8a8f3332) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update changelog](https://github.com/sunesimonsen/nano-router/commit/2ea4e71f03c21e0a02bb4fab824b9811ab976ba8) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v2.14.0 (2024-10-31)
 
 #### Pull requests
