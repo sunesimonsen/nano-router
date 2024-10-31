@@ -28,7 +28,7 @@
   },
   "sideEffects": false,
   "devDependencies": {
-    "mocha": "^8.1.1",
+    "mocha": "^10.8.2",
     "rollup": "^2.27.1",
     "unexpected": "^13.1.0"
   },
