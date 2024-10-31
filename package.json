@@ -38,7 +38,7 @@
     "prettier": "^2.1.0"
   },
   "workspaces": {
-    "packages": ["packages/*", "examples/*"]
+    "packages": ["packages/*"]
   },
   "engines": {
     "node": ">=16"
