@@ -11,7 +11,6 @@ for the [nano-router](../router).
   - [Add the router to your application](#add-the-router-to-your-application)
   - [Switch on the route name](#switch-on-the-route-name)
   - [Use routing information in your views](#use-routing-information-in-your-views)
-- [Example](#example)
 - [MIT License](#mit-license)
 
 <!-- tocstop -->
@@ -118,13 +117,6 @@ const PostEdit = () => {
   );
 };
 ```
-
-## Example
-
-For a more complete example see:
-
-- [application](https://nano-router.surge.sh/)
-- [source](../../example)
 
 ## MIT License
 

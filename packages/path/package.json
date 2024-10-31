@@ -13,12 +13,7 @@
     "test": "mocha src",
     "build": "rollup -c rollup.config.js"
   },
-  "keywords": [
-    "path",
-    "pattern",
-    "matching",
-    "stringify"
-  ],
+  "keywords": ["path", "pattern", "matching", "stringify"],
   "author": "Sune Simonsen <sune@we-knowhow.dk>",
   "license": "MIT",
   "bugs": "https://github.com/sunesimonsen/nano-router/issues",
@@ -36,6 +31,6 @@
     "access": "public"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=16"
   }
 }

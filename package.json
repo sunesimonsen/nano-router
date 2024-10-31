@@ -8,16 +8,12 @@
     "test": "lerna run test",
     "build": "lerna run build",
     "format": "prettier --write '**/*.{js,md,json}'",
-    "update-toc": "for f in `ls packages/*/*.md`; do markdown-toc -i $f; done; yarn format",
+    "update-toc": "for f in `ls packages/*/*.md`; do markdown-toc -i $f; done; npm run format",
     "lint": "eslint . && prettier --check '**/*.{js,md,json}'",
-    "ci": "yarn lint && npm test",
+    "ci": "npm run lint && npm test",
     "release": "node-publisher release"
   },
-  "keywords": [
-    "React",
-    "router",
-    "simple"
-  ],
+  "keywords": ["React", "router", "simple"],
   "author": "Sune Simonsen",
   "license": "MIT",
   "bugs": "https://github.com/sunesimonsen/nano-router/issues",
@@ -42,12 +38,9 @@
     "prettier": "^2.1.0"
   },
   "workspaces": {
-    "packages": [
-      "packages/*",
-      "examples/*"
-    ]
+    "packages": ["packages/*", "examples/*"]
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=16"
   }
 }
