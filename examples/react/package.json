@@ -8,8 +8,8 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html && cp ./dist/index.html ./dist/200.html",
+    "start": "npx parcel index.html",
+    "build": "npx parcel build index.html && cp ./dist/index.html ./dist/200.html",
     "deploy": "npm run build && surge dist nano-router.surge.sh"
   },
   "devDependencies": {
@@ -40,7 +40,5 @@
     "react-resilient": "^1.1.1",
     "styled-components": "^5.1.1"
   },
-  "browserslist": [
-    "last 1 Chrome versions"
-  ]
+  "browserslist": ["last 1 Chrome versions"]
 }
