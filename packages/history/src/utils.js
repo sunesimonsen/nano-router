@@ -1,5 +1,5 @@
 export function createKey() {
-  return Math.random().toString(36).substr(2, 8);
+  return Math.random().toString(36).substring(2, 10);
 }
 
 export const isDev = typeof __DEV__ !== "undefined" && __DEV__;
@@ -67,7 +67,7 @@ export function parseUrl(url) {
   return partialPath;
 }
 
-export function getNextLocation(currentLocation, to, state = null) {
+export function getNextLocation(_currentLocation, to, state = null) {
   return {
     ...(typeof to === "string" ? parseUrl(to) : to),
     state,

@@ -73,7 +73,7 @@ export class Prompt {
 
   render({ children, visible, ...other }) {
     return html`
-      <div onApprove=${this.onApprove} onReject=${this.onReject}>
+      <div onApprove=${this.onApprove} onReject=${this.onReject} ...${other}>
         ${visible && children}
       </div>
     `;

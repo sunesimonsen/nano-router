@@ -60,7 +60,7 @@ export class Routing {
     this.subscription();
   }
 
-  render({ router, children, ...other }) {
+  render({ router, children }) {
     return html`<Context router=${router}>${children}</Context>`;
   }
 }

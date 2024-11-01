@@ -1,6 +1,14 @@
 {
-  "extends": ["standard", "prettier", 'plugin:react/recommended'],
-  "plugins": ["import", "mocha", "react", "react-hooks"],
+  "extends": [
+    "standard",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["import", "mocha", "react", "react-hooks", "@typescript-eslint"],
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
   "globals": {
     "fetch",
     "__DEV__": true
@@ -33,6 +41,20 @@
     ],
     "mocha/no-exclusive-tests": "error",
     "mocha/no-nested-tests": "error",
-    "mocha/no-identical-title": "error"
+    "mocha/no-identical-title": "error",
+    "@typesckipt-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "args": "all",
+        "argsIgnorePattern": "^_",
+        "caughtErrors": "all",
+        "caughtErrorsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      }
+    ],
   }
 }
