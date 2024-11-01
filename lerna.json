@@ -1,6 +1,6 @@
 {
+  "lerna": "8.1.2",
   "npmClient": "npm",
-  "useWorkspaces": true,
   "lerna": "4.0.0",
   "version": "2.16.0"
 }
