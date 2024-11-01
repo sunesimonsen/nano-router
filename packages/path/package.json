@@ -39,8 +39,5 @@
   },
   "engines": {
     "node": ">=16"
-  },
-  "dependencies": {
-    "node-publisher": "1.3.1"
   }
 }

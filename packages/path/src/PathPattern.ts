@@ -4,7 +4,7 @@ type PatternSegments = {
 };
 
 type Match = Record<string, string>;
-type PathValues = Record<string, string>;
+export type PathValues = Record<string, string | number | boolean>;
 
 const splitPattern = (pattern: string): PatternSegments => {
   let prefix = "";
