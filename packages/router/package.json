@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@nano-router/router",
-  "version": "2.20.0",
+  "version": "2.21.0",
   "description": "The nano-router",
   "keywords": [
     "browser",
@@ -28,8 +28,8 @@
     "build": "rollup -c rollup.config.js"
   },
   "dependencies": {
-    "@nano-router/routes": "^2.20.0",
-    "@nano-router/url": "^2.20.0"
+    "@nano-router/routes": "^2.21.0",
+    "@nano-router/url": "^2.21.0"
   },
   "devDependencies": {
     "@nano-router/history": "^2.20.0",
