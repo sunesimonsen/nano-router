@@ -1,3 +1,14 @@
+### v2.20.0 (2024-11-01)
+
+#### Pull requests
+
+- [#226](https://github.com/sunesimonsen/nano-router/pull/226) Migrate @nano-router\/url to TypeScript ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+#### Commits to master
+
+- [v2.20.0](https://github.com/sunesimonsen/nano-router/commit/3e929c8af4b831727b6c177267b0ee2d29d4997b) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update changelog](https://github.com/sunesimonsen/nano-router/commit/241f60f8ca378af00215d5e86f28fd25b4f6ab9c) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v2.19.0 (2024-11-01)
 
 #### Pull requests
