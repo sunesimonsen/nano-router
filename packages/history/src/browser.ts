@@ -1,25 +1,47 @@
 import {
+  RouterAction,
+  RouterHistory,
+  RouterLocation,
+  TransitionArgs,
+  TransitionHandler,
+} from "./history";
+import {
   allowTx,
   createEvents,
   getNextLocation,
   ensureRootRelative,
   promptBeforeUnload,
   isDev,
-} from "./utils.js";
+} from "./utils";
 
 const BeforeUnloadEventType = "beforeunload";
 const PopStateEventType = "popstate";
 
-function createPath({ pathname = "/", search = "", hash = "" }) {
+function createPath({ pathname = "/", search = "", hash = "" }): string {
   return pathname + search + hash;
 }
 
-function createHref(to) {
+function createHref(to: string | RouterLocation): string {
   return typeof to === "string" ? to : createPath(to);
 }
 
-export function createBrowserHistory(options = {}) {
+type Options = {
+  window?: Window;
+};
+
+function getWindow(options: Options): Window {
   const { window = document.defaultView } = options;
+
+  if (!window) {
+    throw new Error("window is undefined");
+  }
+
+  return window;
+}
+
+export function createBrowserHistory(options: Options = {}): RouterHistory {
+  const window = getWindow(options);
+
   const globalHistory = window.history;
 
   function getIndexAndLocation() {
@@ -37,7 +59,7 @@ export function createBrowserHistory(options = {}) {
     ];
   }
 
-  let blockedPopTx;
+  let blockedPopTx: TransitionArgs | null;
   function handlePop() {
     if (blockedPopTx) {
       blockers.call(blockedPopTx);
@@ -80,7 +102,7 @@ export function createBrowserHistory(options = {}) {
 
   window.addEventListener(PopStateEventType, handlePop);
 
-  let action = "POP";
+  let action: RouterAction = "POP";
   let [index, location] = getIndexAndLocation();
   const listeners = createEvents();
   const blockers = createEvents();
@@ -90,26 +112,26 @@ export function createBrowserHistory(options = {}) {
     globalHistory.replaceState({ ...globalHistory.state, idx: index }, "");
   }
 
-  function getHistoryStateAndUrl(nextLocation, index) {
-    return [
-      {
+  function getHistoryStateAndUrl(nextLocation: RouterLocation, index: number) {
+    return {
+      historyState: {
         usr: nextLocation.state,
         key: nextLocation.key,
         idx: index,
       },
-      createHref(nextLocation),
-    ];
+      url: createHref(nextLocation),
+    };
   }
 
-  function applyTx(nextAction) {
+  function applyTx(nextAction: RouterAction) {
     action = nextAction;
     [index, location] = getIndexAndLocation();
     listeners.call({ action, location });
   }
 
-  function push(to, state) {
+  function push(to: string, state?: any) {
     const nextAction = "PUSH";
-    const nextLocation = getNextLocation(location, to, state);
+    const nextLocation = getNextLocation(to, state);
     function retry() {
       push(to, state);
     }
@@ -117,7 +139,7 @@ export function createBrowserHistory(options = {}) {
     ensureRootRelative(location);
 
     if (allowTx(blockers, nextAction, nextLocation, retry)) {
-      const [historyState, url] = getHistoryStateAndUrl(
+      const { historyState, url } = getHistoryStateAndUrl(
         nextLocation,
         index + 1
       );
@@ -136,9 +158,9 @@ export function createBrowserHistory(options = {}) {
     }
   }
 
-  function replace(to, state) {
+  function replace(to: string, state?: any) {
     const nextAction = "REPLACE";
-    const nextLocation = getNextLocation(location, to, state);
+    const nextLocation = getNextLocation(to, state);
     function retry() {
       replace(to, state);
     }
@@ -146,7 +168,7 @@ export function createBrowserHistory(options = {}) {
     ensureRootRelative(location);
 
     if (allowTx(blockers, nextAction, nextLocation, retry)) {
-      const [historyState, url] = getHistoryStateAndUrl(nextLocation, index);
+      const { historyState, url } = getHistoryStateAndUrl(nextLocation, index);
 
       // TODO: Support forced reloading
       globalHistory.replaceState(historyState, "", url);
@@ -155,7 +177,7 @@ export function createBrowserHistory(options = {}) {
     }
   }
 
-  function pushLocation(url, target) {
+  function pushLocation(url: string, target?: string) {
     function retry() {
       pushLocation(url);
     }
@@ -164,7 +186,7 @@ export function createBrowserHistory(options = {}) {
       window.open(url, target, "noopener");
     } else {
       const nextAction = "PUSH";
-      const nextLocation = getNextLocation(location, url);
+      const nextLocation = getNextLocation(url);
 
       if (allowTx(blockers, nextAction, nextLocation, retry)) {
         window.location.assign(url);
@@ -172,9 +194,9 @@ export function createBrowserHistory(options = {}) {
     }
   }
 
-  function replaceLocation(url) {
+  function replaceLocation(url: string) {
     const nextAction = "REPLACE";
-    const nextLocation = getNextLocation(location, url);
+    const nextLocation = getNextLocation(url);
 
     function retry() {
       replaceLocation(url);
@@ -185,11 +207,11 @@ export function createBrowserHistory(options = {}) {
     }
   }
 
-  function go(delta) {
+  function go(delta: number) {
     globalHistory.go(delta);
   }
 
-  const history = {
+  const history: RouterHistory = {
     get action() {
       return action;
     },
@@ -207,10 +229,10 @@ export function createBrowserHistory(options = {}) {
     forward() {
       go(1);
     },
-    listen(listener) {
+    listen(listener: TransitionHandler) {
       return listeners.push(listener);
     },
-    block(blocker) {
+    block(blocker: TransitionHandler) {
       const unblock = blockers.push(blocker);
 
       if (blockers.length === 1) {

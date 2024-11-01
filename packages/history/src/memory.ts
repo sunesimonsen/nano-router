@@ -1,23 +1,37 @@
 import {
+  RouterAction,
+  RouterHistory,
+  RouterLocation,
+  TransitionHandler,
+} from "./history";
+import {
   allowTx,
   createEvents,
   createKey,
   parseUrl,
   getNextLocation,
   ensureRootRelative,
-} from "./utils.js";
+} from "./utils";
 
-function clamp(n, lowerBound, upperBound) {
+function clamp(n: number, lowerBound: number, upperBound: number) {
   return Math.min(Math.max(n, lowerBound), upperBound);
 }
 
-export function createMemoryHistory(options) {
+type Options = {
+  initialEntries?: string[];
+  initialIndex?: number;
+};
+
+export type OpenedWindow = { url: string; target: string };
+
+export type MemoryRouterHistory = RouterHistory & {
+  readonly openedWindow: OpenedWindow | null;
+};
+
+export function createMemoryHistory(options: Options): MemoryRouterHistory {
   const { initialEntries = ["/"], initialIndex } = options;
   const entries = initialEntries.map((entry) => {
-    const location = {
-      pathname: "/",
-      search: "",
-      hash: "",
+    const location: RouterLocation = {
       state: null,
       key: createKey(),
       ...(typeof entry === "string" ? parseUrl(entry) : entry),
@@ -33,21 +47,21 @@ export function createMemoryHistory(options) {
     entries.length - 1
   );
 
-  let action = "POP";
-  let location = entries[index];
-  let openedWindow = null;
+  let action: RouterAction = "POP";
+  let location = entries[index] as RouterLocation;
+  let openedWindow: OpenedWindow | null = null;
   const listeners = createEvents();
   const blockers = createEvents();
 
-  function applyTx(nextAction, nextLocation) {
+  function applyTx(nextAction: RouterAction, nextLocation: RouterLocation) {
     action = nextAction;
     location = nextLocation;
     listeners.call({ action, location });
   }
 
-  function push(to, state) {
+  function push(to: string, state: any) {
     const nextAction = "PUSH";
-    const nextLocation = getNextLocation(location, to, state);
+    const nextLocation = getNextLocation(to, state);
     function retry() {
       push(to, state);
     }
@@ -61,9 +75,9 @@ export function createMemoryHistory(options) {
     }
   }
 
-  function replace(to, state) {
+  function replace(to: string, state: any) {
     const nextAction = "REPLACE";
-    const nextLocation = getNextLocation(location, to, state);
+    const nextLocation = getNextLocation(to, state);
     function retry() {
       replace(to, state);
     }
@@ -76,7 +90,7 @@ export function createMemoryHistory(options) {
     }
   }
 
-  function pushLocation(url, target) {
+  function pushLocation(url: string, target?: string) {
     function retry() {
       pushLocation(url);
     }
@@ -85,7 +99,7 @@ export function createMemoryHistory(options) {
       openedWindow = { url, target };
     } else {
       const nextAction = "PUSH";
-      const nextLocation = getNextLocation(location, url);
+      const nextLocation = getNextLocation(url);
 
       if (allowTx(blockers, nextAction, nextLocation, retry)) {
         entries[index] = nextLocation;
@@ -95,9 +109,9 @@ export function createMemoryHistory(options) {
     }
   }
 
-  function replaceLocation(url) {
+  function replaceLocation(url: string) {
     const nextAction = "REPLACE";
-    const nextLocation = getNextLocation(location, url);
+    const nextLocation = getNextLocation(url);
 
     function retry() {
       replaceLocation(url);
@@ -110,10 +124,10 @@ export function createMemoryHistory(options) {
     }
   }
 
-  function go(delta) {
+  function go(delta: number) {
     const nextIndex = clamp(index + delta, 0, entries.length - 1);
     const nextAction = "POP";
-    const nextLocation = entries[nextIndex];
+    const nextLocation = entries[nextIndex] as RouterLocation;
     function retry() {
       go(delta);
     }
@@ -124,10 +138,7 @@ export function createMemoryHistory(options) {
     }
   }
 
-  const history = {
-    get index() {
-      return index;
-    },
+  const history: MemoryRouterHistory = {
     get action() {
       return action;
     },
@@ -148,10 +159,10 @@ export function createMemoryHistory(options) {
     forward() {
       go(1);
     },
-    listen(listener) {
+    listen(listener: TransitionHandler) {
       return listeners.push(listener);
     },
-    block(blocker) {
+    block(blocker: TransitionHandler) {
       return blockers.push(blocker);
     },
   };

@@ -10,5 +10,5 @@ export default {
       format: "es",
     },
   ],
-  external: ["@nano-router/router"],
+  external: ["@nano-router/router", "react"],
 };
