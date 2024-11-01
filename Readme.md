@@ -6,12 +6,12 @@ A framework agnostic minimalistic router with a focus on named routes.
 
 | Package                                    | Version                                                 | Size                                                     | Dependencies                                                             |
 | ------------------------------------------ | ------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [`@nano-router/history`](packages/history) | [![npm version][history npm version]][history npm link] | [![Bundle Size][history size bundle]][history size link] | [![Dependency count][history dependency count]][history dependency link] |
+| [`@nano-router/path`](packages/path)       | [![npm version][path npm version]][path npm link]       | [![Bundle Size][path size bundle]][path size link]       | [![Dependency count][path dependency count]][path dependency link]       |
 | [`@nano-router/react`](packages/react)     | [![npm version][react npm version]][react npm link]     | [![Bundle Size][react size bundle]][react size link]     | [![Dependency count][react dependency count]][react dependency link]     |
 | [`@nano-router/router`](packages/router)   | [![npm version][router npm version]][router npm link]   | [![Bundle Size][router size bundle]][router size link]   | [![Dependency count][router dependency count]][router dependency link]   |
 | [`@nano-router/routes`](packages/routes)   | [![npm version][routes npm version]][routes npm link]   | [![Bundle Size][routes size bundle]][routes size link]   | [![Dependency count][routes dependency count]][routes dependency link]   |
 | [`@nano-router/url`](packages/url)         | [![npm version][url npm version]][url npm link]         | [![Bundle Size][url size bundle]][url size link]         | [![Dependency count][url dependency count]][url dependency link]         |
-| [`@nano-router/path`](packages/path)       | [![npm version][path npm version]][path npm link]       | [![Bundle Size][path size bundle]][path size link]       | [![Dependency count][path dependency count]][path dependency link]       |
-| [`@nano-router/history`](packages/history) | [![npm version][history npm version]][history npm link] | [![Bundle Size][history size bundle]][history size link] | [![Dependency count][history dependency count]][history dependency link] |
 
 [react npm version]: https://flat.badgen.net/npm/v/@nano-router/react
 [react npm link]: https://www.npmjs.com/package/@nano-router/react
