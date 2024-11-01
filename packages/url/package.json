@@ -4,9 +4,9 @@
   "version": "2.20.0",
   "description": "Methods to create urls",
   "main": "dist/url.cjs",
-  "module": "src/index.js",
+  "module": "./dist/url.mjs",
   "exports": {
-    "import": "./dist/url.js",
+    "import": "./dist/url.mjs",
     "require": "./dist/url.cjs"
   },
   "types": "./lib/index.d.ts",

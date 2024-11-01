@@ -1,15 +1,11 @@
-import expect from "unexpected";
-import { ExternalRoute } from "./index.js";
+import { ExternalRoute } from "./index";
 
 describe("ExternalRoute", () => {
   describe("constructor", () => {
     it("create a new named path that is external", () => {
       const route = new ExternalRoute("edit", "/posts/edit/:id");
 
-      expect(route, "to satisfy", {
-        name: "edit",
-        external: true,
-      });
+      expect(route).toEqual({ name: "edit", external: true });
     });
 
     it("supports full urls", () => {
@@ -18,10 +14,7 @@ describe("ExternalRoute", () => {
         "https://example.com/posts/edit/:id"
       );
 
-      expect(route, "to satisfy", {
-        name: "edit",
-        external: true,
-      });
+      expect(route).toEqual({ name: "edit", external: true });
     });
   });
 
@@ -33,13 +26,9 @@ describe("ExternalRoute", () => {
           "https://www.example.com/posts/edit/:id"
         );
 
-        expect(
-          route.match("https://www.example.com/posts/edit/123"),
-          "to equal",
-          {
-            id: "123",
-          }
-        );
+        expect(route.match("https://www.example.com/posts/edit/123")).toEqual({
+          id: "123",
+        });
       });
     });
 
@@ -50,7 +39,7 @@ describe("ExternalRoute", () => {
           "https://www.example.com/posts/edit/:id"
         );
 
-        expect(route.match("/posts/edit/43"), "to be null");
+        expect(route.match("/posts/edit/43")).toBe(null);
       });
     });
   });
@@ -62,9 +51,7 @@ describe("ExternalRoute", () => {
         "https://www.example.com/posts/edit/:id"
       );
 
-      expect(
-        route.stringify({ id: 123 }),
-        "to equal",
+      expect(route.stringify({ id: 123 })).toEqual(
         "https://www.example.com/posts/edit/123"
       );
     });
