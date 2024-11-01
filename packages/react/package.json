@@ -13,12 +13,7 @@
     "test": "mocha src",
     "build": "babel --no-babelrc --presets @babel/preset-react --out-dir lib --quiet src && rollup -c rollup.config.js"
   },
-  "keywords": [
-    "router",
-    "react",
-    "minimal",
-    "tiny"
-  ],
+  "keywords": ["router", "react", "minimal", "tiny"],
   "author": "Sune Simonsen <sune@we-knowhow.dk>",
   "license": "MIT",
   "bugs": "https://github.com/sunesimonsen/nano-router/issues",
@@ -49,8 +44,7 @@
     "unexpected-dom": "^5.0.1"
   },
   "dependencies": {
-    "@nano-router/router": "^2.19.0",
-    "node-publisher": "1.3.1"
+    "@nano-router/router": "^2.19.0"
   },
   "publishConfig": {
     "access": "public"

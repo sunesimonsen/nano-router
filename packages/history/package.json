@@ -13,10 +13,7 @@
     "test": "mocha src",
     "build": "rollup -c rollup.config.js"
   },
-  "keywords": [
-    "history",
-    "routing"
-  ],
+  "keywords": ["history", "routing"],
   "author": "Sune Simonsen <sune@we-knowhow.dk>",
   "license": "MIT",
   "sideEffects": false,
@@ -29,8 +26,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "node-publisher": "1.3.1"
   }
 }
