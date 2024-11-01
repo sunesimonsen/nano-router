@@ -1,20 +1,15 @@
-import expect from "unexpected";
-import { Route } from "./index.js";
+import { Route } from "./index";
 
 describe("Route", () => {
   describe("constructor", () => {
     it("create a new named path", () => {
       const route = new Route("edit", "/posts/edit/:id");
 
-      expect(route, "to satisfy", {
-        name: "edit",
-      });
+      expect(route).toMatchObject({ name: "edit" });
     });
 
     it("fails when given the name default", () => {
-      expect(
-        () => new Route("default", "/foo/bar"),
-        "to throw",
+      expect(() => new Route("default", "/foo/bar")).toThrow(
         "default is a reserved route name"
       );
     });
@@ -25,9 +20,7 @@ describe("Route", () => {
       it("returns the named parts", () => {
         const route = new Route("edit", "/posts/edit/:id");
 
-        expect(route.match("/posts/edit/123"), "to equal", {
-          id: "123",
-        });
+        expect(route.match("/posts/edit/123")).toEqual({ id: "123" });
       });
     });
 
@@ -35,7 +28,7 @@ describe("Route", () => {
       it("returns null", () => {
         const route = new Route("edit", "/posts/edit/:id");
 
-        expect(route.match("/posts/edit/"), "to be null");
+        expect(route.match("/posts/edit/")).toBe(null);
       });
     });
   });
@@ -44,7 +37,7 @@ describe("Route", () => {
     it("build a url from the given route", () => {
       const route = new Route("edit", "/posts/edit/:id");
 
-      expect(route.stringify({ id: 123 }), "to equal", "/posts/edit/123");
+      expect(route.stringify({ id: 123 })).toEqual("/posts/edit/123");
     });
   });
 });

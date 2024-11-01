@@ -13,8 +13,8 @@ export default [
   {
     input: "lib/index.js",
     output: {
-      file: "dist/url.js",
-      format: "esm",
+      file: "dist/url.mjs",
+      format: "es",
     },
     plugins: [
       commonjs(),
