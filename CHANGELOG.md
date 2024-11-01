@@ -1,3 +1,16 @@
+### v2.17.0 (2024-11-01)
+
+#### Pull requests
+
+- [#222](https://github.com/sunesimonsen/nano-router/pull/222) Use React v18 for testing ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#221](https://github.com/sunesimonsen/nano-router/pull/221) Upgrade Lerna to the latest version ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#219](https://github.com/sunesimonsen/nano-router/pull/219) Bump eslint-plugin-mocha from 9.0.0 to 10.5.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+
+#### Commits to master
+
+- [v2.17.0](https://github.com/sunesimonsen/nano-router/commit/489ecbe7d9e2d880a429351a255d9545c5ac8631) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update changelog](https://github.com/sunesimonsen/nano-router/commit/0264ab142e5e68c60c0087d2b023b123bf2963d4) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v2.16.0 (2024-10-31)
 
 #### Pull requests
