@@ -1,19 +1,18 @@
-import unexpected from "unexpected";
-import unexpectedSinon from "unexpected-sinon";
-import sinon from "sinon";
-import { createMemoryHistory } from "./memory.js";
-
-const expect = unexpected.clone().use(unexpectedSinon);
+import { TransitionArgs, TransitionHandler, Unsubscriber } from "./history";
+import { createMemoryHistory } from "./memory";
+import type { MemoryRouterHistory } from "./memory";
 
 describe("memory", () => {
-  let history, clearListener, transitionSpy;
+  let history: MemoryRouterHistory,
+    clearListener: Unsubscriber,
+    transitionSpy: jest.Mock<TransitionHandler>;
 
   beforeEach(() => {
     history = createMemoryHistory({
       initialEntries: ["/posts"],
     });
 
-    transitionSpy = sinon.spy();
+    transitionSpy = jest.fn();
     clearListener = history.listen(transitionSpy);
   });
 
@@ -26,27 +25,33 @@ describe("memory", () => {
       history.push("/posts/edit/123?hello=you#anchor", "hello");
       history.push("/posts/new");
 
-      expect(transitionSpy, "to have calls satisfying", () => {
-        transitionSpy({
-          action: "PUSH",
-          location: {
-            pathname: "/posts/edit/123",
-            search: "?hello=you",
-            hash: "#anchor",
-            state: "hello",
-          },
-        });
+      const calls = transitionSpy.mock.calls;
 
-        transitionSpy({
-          action: "PUSH",
-          location: {
-            pathname: "/posts/new",
-            state: null,
-          },
-        });
+      expect(transitionSpy).toHaveBeenCalledTimes(2);
+
+      expect(calls[0][0]).toMatchObject({
+        action: "PUSH",
+        location: {
+          href: "/posts/edit/123?hello=you#anchor",
+          pathname: "/posts/edit/123",
+          search: "?hello=you",
+          hash: "#anchor",
+          state: "hello",
+        },
       });
 
-      expect(history.location, "to satisfy", {
+      expect(calls[1][0]).toMatchObject({
+        action: "PUSH",
+        location: {
+          href: "/posts/new",
+          pathname: "/posts/new",
+          state: null,
+          search: "",
+          hash: "",
+        },
+      });
+
+      expect(history.location).toMatchObject({
         pathname: "/posts/new",
         search: "",
         hash: "",
@@ -57,13 +62,13 @@ describe("memory", () => {
 
     describe("when navitation is blocked", () => {
       it("doesn't navigate", () => {
-        history.block(() => {});
+        history.block((_arg: TransitionArgs) => {});
 
         history.push("/posts/edit/123?hello=you#anchor", "hello");
 
-        expect(transitionSpy, "was not called");
+        expect(transitionSpy).not.toHaveBeenCalled();
 
-        expect(history.location, "to satisfy", {
+        expect(history.location).toMatchObject({
           pathname: "/posts",
           search: "",
           hash: "",
@@ -79,27 +84,33 @@ describe("memory", () => {
       history.replace("/posts/edit/123?hello=you#anchor", "hello");
       history.replace("/posts/new");
 
-      expect(transitionSpy, "to have calls satisfying", () => {
-        transitionSpy({
-          action: "REPLACE",
-          location: {
-            pathname: "/posts/edit/123",
-            search: "?hello=you",
-            hash: "#anchor",
-            state: "hello",
-          },
-        });
+      const calls = transitionSpy.mock.calls;
 
-        transitionSpy({
-          action: "REPLACE",
-          location: {
-            pathname: "/posts/new",
-            state: null,
-          },
-        });
+      expect(transitionSpy).toHaveBeenCalledTimes(2);
+
+      expect(calls[0][0]).toMatchObject({
+        action: "REPLACE",
+        location: {
+          href: "/posts/edit/123?hello=you#anchor",
+          pathname: "/posts/edit/123",
+          search: "?hello=you",
+          hash: "#anchor",
+          state: "hello",
+        },
       });
 
-      expect(history.location, "to satisfy", {
+      expect(calls[1][0]).toMatchObject({
+        action: "REPLACE",
+        location: {
+          href: "/posts/new",
+          pathname: "/posts/new",
+          state: null,
+          search: "",
+          hash: "",
+        },
+      });
+
+      expect(history.location).toMatchObject({
         pathname: "/posts/new",
         search: "",
         hash: "",
@@ -114,9 +125,9 @@ describe("memory", () => {
 
         history.replace("/posts/edit/123?hello=you#anchor", "hello");
 
-        expect(transitionSpy, "was not called");
+        expect(transitionSpy).not.toHaveBeenCalled();
 
-        expect(history.location, "to satisfy", {
+        expect(history.location).toMatchObject({
           pathname: "/posts",
           search: "",
           hash: "",
@@ -134,7 +145,7 @@ describe("memory", () => {
       history.replace("/posts/new/da");
       history.back();
 
-      expect(history.location, "to satisfy", {
+      expect(history.location).toMatchObject({
         pathname: "/posts/edit/123",
         search: "?hello=you",
         hash: "#anchor",
@@ -153,7 +164,7 @@ describe("memory", () => {
 
         history.back();
 
-        expect(history.location, "to satisfy", {
+        expect(history.location).toMatchObject({
           href: "/posts/new/da",
           search: "",
           hash: "",
@@ -172,7 +183,7 @@ describe("memory", () => {
       history.back();
       history.forward();
 
-      expect(history.location, "to satisfy", {
+      expect(history.location).toMatchObject({
         pathname: "/posts/new/da",
         search: "",
         hash: "",
@@ -192,7 +203,7 @@ describe("memory", () => {
 
         history.forward();
 
-        expect(history.location, "to satisfy", {
+        expect(history.location).toMatchObject({
           href: "/posts/edit/123?hello=you#anchor",
           search: "?hello=you",
           hash: "#anchor",
@@ -209,11 +220,11 @@ describe("memory", () => {
         "https://example.com/posts/edit/123?hello=you#anchor"
       );
 
-      expect(transitionSpy, "was not called");
+      expect(transitionSpy).not.toHaveBeenCalled();
 
-      expect(history.action, "to equal", "PUSH");
+      expect(history.action).toEqual("PUSH");
 
-      expect(history.location, "to satisfy", {
+      expect(history.location).toMatchObject({
         href: "https://example.com/posts/edit/123?hello=you#anchor",
         hash: "#anchor",
         search: "?hello=you",
@@ -231,18 +242,18 @@ describe("memory", () => {
       });
 
       it("simulates opening up a window", () => {
-        expect(history.openedWindow, "to equal", {
+        expect(history.openedWindow).toEqual({
           url: "https://example.com/posts/edit/123?hello=you#anchor",
           target: "_blank",
         });
       });
 
       it("doesn't affect the current history", () => {
-        expect(transitionSpy, "was not called");
+        expect(transitionSpy).not.toHaveBeenCalled();
 
-        expect(history.action, "to equal", "POP");
+        expect(history.action).toEqual("POP");
 
-        expect(history.location, "to satisfy", {
+        expect(history.location).toMatchObject({
           pathname: "/posts",
           search: "",
           hash: "",
@@ -260,9 +271,9 @@ describe("memory", () => {
           "https://example.com/posts/edit/123?hello=you#anchor"
         );
 
-        expect(transitionSpy, "was not called");
+        expect(transitionSpy).not.toHaveBeenCalled();
 
-        expect(history.location, "to satisfy", {
+        expect(history.location).toMatchObject({
           pathname: "/posts",
           search: "",
           hash: "",
@@ -280,7 +291,7 @@ describe("memory", () => {
             "_blank"
           );
 
-          expect(history.openedWindow, "to equal", {
+          expect(history.openedWindow).toEqual({
             url: "https://example.com/posts/edit/123?hello=you#anchor",
             target: "_blank",
           });
@@ -295,11 +306,11 @@ describe("memory", () => {
         "https://example.com/posts/edit/123?hello=you#anchor"
       );
 
-      expect(transitionSpy, "was not called");
+      expect(transitionSpy).not.toHaveBeenCalled();
 
-      expect(history.action, "to equal", "REPLACE");
+      expect(history.action).toEqual("REPLACE");
 
-      expect(history.location, "to satisfy", {
+      expect(history.location).toMatchObject({
         href: "https://example.com/posts/edit/123?hello=you#anchor",
         hash: "#anchor",
         search: "?hello=you",
@@ -316,9 +327,9 @@ describe("memory", () => {
           "https://example.com/posts/edit/123?hello=you#anchor"
         );
 
-        expect(transitionSpy, "was not called");
+        expect(transitionSpy).not.toHaveBeenCalled();
 
-        expect(history.location, "to satisfy", {
+        expect(history.location).toMatchObject({
           pathname: "/posts",
           search: "",
           hash: "",

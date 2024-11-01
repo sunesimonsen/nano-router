@@ -4,6 +4,7 @@
 tmp/
 .cache
 dist
+tsconfig.tsbuildinfo
 
 node_modules
 /packages/*/lib

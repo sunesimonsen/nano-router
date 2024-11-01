@@ -1,8 +1,9 @@
-import expect from "unexpected";
-import { parseUrl } from "./utils.js";
+import { parseUrl, PartialRouterLocation } from "./utils";
+
+type TestCase = [string, PartialRouterLocation];
 
 describe("parseUrl", () => {
-  [
+  const testCases: TestCase[] = [
     [
       "/foo/bar/baz",
       { href: "/foo/bar/baz", pathname: "/foo/bar/baz", search: "", hash: "" },
@@ -34,9 +35,11 @@ describe("parseUrl", () => {
         hash: "#hash",
       },
     ],
-  ].forEach(([input, output]) => {
+  ];
+
+  testCases.forEach(([input, output]) => {
     it(`${input} -> ${JSON.stringify(output)}`, () => {
-      expect(parseUrl(input), "to equal", output);
+      expect(parseUrl(input)).toEqual(output);
     });
   });
 });
