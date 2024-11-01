@@ -7,7 +7,7 @@
   "scripts": {
     "test": "lerna run test",
     "build": "lerna run build",
-    "format": "prettier --write '**/*.{js,md,json}'",
+    "format": "prettier --write '**/*.{js,ts,md,json}'",
     "update-toc": "for f in `ls packages/*/*.md`; do markdown-toc -i $f; done; npm run format",
     "lint": "eslint . && prettier --check '**/*.{js,md,json}'",
     "ci": "npm run lint && npm test",

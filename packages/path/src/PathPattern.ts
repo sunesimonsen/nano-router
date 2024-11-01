@@ -1,4 +1,12 @@
-const splitPattern = (pattern) => {
+type PatternSegments = {
+  prefix: string;
+  segments: string[];
+};
+
+type Match = Record<string, string>;
+type PathValues = Record<string, string>;
+
+const splitPattern = (pattern: string): PatternSegments => {
   let prefix = "";
 
   const protocolIndex = pattern.indexOf("//");
@@ -18,12 +26,14 @@ const splitPattern = (pattern) => {
 };
 
 export class PathPattern {
-  constructor(pattern) {
-    this.pattern = splitPattern(pattern);
+  #pattern: PatternSegments;
+
+  constructor(pattern: string) {
+    this.#pattern = splitPattern(pattern);
   }
 
-  match(path) {
-    const pattern = this.pattern;
+  match(path: string) {
+    const pattern = this.#pattern;
     const { prefix, segments } = splitPattern(path);
 
     if (pattern.prefix !== prefix) {
@@ -37,13 +47,13 @@ export class PathPattern {
       return null;
     }
 
-    const match = {};
+    const match: Match = {};
 
     for (let i = 0; i < patternSegments.length; i++) {
       const pathSegment = pathSegments[i];
       const patternSegment = patternSegments[i];
 
-      if (patternSegment.startsWith(":")) {
+      if (patternSegment?.startsWith(":")) {
         if (!pathSegment) {
           return null;
         }
@@ -57,8 +67,8 @@ export class PathPattern {
     return match;
   }
 
-  stringify(values = {}) {
-    const { prefix, segments } = this.pattern;
+  stringify(values: PathValues = {}) {
+    const { prefix, segments } = this.#pattern;
 
     const path =
       prefix +

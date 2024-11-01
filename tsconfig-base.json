@@ -8,13 +8,11 @@
     "declaration": true,
     "declarationMap": true,
     "incremental": true,
-    "inlineSources": true,
     "lib": ["ES2022", "DOM"],
     "module": "preserve",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "sourceMap": true,
     "target": "ES2022",
     "verbatimModuleSyntax": false,
     "removeComments": true
