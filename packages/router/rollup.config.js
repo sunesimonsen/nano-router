@@ -4,4 +4,5 @@ export default {
     file: "dist/bundle.cjs",
     format: "cjs",
   },
+  external: ["@nano-router/routes", "@nano-router/url"],
 };
