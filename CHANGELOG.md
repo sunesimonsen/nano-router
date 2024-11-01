@@ -1,3 +1,16 @@
+### v2.18.0 (2024-11-01)
+
+#### Pull requests
+
+- [#223](https://github.com/sunesimonsen/nano-router/pull/223) Audit upgrade ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#204](https://github.com/sunesimonsen/nano-router/pull/204) Bump @rollup\/plugin-babel from 5.3.0 to 6.0.4 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+
+#### Commits to master
+
+- [v2.18.0](https://github.com/sunesimonsen/nano-router/commit/96fb5cc05ab5f680a8d7a6d22e692e39286c579e) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update the package-lock](https://github.com/sunesimonsen/nano-router/commit/7a3834d68de62a2ab15feda448db47772c38dab1) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update changelog](https://github.com/sunesimonsen/nano-router/commit/3069aa4794482fb750d4f37526ec2ebc23546e79) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v2.17.0 (2024-11-01)
 
 #### Pull requests
