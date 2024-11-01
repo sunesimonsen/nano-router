@@ -126,7 +126,7 @@ export function createBrowserHistory(options = {}) {
       // try...catch because iOS limits us to 100 pushState calls :/
       try {
         globalHistory.pushState(historyState, "", url);
-      } catch (error) {
+      } catch {
         // They are going to lose state here, but there is no real
         // way to warn them about it since the page will refresh...
         window.location.assign(url);

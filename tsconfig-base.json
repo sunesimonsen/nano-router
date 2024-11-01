@@ -1,0 +1,23 @@
+{
+  "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/node20/tsconfig.json"],
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "incremental": true,
+    "inlineSources": true,
+    "lib": ["ES2022", "DOM"],
+    "module": "preserve",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "target": "ES2022",
+    "verbatimModuleSyntax": false,
+    "removeComments": true
+  },
+  "exclude": ["test", "**/*spec.ts"]
+}
