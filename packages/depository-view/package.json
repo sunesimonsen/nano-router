@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@nano-router/depository-view",
-  "version": "2.19.0",
+  "version": "2.20.0",
   "description": "@depository/view integration for @nano-router/router",
   "module": "./dist/nano-router-depository-view.esm.min.js",
   "exports": {
@@ -32,7 +32,7 @@
     "@babel/core": "^7.12.10",
     "@depository/store": "^0.60.0",
     "@depository/view": "^0.60.0",
-    "@nano-router/history": "^2.19.0",
+    "@nano-router/history": "^2.20.0",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^11.0.0",
@@ -47,7 +47,7 @@
     "unexpected-dom": "^5.0.1"
   },
   "dependencies": {
-    "@nano-router/router": "^2.19.0"
+    "@nano-router/router": "^2.20.0"
   },
   "publishConfig": {
     "access": "public"
