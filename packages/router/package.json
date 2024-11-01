@@ -3,7 +3,12 @@
   "name": "@nano-router/router",
   "version": "2.19.0",
   "description": "The nano-router",
-  "keywords": ["browser", "history", "routing", "router"],
+  "keywords": [
+    "browser",
+    "history",
+    "routing",
+    "router"
+  ],
   "author": "Sune Simonsen <sune@we-knowhow.dk>",
   "license": "MIT",
   "bugs": "https://github.com/sunesimonsen/nano-router/issues",

@@ -3,7 +3,7 @@ import { nodeResolve } from "@rollup/plugin-node-resolve";
 
 export default [
   {
-    input: "src/index.js",
+    input: "lib/index.js",
     output: {
       file: "dist/url.cjs",
       format: "cjs",
@@ -11,7 +11,7 @@ export default [
     external: ["querystring", "@nano-router/path"],
   },
   {
-    input: "src/index.js",
+    input: "lib/index.js",
     output: {
       file: "dist/url.js",
       format: "esm",
