@@ -1,7 +1,7 @@
 {
   "type": "commonjs",
   "name": "@nano-router/react",
-  "version": "2.22.0",
+  "version": "3.0.0",
   "description": "React integration for @nano-router/router",
   "main": "dist/bundle.cjs",
   "module": "lib/index.js",
@@ -37,7 +37,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.25.9",
     "@babel/preset-react": "^7.10.4",
     "@babel/register": "^7.10.5",
-    "@nano-router/history": "^2.22.0",
+    "@nano-router/history": "^3.0.0",
     "jsdom": "^19.0.0",
     "mocha": "^10.8.2",
     "mocha-dominate": "^2.0.0",
@@ -49,7 +49,7 @@
     "unexpected-dom": "^5.0.1"
   },
   "dependencies": {
-    "@nano-router/router": "^2.22.0"
+    "@nano-router/router": "^3.0.0"
   },
   "publishConfig": {
     "access": "public"
