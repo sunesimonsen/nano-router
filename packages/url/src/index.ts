@@ -2,12 +2,14 @@ import querystring, { ParsedUrlQueryInput } from "querystring";
 import { PathPattern } from "@nano-router/path";
 import type { PathValues } from "@nano-router/path";
 
+export type QueryParams = ParsedUrlQueryInput;
+
 type CreateUrlArgs = {
   origin?: string;
   pathname?: string;
   hash?: string;
   params?: PathValues;
-  queryParams?: ParsedUrlQueryInput;
+  queryParams?: QueryParams;
 };
 
 export const createUrl = ({

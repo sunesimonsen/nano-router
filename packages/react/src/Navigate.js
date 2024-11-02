@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { useRouter } from "./useRouter.js";
 
 export const Navigate = (props) => {
-  const { navigate } = useRouter();
+  const router = useRouter();
 
   useEffect(() => {
-    navigate(props);
+    router.navigate(props);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
