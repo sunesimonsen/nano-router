@@ -10,20 +10,17 @@ export class Routes {
   match(path: string) {
     for (let i = 0; i < this.#routes.length; i++) {
       const route = this.#routes[i];
-      const match = route?.match(path);
 
-      if (match) {
-        return {
-          name: route?.name,
-          params: match,
-        };
+      if (route) {
+        const match = route.match(path);
+
+        if (match) {
+          return { name: route.name, params: match };
+        }
       }
     }
 
-    return {
-      name: "default",
-      params: {},
-    };
+    return { name: "default", params: {} };
   }
 
   byName(name: string) {
