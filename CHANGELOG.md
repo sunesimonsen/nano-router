@@ -1,3 +1,22 @@
+### v3.1.0 (2024-11-04)
+
+#### Pull requests
+
+- [#232](https://github.com/sunesimonsen/nano-router/pull/232) Bump @rollup\/plugin-commonjs from 21.1.0 to 28.0.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#229](https://github.com/sunesimonsen/nano-router/pull/229) Bump prettier from 2.8.8 to 3.3.3 ([Sune Simonsen](mailto:sune@we-knowhow.dk), [dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#240](https://github.com/sunesimonsen/nano-router/pull/240) Remove broken badges from readme ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#228](https://github.com/sunesimonsen/nano-router/pull/228) Bump @rollup\/plugin-node-resolve from 11.2.1 to 15.3.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#239](https://github.com/sunesimonsen/nano-router/pull/239) Bump rollup from 2.79.2 to 4.24.4 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#234](https://github.com/sunesimonsen/nano-router/pull/234) Bump sinon from 13.0.2 to 19.0.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#233](https://github.com/sunesimonsen/nano-router/pull/233) Bump eslint-plugin-react-hooks from 4.6.2 to 5.0.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#237](https://github.com/sunesimonsen/nano-router/pull/237) Migrate @nano-router\/react to TypeScript ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+#### Commits to master
+
+- [v3.1.0](https://github.com/sunesimonsen/nano-router/commit/348940b4df97310949910fa55f9ec059ceb97e5e) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update build file](https://github.com/sunesimonsen/nano-router/commit/67d335965cdf6359ae41ff0173c9ca851c3a2976) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update changelog](https://github.com/sunesimonsen/nano-router/commit/8296721c17ffecebb8df8d131f88525354d760e9) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v3.0.0 (2024-11-02)
 
 #### Pull requests
