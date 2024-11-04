@@ -66,7 +66,7 @@ export const NestedRouter: React.FC<NestedRouterProps> = ({
   const parentRouter = useRouter();
   const router = useMemo(
     () => new NestedNanoRouter({ parentRouter, routes, history }),
-    [parentRouter, routes, history]
+    [parentRouter, routes, history],
   );
 
   return (

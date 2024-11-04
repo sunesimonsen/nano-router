@@ -80,7 +80,7 @@ export class PathPattern {
 
             if (!value) {
               throw new Error(
-                `No value provided for variable: ${variableName}`
+                `No value provided for variable: ${variableName}`,
               );
             }
 

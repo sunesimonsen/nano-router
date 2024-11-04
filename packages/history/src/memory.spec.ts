@@ -217,7 +217,7 @@ describe("memory", () => {
   describe("pushLocation", () => {
     it("pushes an external location", () => {
       history.pushLocation(
-        "https://example.com/posts/edit/123?hello=you#anchor"
+        "https://example.com/posts/edit/123?hello=you#anchor",
       );
 
       expect(transitionSpy).not.toHaveBeenCalled();
@@ -237,7 +237,7 @@ describe("memory", () => {
       beforeEach(() => {
         history.pushLocation(
           "https://example.com/posts/edit/123?hello=you#anchor",
-          "_blank"
+          "_blank",
         );
       });
 
@@ -268,7 +268,7 @@ describe("memory", () => {
         history.block(() => {});
 
         history.pushLocation(
-          "https://example.com/posts/edit/123?hello=you#anchor"
+          "https://example.com/posts/edit/123?hello=you#anchor",
         );
 
         expect(transitionSpy).not.toHaveBeenCalled();
@@ -288,7 +288,7 @@ describe("memory", () => {
 
           history.pushLocation(
             "https://example.com/posts/edit/123?hello=you#anchor",
-            "_blank"
+            "_blank",
           );
 
           expect(history.openedWindow).toEqual({
@@ -303,7 +303,7 @@ describe("memory", () => {
   describe("replaceLocation", () => {
     it("replaces the current location", () => {
       history.replaceLocation(
-        "https://example.com/posts/edit/123?hello=you#anchor"
+        "https://example.com/posts/edit/123?hello=you#anchor",
       );
 
       expect(transitionSpy).not.toHaveBeenCalled();
@@ -324,7 +324,7 @@ describe("memory", () => {
         history.block(() => {});
 
         history.pushLocation(
-          "https://example.com/posts/edit/123?hello=you#anchor"
+          "https://example.com/posts/edit/123?hello=you#anchor",
         );
 
         expect(transitionSpy).not.toHaveBeenCalled();

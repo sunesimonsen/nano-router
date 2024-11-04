@@ -3,7 +3,7 @@ import { Routes, Route } from "./index";
 const routes = new Routes(
   new Route("new", "/posts/new"),
   new Route("edit", "/posts/edit/:id"),
-  new Route("view", "/posts/:id")
+  new Route("view", "/posts/:id"),
 );
 
 describe("Routes", () => {

@@ -18,7 +18,7 @@ const expect = unexpected.clone().use(unexpectedDom);
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),
   new Route("posts", "/posts"),
-  new ExternalRoute("external", "https://www.example.com/blog/:id")
+  new ExternalRoute("external", "https://www.example.com/blog/:id"),
 );
 
 class NewView {
@@ -78,7 +78,7 @@ describe("Link", () => {
     render(
       html`<${Routing} router=${router}><${RootView} /><//>`,
       store,
-      container
+      container,
     );
 
     await clock.runAllAsync();
@@ -105,7 +105,7 @@ describe("Link", () => {
           href: "/posts/new",
           target: "_blank",
           rel: "noopener",
-        }
+        },
       );
     });
   });

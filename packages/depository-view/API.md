@@ -114,13 +114,13 @@ class Confirm {
   constructor() {
     this.onApprove = (e) => {
       e.target.dispatchEvent(
-        new CustomEvent("Approve", { bubbles: true, cancelable: true })
+        new CustomEvent("Approve", { bubbles: true, cancelable: true }),
       );
     };
 
     this.onReject = (e) => {
       e.target.dispatchEvent(
-        new CustomEvent("Reject", { bubbles: true, cancelable: true })
+        new CustomEvent("Reject", { bubbles: true, cancelable: true }),
       );
     };
   }

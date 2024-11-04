@@ -10,7 +10,7 @@ describe("Route", () => {
 
     it("fails when given the name default", () => {
       expect(() => new Route("default", "/foo/bar")).toThrow(
-        "default is a reserved route name"
+        "default is a reserved route name",
       );
     });
   });

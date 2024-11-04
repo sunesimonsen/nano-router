@@ -11,7 +11,7 @@ describe("ExternalRoute", () => {
     it("supports full urls", () => {
       const route = new ExternalRoute(
         "edit",
-        "https://example.com/posts/edit/:id"
+        "https://example.com/posts/edit/:id",
       );
 
       expect(route).toEqual({ name: "edit", external: true });
@@ -23,7 +23,7 @@ describe("ExternalRoute", () => {
       it("returns the named parts", () => {
         const route = new ExternalRoute(
           "edit",
-          "https://www.example.com/posts/edit/:id"
+          "https://www.example.com/posts/edit/:id",
         );
 
         expect(route.match("https://www.example.com/posts/edit/123")).toEqual({
@@ -36,7 +36,7 @@ describe("ExternalRoute", () => {
       it("returns null", () => {
         const route = new ExternalRoute(
           "edit",
-          "https://www.example.com/posts/edit/:id"
+          "https://www.example.com/posts/edit/:id",
         );
 
         expect(route.match("/posts/edit/43")).toBe(null);
@@ -48,11 +48,11 @@ describe("ExternalRoute", () => {
     it("build a url from the given route", () => {
       const route = new ExternalRoute(
         "edit",
-        "https://www.example.com/posts/edit/:id"
+        "https://www.example.com/posts/edit/:id",
       );
 
       expect(route.stringify({ id: 123 })).toEqual(
-        "https://www.example.com/posts/edit/123"
+        "https://www.example.com/posts/edit/123",
       );
     });
   });

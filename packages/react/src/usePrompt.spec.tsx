@@ -18,7 +18,7 @@ import {
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),
   new Route("posts", "/posts"),
-  new ExternalRoute("external", "https://www.example.com/blog/:id")
+  new ExternalRoute("external", "https://www.example.com/blog/:id"),
 );
 
 const NewView = () => {
@@ -83,7 +83,7 @@ const RootView = () => {
 const App = () => {
   const history = useMemo(
     () => createMemoryHistory({ initialEntries: ["/posts/new"] }),
-    []
+    [],
   );
 
   return (

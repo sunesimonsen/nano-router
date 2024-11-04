@@ -38,7 +38,7 @@ const App = () => {
   const history = useMemo(
     () =>
       createMemoryHistory({ initialEntries: ["/posts/42?message=hello#h2"] }),
-    []
+    [],
   );
 
   return (
@@ -58,7 +58,7 @@ describe("useLocation", () => {
     await userEvent.click(screen.getByTestId("set-message"));
 
     expect(screen.getByTestId("location")).toHaveTextContent(
-      "/posts/42?message=hello#h2 - Hello world"
+      "/posts/42?message=hello#h2 - Hello world",
     );
   });
 });

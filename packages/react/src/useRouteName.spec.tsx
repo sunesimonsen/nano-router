@@ -15,7 +15,7 @@ import {
 
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),
-  new Route("posts", "/posts")
+  new Route("posts", "/posts"),
 );
 
 const RouteName = () => {
@@ -74,7 +74,7 @@ describe("useRouteName", () => {
         <Router history={history} routes={routes}>
           <App />
         </Router>
-      </div>
+      </div>,
     );
   });
 

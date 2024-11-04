@@ -16,7 +16,7 @@ import {
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),
   new Route("posts", "/posts"),
-  new ExternalRoute("external", "https://www.example.com/blog/:id")
+  new ExternalRoute("external", "https://www.example.com/blog/:id"),
 );
 
 const NewView = () => <div data-test-id="new-view" />;
@@ -68,7 +68,7 @@ const RootView = () => {
 const App = () => {
   const history = useMemo(
     () => createMemoryHistory({ initialEntries: ["/posts"] }),
-    []
+    [],
   );
 
   return (
@@ -131,7 +131,7 @@ describe("useLink", () => {
   it("supports external routes", () => {
     expect(screen.getByTestId("external")).toHaveAttribute(
       "href",
-      "https://www.example.com/blog/42"
+      "https://www.example.com/blog/42",
     );
   });
 
@@ -140,7 +140,7 @@ describe("useLink", () => {
 
     expect(externalUrl).toHaveAttribute(
       "href",
-      "https://www.example.com/examples?hello=you#anchor"
+      "https://www.example.com/examples?hello=you#anchor",
     );
     expect(externalUrl).toHaveAttribute("target", "_blank");
   });

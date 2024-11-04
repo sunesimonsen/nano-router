@@ -16,7 +16,7 @@ const RouteQueryParams = () => {
 const App = () => {
   const history = useMemo(
     () => createMemoryHistory({ initialEntries: ["/posts/42?message=hello"] }),
-    []
+    [],
   );
 
   return (
@@ -33,7 +33,7 @@ describe("useQueryParams", () => {
     render(<App />);
 
     expect(screen.getByTestId("query-params-message")).toHaveTextContent(
-      "hello"
+      "hello",
     );
   });
 });

@@ -86,7 +86,7 @@ export function parseUrl(url: string): PartialRouterLocation {
 
 export function getNextLocation(
   to: string | RouterLocation,
-  state: any = null
+  state: any = null,
 ): RouterLocation {
   return {
     ...(typeof to === "string" ? parseUrl(to) : to),
@@ -99,7 +99,7 @@ export function allowTx(
   blockers: TransitionHandlers,
   action: RouterAction,
   location: RouterLocation,
-  retry: RetryFunction
+  retry: RetryFunction,
 ) {
   return (
     !blockers.length || (blockers.call({ action, location, retry }), false)

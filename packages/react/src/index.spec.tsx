@@ -17,7 +17,7 @@ import {
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),
   new Route("posts/edit", "/posts/:id"),
-  new Route("posts", "/posts")
+  new Route("posts", "/posts"),
 );
 
 const RouteName = () => {
@@ -74,7 +74,7 @@ const RootView = () => {
 const App = () => {
   const history = useMemo(
     () => createMemoryHistory({ initialEntries: ["/posts"] }),
-    []
+    [],
   );
 
   return (
