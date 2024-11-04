@@ -1,8 +1,9 @@
 import React, { useMemo } from "react";
+import { render, screen } from "@testing-library/react";
 import { createMemoryHistory } from "@nano-router/history";
-import expect, { mount, unmount } from "./expect.js";
+import "@testing-library/jest-dom";
 
-import { Routes, Route, Router, useLocation, Navigate } from "./index.js";
+import { Routes, Route, Router, useLocation, Navigate } from "./index";
 
 const routes = new Routes(
   new Route("posts", "/posts"),
@@ -32,23 +33,11 @@ const App = () => {
 };
 
 describe("Navigate", () => {
-  let component;
-
   beforeEach(() => {
-    component = mount(<App />);
-  });
-
-  afterEach(() => {
-    unmount(component);
+    render(<App />);
   });
 
   it("navigates to new route", () => {
-    expect(
-      component,
-      "queried for test id",
-      "location",
-      "to have text",
-      "/new"
-    );
+    expect(screen.getByTestId("location")).toHaveTextContent("/new");
   });
 });

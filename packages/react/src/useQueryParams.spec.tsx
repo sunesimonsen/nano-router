@@ -1,8 +1,9 @@
 import React, { useMemo } from "react";
+import { render, screen } from "@testing-library/react";
 import { createMemoryHistory } from "@nano-router/history";
-import expect, { mount, unmount } from "./expect.js";
+import "@testing-library/jest-dom";
 
-import { Routes, Route, Router, useQueryParams } from "./index.js";
+import { Routes, Route, Router, useQueryParams } from "./index";
 
 const routes = new Routes(new Route("posts/edit", "/posts/:id"));
 
@@ -28,22 +29,10 @@ const App = () => {
 };
 
 describe("useQueryParams", () => {
-  let component;
-
-  beforeEach(() => {
-    component = mount(<App />);
-  });
-
-  afterEach(() => {
-    unmount(component);
-  });
-
   it("returns route query params", () => {
-    expect(
-      component,
-      "queried for test id",
-      "query-params-message",
-      "to have text",
+    render(<App />);
+
+    expect(screen.getByTestId("query-params-message")).toHaveTextContent(
       "hello"
     );
   });

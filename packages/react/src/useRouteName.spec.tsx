@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
+import { render, screen, act } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "@nano-router/history";
-import expect, { act, mount, unmount, simulate } from "./expect.js";
+import "@testing-library/jest-dom";
 
 import {
   Routes,
@@ -9,7 +11,7 @@ import {
   useRouter,
   useRouteName,
   useLink,
-} from "./index.js";
+} from "./index";
 
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),
@@ -62,12 +64,12 @@ const App = () => (
 );
 
 describe("useRouteName", () => {
-  let component, history;
+  let history;
 
   beforeEach(() => {
     history = createMemoryHistory({ initialEntries: ["/posts"] });
 
-    component = mount(
+    render(
       <div>
         <Router history={history} routes={routes}>
           <App />
@@ -76,33 +78,18 @@ describe("useRouteName", () => {
     );
   });
 
-  afterEach(() => {
-    unmount(component);
-  });
-
   it("returns the name of the current route", () => {
-    expect(
-      component,
-      "queried for test id",
-      "route-name",
-      "to have text",
-      "posts"
-    );
+    expect(screen.getByTestId("route-name")).toHaveTextContent("posts");
   });
 
   describe("when navigating", () => {
-    beforeEach(() => {
-      simulate(component, { type: "click", target: "[data-test-id=new]" });
+    beforeEach(async () => {
+      await userEvent.click(screen.getByTestId("new"));
     });
 
     it("updates the route name", () => {
-      expect(
-        component,
-        "queried for test id",
-        "route-name",
-        "to have text",
-        "posts/new"
-      ).and("to contain test id", "new-view");
+      expect(screen.getByTestId("route-name")).toHaveTextContent("posts/new");
+      expect(screen.getByTestId("new-view")).toBeInTheDocument();
     });
   });
 
@@ -114,13 +101,7 @@ describe("useRouteName", () => {
     });
 
     it("uses the default route and the app redirects", () => {
-      expect(
-        component,
-        "queried for test id",
-        "route-name",
-        "to have text",
-        "posts"
-      );
+      expect(screen.getByTestId("route-name")).toHaveTextContent("posts");
     });
   });
 });

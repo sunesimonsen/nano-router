@@ -1,17 +1,18 @@
 {
-  "type": "commonjs",
+  "type": "module",
   "name": "@nano-router/react",
   "version": "3.0.0",
   "description": "React integration for @nano-router/router",
   "main": "dist/bundle.cjs",
-  "module": "lib/index.js",
+  "module": "dist/bundle.mjs",
   "exports": {
     "import": "./dist/bundle.mjs",
     "require": "./dist/bundle.cjs"
   },
+  "types": "./lib/index.d.ts",
   "scripts": {
-    "test": "mocha src",
-    "build": "babel --no-babelrc --presets @babel/preset-react --out-dir lib --quiet src && rollup -c rollup.config.js"
+    "test": "jest",
+    "build": "tsc --build --clean && tsc --build && rollup -c rollup.config.js"
   },
   "keywords": [
     "router",
@@ -28,25 +29,25 @@
   },
   "sideEffects": false,
   "peerDependencies": {
-    "@nano-router/history": "^2.0.1",
+    "@nano-router/history": "^3.0.0",
     "react": "16 | 17 | 18"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.4",
-    "@babel/plugin-transform-modules-commonjs": "^7.25.9",
-    "@babel/preset-react": "^7.10.4",
-    "@babel/register": "^7.10.5",
     "@nano-router/history": "^3.0.0",
-    "jsdom": "^19.0.0",
-    "mocha": "^10.8.2",
-    "mocha-dominate": "^2.0.0",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.14",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-dom-testing": "^1.12.0",
     "rollup": "^2.27.1",
-    "unexpected": "^13.1.0",
-    "unexpected-dom": "^5.0.1"
+    "ts-jest": "^29.1.2"
   },
   "dependencies": {
     "@nano-router/router": "^3.0.0"

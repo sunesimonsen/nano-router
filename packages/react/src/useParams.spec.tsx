@@ -1,8 +1,9 @@
 import React, { useMemo } from "react";
+import { render, screen } from "@testing-library/react";
 import { createMemoryHistory } from "@nano-router/history";
-import expect, { mount, unmount } from "./expect.js";
+import "@testing-library/jest-dom";
 
-import { Routes, Route, Router, useParams } from "./index.js";
+import { Routes, Route, Router, useParams } from "./index";
 
 const routes = new Routes(new Route("posts/edit", "/posts/:id"));
 
@@ -28,17 +29,9 @@ const App = () => {
 };
 
 describe("useParams", () => {
-  let component;
-
-  beforeEach(() => {
-    component = mount(<App />);
-  });
-
-  afterEach(() => {
-    unmount(component);
-  });
-
   it("returns route params", () => {
-    expect(component, "queried for test id", "params-id", "to have text", "42");
+    render(<App />);
+
+    expect(screen.getByTestId("params-id")).toHaveTextContent("42");
   });
 });

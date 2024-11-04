@@ -31,8 +31,8 @@
       "error",
       {
         "devDependencies": [
-          "**/*.spec.js",
-          "**/expect.js",
+          "**/*.spec.{js,ts,tsx}",
+          "**/test/*",
           "**/rollup.config.js"
         ],
         "optionalDependencies": false,

@@ -1,8 +1,14 @@
-import React, { useLayoutEffect, useState } from "react";
-import { RouterLocationContext } from "./RouterContext.js";
-import { useRouter } from "./useRouter.js";
+import React, { ReactNode, useLayoutEffect, useState } from "react";
+import { RouterLocationContext } from "./RouterContext";
+import { useRouter } from "./useRouter";
 
-export const RouterSubscription = ({ children }) => {
+type RouterSubscriptionProps = {
+  children: ReactNode;
+};
+
+export const RouterSubscription: React.FC<RouterSubscriptionProps> = ({
+  children,
+}) => {
   const router = useRouter();
   const [match, setMatch] = useState({
     route: router.route,
