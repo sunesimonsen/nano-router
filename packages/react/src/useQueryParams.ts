@@ -1,3 +1,3 @@
-import { useRouterSubscription } from "./useRouterSubscription.js";
+import { useRouterSubscription } from "./useRouterSubscription";
 
 export const useQueryParams = () => useRouterSubscription().queryParams;

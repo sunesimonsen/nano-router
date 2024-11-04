@@ -1,6 +1,8 @@
 import React, { useMemo } from "react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "@nano-router/history";
-import expect, { mount, unmount, simulate } from "./expect.js";
+import "@testing-library/jest-dom";
 
 import {
   Routes,
@@ -10,7 +12,7 @@ import {
   useRouter,
   useParams,
   useLink,
-} from "./index.js";
+} from "./index";
 
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),
@@ -71,7 +73,7 @@ const RootView = () => {
 
 const App = () => {
   const history = useMemo(
-    () => createMemoryHistory({ initialPath: "/posts" }),
+    () => createMemoryHistory({ initialEntries: ["/posts"] }),
     []
   );
 
@@ -86,32 +88,18 @@ const App = () => {
 };
 
 describe("useRouteName", () => {
-  let component;
-
   beforeEach(() => {
-    component = mount(<App />);
-  });
-
-  afterEach(() => {
-    unmount(component);
+    render(<App />);
   });
 
   describe("when navigating", () => {
-    beforeEach(() => {
-      simulate(component, [
-        { type: "click", target: "[data-test-id=new]" },
-        { type: "click", target: "[data-test-id=create]" },
-      ]);
+    beforeEach(async () => {
+      await userEvent.click(screen.getByTestId("new"));
+      await userEvent.click(screen.getByTestId("create"));
     });
 
     it("re-renders the subscribed parts", () => {
-      expect(
-        component,
-        "queried for test id",
-        "edit-view",
-        "to have text",
-        "Id 42"
-      );
+      expect(screen.getByTestId("edit-view")).toHaveTextContent("Id 42");
     });
   });
 });

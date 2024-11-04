@@ -1,7 +1,8 @@
 import { useEffect } from "react";
-import { useRouter } from "./useRouter.js";
+import { useRouter } from "./useRouter";
+import { NavigateOptions } from "@nano-router/router";
 
-export const Navigate = (props) => {
+export const Navigate: React.FC<NavigateOptions> = (props) => {
   const router = useRouter();
 
   useEffect(() => {

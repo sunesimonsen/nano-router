@@ -1,6 +1,8 @@
 import React, { useMemo } from "react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "@nano-router/history";
-import expect, { mount, unmount, simulate } from "./expect.js";
+import "@testing-library/jest-dom";
 
 import {
   NestedRouter,
@@ -10,7 +12,7 @@ import {
   useLink,
   useLocation,
   useParams,
-} from "./index.js";
+} from "./index";
 
 const routes = new Routes(
   new Route("posts", "/posts"),
@@ -23,7 +25,11 @@ const nestedRoutes = new Routes(
   new Route("posts/show", "/:id")
 );
 
-const Location = ({ name }) => {
+type LocationProps = {
+  name: string;
+};
+
+const Location: React.FC<LocationProps> = ({ name }) => {
   const location = useLocation();
 
   return <div data-test-id={`location-${name}`}>{location.pathname}</div>;
@@ -31,6 +37,7 @@ const Location = ({ name }) => {
 
 const PostViews = () => {
   const { id } = useParams();
+
   const showNewPost = useLink("posts/new");
   const showEditPost = useLink({ route: "posts/edit", params: { id } });
   const showComments = useLink({ route: "comments", params: { id } });
@@ -83,80 +90,42 @@ const App = () => {
 };
 
 describe("NestedRouter", () => {
-  let component;
-
   beforeEach(() => {
-    component = mount(<App />);
-  });
-
-  afterEach(() => {
-    unmount(component);
+    render(<App />);
   });
 
   it("returns the router from the context", () => {
-    expect(
-      component,
-      "queried for test id",
-      "location-app",
-      "to have text",
-      "/posts"
-    );
+    expect(screen.getByTestId("location-app")).toHaveTextContent("/posts");
 
-    expect(
-      component,
-      "queried for test id",
-      "location-nested-app",
-      "to have text",
-      "/42"
-    );
+    expect(screen.getByTestId("location-nested-app")).toHaveTextContent("/42");
   });
 
   describe("when navigating in the nested router", () => {
     describe("and the route exist", () => {
-      beforeEach(() => {
-        simulate(component, [{ type: "click", target: "[data-test-id=edit]" }]);
+      beforeEach(async () => {
+        await userEvent.click(screen.getByTestId("edit"));
       });
 
       it("updates the routing information in the nested router", () => {
-        expect(
-          component,
-          "queried for test id",
-          "location-app",
-          "to have text",
-          "/posts"
-        );
+        expect(screen.getByTestId("location-app")).toHaveTextContent("/posts");
 
-        expect(
-          component,
-          "queried for test id",
-          "location-nested-app",
-          "to have text",
+        expect(screen.getByTestId("location-nested-app")).toHaveTextContent(
           "/edit/42"
         );
       });
     });
 
     describe("and the route does't exist", () => {
-      beforeEach(() => {
-        simulate(component, [
-          { type: "click", target: "[data-test-id=comments]" },
-        ]);
+      beforeEach(async () => {
+        await userEvent.click(screen.getByTestId("comments"));
       });
 
       it("forwards the navigation to the parent router", () => {
-        expect(
-          component,
-          "queried for test id",
-          "location-app",
-          "to have text",
+        expect(screen.getByTestId("location-app")).toHaveTextContent(
           "/comments/42"
         );
 
-        expect(
-          component,
-          "queried for test id",
-          "location-nested-app",
-          "to have text",
+        expect(screen.getByTestId("location-nested-app")).toHaveTextContent(
           "/42"
         );
       });

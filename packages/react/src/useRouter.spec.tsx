@@ -1,8 +1,9 @@
 import React, { useMemo } from "react";
+import { render, screen } from "@testing-library/react";
 import { createMemoryHistory } from "@nano-router/history";
-import expect, { mount, unmount } from "./expect.js";
+import "@testing-library/jest-dom";
 
-import { Routes, Route, Router, useRouter } from "./index.js";
+import { Routes, Route, Router, useRouter } from "./index";
 
 const routes = new Routes(new Route("posts", "/posts"));
 
@@ -28,23 +29,9 @@ const App = () => {
 };
 
 describe("useRouter", () => {
-  let component;
-
-  beforeEach(() => {
-    component = mount(<App />);
-  });
-
-  afterEach(() => {
-    unmount(component);
-  });
-
   it("returns the router from the context", () => {
-    expect(
-      component,
-      "queried for test id",
-      "location",
-      "to have text",
-      "/posts"
-    );
+    render(<App />);
+
+    expect(screen.getByTestId("location")).toHaveTextContent("/posts");
   });
 });

@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
-import { useRouter } from "./useRouter.js";
+import { useRouter } from "./useRouter";
 
-const inactiveConfirmation = { isVisible: false };
+const inactiveConfirmation = {
+  isVisible: false,
+  reject: () => {},
+  approve: () => {},
+};
 
-export const usePrompt = (isActive) => {
+export const usePrompt = (isActive: boolean) => {
   const router = useRouter();
 
   const [confirmation, setConfirmation] = useState(inactiveConfirmation);
@@ -14,7 +18,7 @@ export const usePrompt = (isActive) => {
         const state = tx.location.state;
         if (state && state.skipPrompt) {
           unblock();
-          tx.retry();
+          tx.retry?.();
         } else {
           setConfirmation({
             isVisible: true,
@@ -23,7 +27,7 @@ export const usePrompt = (isActive) => {
             },
             approve: () => {
               unblock();
-              tx.retry();
+              tx.retry?.();
               setConfirmation(inactiveConfirmation);
             },
           });
@@ -37,6 +41,7 @@ export const usePrompt = (isActive) => {
       };
     } else {
       setConfirmation(inactiveConfirmation);
+      return () => {};
     }
   }, [router, isActive]);
 

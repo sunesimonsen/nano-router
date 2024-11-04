@@ -1,6 +1,8 @@
-import React, { useState, useMemo } from "react";
+import React, { useMemo, useState } from "react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "@nano-router/history";
-import expect, { mount, unmount, simulate } from "./expect.js";
+import "@testing-library/jest-dom";
 
 import {
   Routes,
@@ -11,7 +13,7 @@ import {
   useRouter,
   usePrompt,
   useLink,
-} from "./index.js";
+} from "./index";
 
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),
@@ -28,8 +30,8 @@ const NewView = () => {
   const showPosts = useLink("posts");
   const showExternal = useLink({ route: "external", params: { id: 42 } });
 
-  const onChange = (e) => {
-    setName(e.target.value);
+  const onChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
+    setName(e.currentTarget.value);
   };
 
   const onSave = () => {
@@ -94,102 +96,82 @@ const App = () => {
 };
 
 describe("usePrompt", () => {
-  let component;
-
   beforeEach(() => {
-    component = mount(<App />);
-  });
-
-  afterEach(() => {
-    unmount(component);
+    render(<App />);
   });
 
   describe("when navigation is blocked", () => {
-    beforeEach(() => {
-      simulate(component, [
-        { type: "change", target: "[data-test-id=name]", value: "Sune" },
-        { type: "click", target: "[data-test-id=show-list]" },
-      ]);
+    beforeEach(async () => {
+      await userEvent.type(screen.getByTestId("name"), "Sune");
+      await userEvent.click(screen.getByTestId("show-list"));
     });
 
     it("shows a confirmation", () => {
-      expect(component, "to contain test id", "approve");
+      expect(screen.getByTestId("approve")).toBeInTheDocument();
     });
   });
 
   describe("when navigation is blocked to an external route", () => {
-    beforeEach(() => {
-      simulate(component, [
-        { type: "change", target: "[data-test-id=name]", value: "Sune" },
-        { type: "click", target: "[data-test-id=external]" },
-      ]);
+    beforeEach(async () => {
+      await userEvent.type(screen.getByTestId("name"), "Sune");
+      await userEvent.click(screen.getByTestId("external"));
     });
 
     it("shows a confirmation", () => {
-      expect(component, "to contain test id", "approve");
+      expect(screen.getByTestId("approve")).toBeInTheDocument();
     });
   });
 
   describe("when block navigation is confirmed", () => {
-    beforeEach(() => {
-      simulate(component, [
-        { type: "change", target: "[data-test-id=name]", value: "Sune" },
-        { type: "click", target: "[data-test-id=show-list]" },
-        { type: "click", target: "[data-test-id=approve]" },
-      ]);
+    beforeEach(async () => {
+      await userEvent.type(screen.getByTestId("name"), "Sune");
+      await userEvent.click(screen.getByTestId("show-list"));
+      await userEvent.click(screen.getByTestId("approve"));
     });
 
     it("navigates", () => {
-      expect(component, "to contain test id", "posts-list");
+      expect(screen.getByTestId("posts-list")).toBeInTheDocument();
     });
   });
 
   describe("when block navigation is rejected", () => {
-    beforeEach(() => {
-      simulate(component, [
-        { type: "change", target: "[data-test-id=name]", value: "Sune" },
-        { type: "click", target: "[data-test-id=show-list]" },
-        { type: "click", target: "[data-test-id=reject]" },
-      ]);
+    beforeEach(async () => {
+      await userEvent.type(screen.getByTestId("name"), "Sune");
+      await userEvent.click(screen.getByTestId("show-list"));
+      await userEvent.click(screen.getByTestId("reject"));
     });
 
     it("removes the confirmation but it doesn't navigate", () => {
-      expect(component, "not to contain test id", "approve").and(
-        "not to contain test id",
-        "posts-list"
-      );
+      expect(screen.queryByTestId("approve")).toBe(null);
+      expect(screen.getByTestId("show-list")).toBeInTheDocument();
+      expect(screen.queryByTestId("posts-list")).toBe(null);
     });
   });
 
   describe("when block navigation is rejected multiple times", () => {
-    beforeEach(() => {
-      simulate(component, [
-        { type: "change", target: "[data-test-id=name]", value: "Sune" },
-        { type: "click", target: "[data-test-id=show-list]" },
-        { type: "click", target: "[data-test-id=reject]" },
-        { type: "click", target: "[data-test-id=show-list]" },
-        { type: "click", target: "[data-test-id=reject]" },
-      ]);
+    beforeEach(async () => {
+      await userEvent.type(screen.getByTestId("name"), "Sune");
+      await userEvent.click(screen.getByTestId("show-list"));
+      await userEvent.click(screen.getByTestId("reject"));
+      await userEvent.click(screen.getByTestId("show-list"));
+      await userEvent.click(screen.getByTestId("reject"));
     });
 
     it("removes the confirmation but it doesn't navigate", () => {
-      expect(component, "not to contain test id", "approve").and(
-        "not to contain test id",
-        "posts-list"
-      );
+      expect(screen.queryByTestId("approve")).toBe(null);
+      expect(screen.getByTestId("show-list")).toBeInTheDocument();
+      expect(screen.queryByTestId("posts-list")).toBe(null);
     });
   });
 
   describe("when removing a confirmation", () => {
-    beforeEach(() => {
-      simulate(component, [
-        { type: "change", target: "[data-test-id=name]", value: "Sune" },
-        { type: "click", target: "[data-test-id=save]" },
-      ]);
+    beforeEach(async () => {
+      await userEvent.type(screen.getByTestId("name"), "Sune");
+      await userEvent.click(screen.getByTestId("save"));
     });
 
     it("won't prompt on navigation", () => {
-      expect(component, "to contain test id", "posts-list");
+      expect(screen.queryByTestId("posts-list")).toBeInTheDocument();
     });
   });
 });

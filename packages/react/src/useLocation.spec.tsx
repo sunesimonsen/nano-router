@@ -1,8 +1,10 @@
 import React, { useMemo } from "react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "@nano-router/history";
-import expect, { mount, unmount, simulate } from "./expect.js";
+import "@testing-library/jest-dom";
 
-import { Routes, Route, Router, useLocation, useRouter } from "./index.js";
+import { Routes, Route, Router, useLocation, useRouter } from "./index";
 
 const routes = new Routes(new Route("posts/edit", "/posts/:id"));
 
@@ -50,27 +52,12 @@ const App = () => {
 };
 
 describe("useLocation", () => {
-  let component;
+  it("retrieves the current history location", async () => {
+    render(<App />);
 
-  beforeEach(() => {
-    component = mount(<App />);
-  });
+    await userEvent.click(screen.getByTestId("set-message"));
 
-  afterEach(() => {
-    unmount(component);
-  });
-
-  it("retrieves the current history location", () => {
-    simulate(component, {
-      type: "click",
-      target: "[data-test-id=set-message]",
-    });
-
-    expect(
-      component,
-      "queried for test id",
-      "location",
-      "to have text",
+    expect(screen.getByTestId("location")).toHaveTextContent(
       "/posts/42?message=hello#h2 - Hello world"
     );
   });

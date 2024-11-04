@@ -1,5 +1,5 @@
 export default {
-  input: "lib/index.js",
+  input: "lib/src/index.js",
   output: [
     {
       file: "dist/bundle.cjs",
