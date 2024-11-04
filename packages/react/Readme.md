@@ -31,7 +31,7 @@ import { Routes, Route } from "@nano-router/react";
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),
   new Route("posts/edit", "/posts/:id"),
-  new Route("posts", "/posts")
+  new Route("posts", "/posts"),
 );
 ```
 

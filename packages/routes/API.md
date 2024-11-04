@@ -105,7 +105,7 @@ Create a URL from the route pattern and the given parameters:
 expect(
   route.stringify({ id: 42 }),
   "to equal",
-  "https://www.example.com/posts/42"
+  "https://www.example.com/posts/42",
 );
 ```
 
@@ -121,7 +121,7 @@ Create a new routes object for the given routes.
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),
   new Route("posts/edit", "/posts/:id"),
-  new Route("posts", "/posts")
+  new Route("posts", "/posts"),
 );
 ```
 

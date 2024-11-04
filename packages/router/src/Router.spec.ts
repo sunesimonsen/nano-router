@@ -12,7 +12,7 @@ const routes = new Routes(
   new Route("posts/view", "/posts/:id"),
   new Route("posts", "/posts"),
   new ExternalRoute("blog", "/blog/:id"),
-  new ExternalRoute("examples", "https://www.example.com/examples")
+  new ExternalRoute("examples", "https://www.example.com/examples"),
 );
 
 describe("Router", () => {

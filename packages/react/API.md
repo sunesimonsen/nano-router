@@ -55,7 +55,7 @@ import { createMemoryHistory } from "@nano-router/history";
 const App = () => {
   const history = useMemo(
     () => createMemoryHistory({ initialEntries: ["/posts"] }),
-    []
+    [],
   );
 
   return (
@@ -106,7 +106,7 @@ import { createBrowserHistory } from "@nano-router/history";
 const NestedNavigation = () => {
   const history = useMemo(
     () => createMemoryHistory({ initialEntries: ["/"] }),
-    []
+    [],
   );
 
   return (

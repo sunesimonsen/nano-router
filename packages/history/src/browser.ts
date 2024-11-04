@@ -91,7 +91,7 @@ export function createBrowserHistory(options: Options = {}): RouterHistory {
               `created by the history library. The block will fail silently in ` +
               `production, but in general you should do all navigation with the ` +
               `history library (instead of using window.history.pushState directly) ` +
-              `to avoid this situation.`
+              `to avoid this situation.`,
           );
         }
       } else {
@@ -141,7 +141,7 @@ export function createBrowserHistory(options: Options = {}): RouterHistory {
     if (allowTx(blockers, nextAction, nextLocation, retry)) {
       const { historyState, url } = getHistoryStateAndUrl(
         nextLocation,
-        index + 1
+        index + 1,
       );
 
       // TODO: Support forced reloading

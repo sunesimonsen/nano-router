@@ -44,7 +44,7 @@ export function createMemoryHistory(options: Options): MemoryRouterHistory {
   let index = clamp(
     initialIndex == null ? entries.length - 1 : initialIndex,
     0,
-    entries.length - 1
+    entries.length - 1,
   );
 
   let action: RouterAction = "POP";

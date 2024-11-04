@@ -7,7 +7,7 @@ import { Routes, Route, Router, useLocation, Navigate } from "./index";
 
 const routes = new Routes(
   new Route("posts", "/posts"),
-  new Route("new", "/new")
+  new Route("new", "/new"),
 );
 
 const Location = () => {
@@ -19,7 +19,7 @@ const Location = () => {
 const App = () => {
   const history = useMemo(
     () => createMemoryHistory({ initialEntries: ["/posts"] }),
-    []
+    [],
   );
 
   return (

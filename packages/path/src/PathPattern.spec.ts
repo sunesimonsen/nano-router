@@ -31,13 +31,13 @@ describe("PathPattern", () => {
 
     it("returns null if pattern doesn't match", () => {
       expect(
-        new PathPattern("/posts/:locale/edit/:id").match("/posts/da/edit")
+        new PathPattern("/posts/:locale/edit/:id").match("/posts/da/edit"),
       ).toBe(null);
 
       expect(new PathPattern(":id").match("")).toBe(null);
 
       expect(
-        new PathPattern("/posts/:locale/edit/:id").match("/posts/da/new/123")
+        new PathPattern("/posts/:locale/edit/:id").match("/posts/da/new/123"),
       ).toBe(null);
     });
 
@@ -46,8 +46,8 @@ describe("PathPattern", () => {
 
       expect(
         pattern.match(
-          "/posts/da%25%3F%26/edit/123%2B%20%2F%20%C3%A6%C3%B8%C3%A5"
-        )
+          "/posts/da%25%3F%26/edit/123%2B%20%2F%20%C3%A6%C3%B8%C3%A5",
+        ),
       ).toEqual({
         id: "123+ / æøå",
         locale: "da%?&",
@@ -56,7 +56,7 @@ describe("PathPattern", () => {
 
     it("supports full URL patterns", () => {
       const pattern = new PathPattern(
-        "https://example.com/posts/:locale/edit/:id"
+        "https://example.com/posts/:locale/edit/:id",
       );
 
       expect(pattern.match("https://example.com/posts/da/edit/123")).toEqual({
@@ -67,7 +67,7 @@ describe("PathPattern", () => {
 
     it("ignores trailing slashes when matching full URL patterns", () => {
       const pattern = new PathPattern(
-        "https://example.com/posts/:locale/edit/:id"
+        "https://example.com/posts/:locale/edit/:id",
       );
 
       expect(pattern.match("https://example.com/posts/da/edit/123/")).toEqual({
@@ -84,7 +84,7 @@ describe("PathPattern", () => {
 
     it("doesn't match full urls with paths", () => {
       const pattern = new PathPattern(
-        "https://example.com/posts/:locale/edit/:id"
+        "https://example.com/posts/:locale/edit/:id",
       );
 
       expect(pattern.match("/posts/da/edit/123")).toBe(null);
@@ -102,7 +102,7 @@ describe("PathPattern", () => {
       const pattern = new PathPattern("posts/edit/:id");
 
       expect(() => pattern.stringify()).toThrow(
-        "No value provided for variable: id"
+        "No value provided for variable: id",
       );
     });
 
@@ -114,7 +114,7 @@ describe("PathPattern", () => {
           id: "123",
           locale: "da",
           other: "not needed",
-        })
+        }),
       ).toEqual("/posts/da/edit/123");
     });
 
@@ -126,20 +126,20 @@ describe("PathPattern", () => {
           id: "123+ / æøå",
           locale: "da%?&",
           other: "not needed",
-        })
+        }),
       ).toEqual("/posts/da%25%3F%26/edit/123%2B%20%2F%20%C3%A6%C3%B8%C3%A5");
     });
 
     it("supports full URL patterns", () => {
       const pattern = new PathPattern(
-        "https://example.com/posts/:locale/edit/:id"
+        "https://example.com/posts/:locale/edit/:id",
       );
 
       expect(
         pattern.stringify({
           id: "123",
           locale: "da",
-        })
+        }),
       ).toEqual("https://example.com/posts/da/edit/123");
     });
   });

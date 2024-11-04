@@ -12,7 +12,7 @@ export const useLink = (routeNameOrOptions: string | NavigateOptions) => {
 
   const href = useMemo(
     () => router.createUrl(routeNameOrOptions),
-    [router, routeNameOrOptions]
+    [router, routeNameOrOptions],
   );
 
   const onClick = useCallback(
@@ -22,7 +22,7 @@ export const useLink = (routeNameOrOptions: string | NavigateOptions) => {
         router.navigate(routeNameOrOptions);
       }
     },
-    [router, routeNameOrOptions]
+    [router, routeNameOrOptions],
   );
 
   const target =

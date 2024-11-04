@@ -11,7 +11,7 @@ describe("createUrl", () => {
         pathname: "/posts/new",
         queryParams: { foo: "bar", one: 1 },
         hash: "#hash",
-      })
+      }),
     ).toEqual("/posts/new?foo=bar&one=1#hash");
   });
 
@@ -20,7 +20,7 @@ describe("createUrl", () => {
       createUrl({
         pathname: "/posts/new",
         queryParams: { foo: "bar", one: 1 },
-      })
+      }),
     ).toEqual("/posts/new?foo=bar&one=1");
   });
 
@@ -30,7 +30,7 @@ describe("createUrl", () => {
         origin: "https://www.example.com",
         pathname: "/posts/new",
         queryParams: { foo: "bar", one: 1 },
-      })
+      }),
     ).toEqual("https://www.example.com/posts/new?foo=bar&one=1");
   });
 
@@ -41,7 +41,7 @@ describe("createUrl", () => {
         pathname: "/posts/edit/:id",
         params: { id: 123 },
         queryParams: { foo: "bar", one: 1 },
-      })
+      }),
     ).toEqual("https://www.example.com/posts/edit/123?foo=bar&one=1");
   });
 });

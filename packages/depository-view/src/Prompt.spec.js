@@ -20,7 +20,7 @@ const expect = unexpected.clone().use(unexpectedDom);
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),
   new Route("posts", "/posts"),
-  new ExternalRoute("external", "https://www.example.com/blog/:id")
+  new ExternalRoute("external", "https://www.example.com/blog/:id"),
 );
 
 const updateName = (name) => ({
@@ -32,13 +32,13 @@ class Confirm {
   constructor() {
     this.onApprove = (e) => {
       e.target.dispatchEvent(
-        new window.CustomEvent("Approve", { bubbles: true, cancelable: true })
+        new window.CustomEvent("Approve", { bubbles: true, cancelable: true }),
       );
     };
 
     this.onReject = (e) => {
       e.target.dispatchEvent(
-        new window.CustomEvent("Reject", { bubbles: true, cancelable: true })
+        new window.CustomEvent("Reject", { bubbles: true, cancelable: true }),
       );
     };
   }
@@ -142,7 +142,7 @@ describe("usePrompt", () => {
     render(
       html`<${Routing} router=${router}><${RootView} /><//>`,
       store,
-      container
+      container,
     );
 
     await clock.runAllAsync();
@@ -196,7 +196,7 @@ describe("usePrompt", () => {
     it("removes the confirmation but it doesn't navigate", () => {
       expect(container, "not to contain test id", "approve").and(
         "not to contain test id",
-        "posts-list"
+        "posts-list",
       );
     });
   });
@@ -213,7 +213,7 @@ describe("usePrompt", () => {
     it("removes the confirmation but it doesn't navigate", () => {
       expect(container, "not to contain test id", "approve").and(
         "not to contain test id",
-        "posts-list"
+        "posts-list",
       );
     });
   });

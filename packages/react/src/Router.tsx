@@ -17,7 +17,7 @@ export const Router: React.FC<RouterProps> = ({
 }) => {
   const router = useMemo(
     () => new NanoRouter({ routes, history }),
-    [routes, history]
+    [routes, history],
   );
 
   return (

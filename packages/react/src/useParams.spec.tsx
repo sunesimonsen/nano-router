@@ -16,7 +16,7 @@ const RouteParams = () => {
 const App = () => {
   const history = useMemo(
     () => createMemoryHistory({ initialEntries: ["/posts/42"] }),
-    []
+    [],
   );
 
   return (

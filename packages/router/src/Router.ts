@@ -89,7 +89,7 @@ export class Router {
   }
 
   #createRouteOptions(
-    routeNameOrOptions: string | NavigateOptions
+    routeNameOrOptions: string | NavigateOptions,
   ): NavigateTarget {
     const options =
       typeof routeNameOrOptions === "string"

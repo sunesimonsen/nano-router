@@ -16,7 +16,7 @@ const Location = () => {
 const App = () => {
   const history = useMemo(
     () => createMemoryHistory({ initialEntries: ["/posts"] }),
-    []
+    [],
   );
 
   return (

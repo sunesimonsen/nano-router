@@ -16,13 +16,13 @@ import {
 
 const routes = new Routes(
   new Route("posts", "/posts"),
-  new Route("comments", "/comments/:id")
+  new Route("comments", "/comments/:id"),
 );
 
 const nestedRoutes = new Routes(
   new Route("posts/new", "/new"),
   new Route("posts/edit", "/edit/:id"),
-  new Route("posts/show", "/:id")
+  new Route("posts/show", "/:id"),
 );
 
 type LocationProps = {
@@ -60,7 +60,7 @@ const PostViews = () => {
 const NestedApp = () => {
   const history = useMemo(
     () => createMemoryHistory({ initialEntries: ["/42"] }),
-    []
+    [],
   );
 
   return (
@@ -76,7 +76,7 @@ const NestedApp = () => {
 const App = () => {
   const history = useMemo(
     () => createMemoryHistory({ initialEntries: ["/posts"] }),
-    []
+    [],
   );
 
   return (
@@ -110,7 +110,7 @@ describe("NestedRouter", () => {
         expect(screen.getByTestId("location-app")).toHaveTextContent("/posts");
 
         expect(screen.getByTestId("location-nested-app")).toHaveTextContent(
-          "/edit/42"
+          "/edit/42",
         );
       });
     });
@@ -122,11 +122,11 @@ describe("NestedRouter", () => {
 
       it("forwards the navigation to the parent router", () => {
         expect(screen.getByTestId("location-app")).toHaveTextContent(
-          "/comments/42"
+          "/comments/42",
         );
 
         expect(screen.getByTestId("location-nested-app")).toHaveTextContent(
-          "/42"
+          "/42",
         );
       });
     });
