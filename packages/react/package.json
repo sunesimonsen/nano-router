@@ -9,17 +9,12 @@
     "import": "./dist/bundle.mjs",
     "require": "./dist/bundle.cjs"
   },
-  "types": "./lib/index.d.ts",
+  "types": "./lib/src/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc --build --clean && tsc --build && rollup -c rollup.config.js"
   },
-  "keywords": [
-    "router",
-    "react",
-    "minimal",
-    "tiny"
-  ],
+  "keywords": ["router", "react", "minimal", "tiny"],
   "author": "Sune Simonsen <sune@we-knowhow.dk>",
   "license": "MIT",
   "bugs": "https://github.com/sunesimonsen/nano-router/issues",
