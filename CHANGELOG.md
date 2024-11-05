@@ -1,3 +1,10 @@
+### v3.1.1 (2024-11-05)
+
+- [v3.1.1](https://github.com/sunesimonsen/nano-router/commit/254a304f04505bfdf2a1e027cf215086dd05c5d9) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [formatted the code](https://github.com/sunesimonsen/nano-router/commit/da511fa822ae7f60c749ddf1b4804f79876d82ee) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Fix react types path](https://github.com/sunesimonsen/nano-router/commit/717e500f58da4590d6b36f6d46c8ec01b95520f6) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update changelog](https://github.com/sunesimonsen/nano-router/commit/62cf49fcd498ce9f3712728bf232e5f877b44f5e) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v3.1.0 (2024-11-04)
 
 #### Pull requests
