@@ -29,7 +29,7 @@
     "@tsconfig/node20": "^20.1.2",
     "@tsconfig/strictest": "^2.0.3",
     "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-prettier": "^10.0.2",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-mocha": "^10.3.0",
