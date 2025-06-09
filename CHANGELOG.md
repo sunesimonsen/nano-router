@@ -1,3 +1,20 @@
+### v3.1.2 (2025-06-09)
+
+#### Pull requests
+
+- [#302](https://github.com/sunesimonsen/nano-router/pull/302) Fix the package.json exports ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#256](https://github.com/sunesimonsen/nano-router/pull/256) Bump eslint-plugin-promise from 6.6.0 to 7.2.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#244](https://github.com/sunesimonsen/nano-router/pull/244) Bump unexpected-dom from 5.1.0 to 6.0.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#263](https://github.com/sunesimonsen/nano-router/pull/263) Bump eslint-plugin-n from 16.6.2 to 17.15.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+
+#### Commits to master
+
+- [v3.1.2](https://github.com/sunesimonsen/nano-router/commit/d7d89b0eb88a6703c80e76f161d9898eacba60a9) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Fix lint setup](https://github.com/sunesimonsen/nano-router/commit/3a7261559047eeb60097a8186573012f78b865cb) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update lock file](https://github.com/sunesimonsen/nano-router/commit/dc783b0d3310dfe696dc9b4f58317e5423b33859) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update Readme.md](https://github.com/sunesimonsen/nano-router/commit/44540c2e047c275093dd5ce10b85f0f7f4b1f1d8) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update changelog](https://github.com/sunesimonsen/nano-router/commit/9776e9903db2f07073cf44138c7b551b2e6ad994) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v3.1.1 (2024-11-05)
 
 - [v3.1.1](https://github.com/sunesimonsen/nano-router/commit/254a304f04505bfdf2a1e027cf215086dd05c5d9) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
