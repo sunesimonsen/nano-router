@@ -3,9 +3,11 @@
   "name": "@nano-router/react",
   "version": "3.1.1",
   "description": "React integration for @nano-router/router",
-  "main": "dist/bundle.cjs",
-  "module": "dist/bundle.mjs",
+  "main": "./dist/bundle.cjs",
+  "module": "./dist/bundle.mjs",
   "exports": {
+    "types": "./lib/src/index.d.ts",
+    "module": "./dist/bundle.mjs",
     "import": "./dist/bundle.mjs",
     "require": "./dist/bundle.cjs"
   },

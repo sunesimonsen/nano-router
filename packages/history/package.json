@@ -3,9 +3,11 @@
   "name": "@nano-router/history",
   "version": "3.1.0",
   "description": "Manage session history with JavaScript",
-  "main": "dist/bundle.cjs",
-  "module": "dist/bundle.mjs",
+  "main": "./dist/bundle.cjs",
+  "module": "./dist/bundle.mjs",
   "exports": {
+    "types": "./lib/index.d.ts",
+    "module": "./dist/bundle.mjs",
     "import": "./dist/bundle.mjs",
     "require": "./dist/bundle.cjs"
   },

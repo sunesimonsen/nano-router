@@ -3,11 +3,13 @@
   "name": "@nano-router/url",
   "version": "3.1.0",
   "description": "Methods to create urls",
-  "main": "dist/url.cjs",
-  "module": "./dist/url.mjs",
+  "main": "./dist/bundle.cjs",
+  "module": "./dist/bundle.mjs",
   "exports": {
-    "import": "./dist/url.mjs",
-    "require": "./dist/url.cjs"
+    "types": "./lib/index.d.ts",
+    "module": "./dist/bundle.mjs",
+    "import": "./dist/bundle.mjs",
+    "require": "./dist/bundle.cjs"
   },
   "types": "./lib/index.d.ts",
   "scripts": {

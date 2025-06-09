@@ -4,8 +4,10 @@
   "version": "3.1.0",
   "description": "Objects to setup routes",
   "main": "./dist/bundle.cjs",
-  "module": "dist/bundle.mjs",
+  "module": "./dist/bundle.mjs",
   "exports": {
+    "types": "./lib/index.d.ts",
+    "module": "./dist/bundle.mjs",
     "import": "./dist/bundle.mjs",
     "require": "./dist/bundle.cjs"
   },
