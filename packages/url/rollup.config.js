@@ -5,7 +5,7 @@ export default [
   {
     input: "lib/index.js",
     output: {
-      file: "dist/url.cjs",
+      file: "dist/bundle.cjs",
       format: "cjs",
     },
     external: ["querystring", "@nano-router/path"],
@@ -13,7 +13,7 @@ export default [
   {
     input: "lib/index.js",
     output: {
-      file: "dist/url.mjs",
+      file: "dist/bundle.mjs",
       format: "es",
     },
     plugins: [
