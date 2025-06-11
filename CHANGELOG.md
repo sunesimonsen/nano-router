@@ -1,3 +1,14 @@
+### v3.2.0 (2025-06-11)
+
+#### Pull requests
+
+- [#303](https://github.com/sunesimonsen/nano-router/pull/303) Import with js extensions ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+#### Commits to master
+
+- [v3.2.0](https://github.com/sunesimonsen/nano-router/commit/cd230bbeb404a23a8bf0205748cbf5202e1503ca) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update changelog](https://github.com/sunesimonsen/nano-router/commit/592a886b2ef492ec3ebc4a1cdfd019f4b525cd2d) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v3.1.2 (2025-06-09)
 
 #### Pull requests
