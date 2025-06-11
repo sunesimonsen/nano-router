@@ -1,5 +1,5 @@
 import { PathPattern } from "@nano-router/path";
-import { PathValues } from "@nano-router/path/src/PathPattern";
+import type { PathValues } from "@nano-router/path";
 
 export class Route {
   name: string;

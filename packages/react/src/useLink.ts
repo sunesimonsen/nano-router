@@ -1,5 +1,5 @@
 import { MouseEvent, useCallback, useMemo } from "react";
-import { useRouter } from "./useRouter";
+import { useRouter } from "./useRouter.js";
 import { NavigateOptions } from "@nano-router/router";
 
 const shouldNavigate = (e: MouseEvent) =>

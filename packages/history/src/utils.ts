@@ -5,7 +5,7 @@ import {
   TransitionArgs,
   TransitionHandler,
   TransitionHandlers,
-} from "./history";
+} from "./history.js";
 
 export const isDev = (globalThis as any).__DEV__;
 

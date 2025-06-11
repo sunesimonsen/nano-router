@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "@nano-router/history";
 import "@testing-library/jest-dom";
 
-import { Routes, Route, Router, useLocation, useRouter } from "./index";
+import { Routes, Route, Router, useLocation, useRouter } from "./index.js";
 
 const routes = new Routes(new Route("posts/edit", "/posts/:id"));
 

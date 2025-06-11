@@ -1,6 +1,6 @@
-import { TransitionArgs, TransitionHandler, Unsubscriber } from "./history";
-import { createMemoryHistory } from "./memory";
-import type { MemoryRouterHistory } from "./memory";
+import { TransitionArgs, TransitionHandler, Unsubscriber } from "./history.js";
+import { createMemoryHistory } from "./memory.js";
+import type { MemoryRouterHistory } from "./memory.js";
 
 describe("memory", () => {
   let history: MemoryRouterHistory,

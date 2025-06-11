@@ -1,8 +1,8 @@
 import React, { ReactNode, useMemo } from "react";
-import { RouterContext } from "./RouterContext";
+import { RouterContext } from "./RouterContext.js";
 import { Router as NanoRouter, Routes } from "@nano-router/router";
 import { type RouterHistory } from "@nano-router/history";
-import { RouterSubscription } from "./RouterSubscription";
+import { RouterSubscription } from "./RouterSubscription.js";
 
 type RouterProps = {
   routes: Routes;
