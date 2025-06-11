@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@nano-router/path",
-  "version": "3.1.2",
+  "version": "3.2.0",
   "description": "Simple path patterns for matching and stringifying",
   "main": "./dist/bundle.cjs",
   "module": "./dist/bundle.mjs",
