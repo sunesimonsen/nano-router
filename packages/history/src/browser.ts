@@ -4,7 +4,7 @@ import {
   RouterLocation,
   TransitionArgs,
   TransitionHandler,
-} from "./history";
+} from "./history.js";
 import {
   allowTx,
   createEvents,
@@ -12,7 +12,7 @@ import {
   ensureRootRelative,
   promptBeforeUnload,
   isDev,
-} from "./utils";
+} from "./utils.js";
 
 const BeforeUnloadEventType = "beforeunload";
 const PopStateEventType = "popstate";

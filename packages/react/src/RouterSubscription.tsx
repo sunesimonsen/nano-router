@@ -1,6 +1,6 @@
 import React, { ReactNode, useLayoutEffect, useState } from "react";
-import { RouterLocationContext } from "./RouterContext";
-import { useRouter } from "./useRouter";
+import { RouterLocationContext } from "./RouterContext.js";
+import { useRouter } from "./useRouter.js";
 
 type RouterSubscriptionProps = {
   children: ReactNode;

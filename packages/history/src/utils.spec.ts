@@ -1,4 +1,4 @@
-import { parseUrl, PartialRouterLocation } from "./utils";
+import { parseUrl, PartialRouterLocation } from "./utils.js";
 
 type TestCase = [string, PartialRouterLocation];
 

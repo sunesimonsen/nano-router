@@ -1,12 +1,12 @@
 import React, { ReactNode, useMemo } from "react";
-import { RouterContext } from "./RouterContext";
+import { RouterContext } from "./RouterContext.js";
 import {
   Router as NanoRouter,
   NavigateOptions,
   Routes,
 } from "@nano-router/router";
-import { RouterSubscription } from "./RouterSubscription";
-import { useRouter } from "./useRouter";
+import { RouterSubscription } from "./RouterSubscription.js";
+import { useRouter } from "./useRouter.js";
 import { RouterHistory } from "@nano-router/history";
 
 type NestedNanoRouterArgs = {

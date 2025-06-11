@@ -1,4 +1,4 @@
-import { createUrl, objectToSearch, searchToObject } from "./index";
+import { createUrl, objectToSearch, searchToObject } from "./index.js";
 
 describe("createUrl", () => {
   it("allows you to omit all arguments", () => {

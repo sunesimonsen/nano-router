@@ -4,7 +4,7 @@ import {
   TransitionHandler,
   MemoryRouterHistory,
 } from "@nano-router/history";
-import { Router, Routes, Route, ExternalRoute } from "./index";
+import { Router, Routes, Route, ExternalRoute } from "./index.js";
 
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),

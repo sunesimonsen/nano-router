@@ -1,4 +1,4 @@
-export { createMemoryHistory } from "./memory";
-export type { MemoryRouterHistory } from "./memory";
-export { createBrowserHistory } from "./browser";
-export * from "./history";
+export { createMemoryHistory } from "./memory.js";
+export type { MemoryRouterHistory } from "./memory.js";
+export { createBrowserHistory } from "./browser.js";
+export * from "./history.js";

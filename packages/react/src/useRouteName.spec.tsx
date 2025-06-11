@@ -11,7 +11,7 @@ import {
   useRouter,
   useRouteName,
   useLink,
-} from "./index";
+} from "./index.js";
 
 const routes = new Routes(
   new Route("posts/new", "/posts/new"),

@@ -2,8 +2,6 @@ export default {
   preset: "ts-jest",
   testEnvironment: "jsdom",
   modulePathIgnorePatterns: ["<rootDir>/dist/", "<rootDir>/lib/"],
-  transform: {
-    "\\.(ts|tsx)$": "ts-jest",
-  },
+  moduleNameMapper: { "(.+)\\.js": "$1" },
   setupFilesAfterEnv: ["<rootDir>/test/setupAfterEnv.ts"],
 };

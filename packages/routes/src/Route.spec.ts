@@ -1,4 +1,4 @@
-import { Route } from "./index";
+import { Route } from "./index.js";
 
 describe("Route", () => {
   describe("constructor", () => {

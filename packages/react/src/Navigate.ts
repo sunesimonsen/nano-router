@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useRouter } from "./useRouter";
+import { useRouter } from "./useRouter.js";
 import { NavigateOptions } from "@nano-router/router";
 
 export const Navigate: React.FC<NavigateOptions> = (props) => {

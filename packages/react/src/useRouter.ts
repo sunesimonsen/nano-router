@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { RouterContext } from "./RouterContext";
+import { RouterContext } from "./RouterContext.js";
 import { Router } from "@nano-router/router";
 
 export const useRouter = (): Router => {

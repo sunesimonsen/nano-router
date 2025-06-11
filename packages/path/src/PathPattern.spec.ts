@@ -1,4 +1,4 @@
-import { PathPattern } from "./PathPattern";
+import { PathPattern } from "./PathPattern.js";
 
 describe("PathPattern", () => {
   describe("match", () => {

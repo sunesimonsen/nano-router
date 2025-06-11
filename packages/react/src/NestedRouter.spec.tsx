@@ -12,7 +12,7 @@ import {
   useLink,
   useLocation,
   useParams,
-} from "./index";
+} from "./index.js";
 
 const routes = new Routes(
   new Route("posts", "/posts"),

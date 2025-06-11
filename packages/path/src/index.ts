@@ -1,2 +1,2 @@
-export { PathPattern } from "./PathPattern";
-export type { PathValues } from "./PathPattern";
+export { PathPattern } from "./PathPattern.js";
+export type { PathValues } from "./PathPattern.js";

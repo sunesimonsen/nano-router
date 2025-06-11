@@ -1,3 +1,3 @@
-export { Route } from "./Route";
-export { ExternalRoute } from "./ExternalRoute";
-export { Routes } from "./Routes";
+export { Route } from "./Route.js";
+export { ExternalRoute } from "./ExternalRoute.js";
+export { Routes } from "./Routes.js";

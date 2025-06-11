@@ -1,4 +1,4 @@
-import { ExternalRoute } from "./index";
+import { ExternalRoute } from "./index.js";
 
 describe("ExternalRoute", () => {
   describe("constructor", () => {
