@@ -41,8 +41,12 @@ export class Prompt {
     this.onApprove = (e) => {
       e.stopPropagation();
       this.hide();
-      this.unblock && this.unblock();
-      this.tx && this.tx.retry();
+      if (this.unblock) {
+        this.unblock();
+      }
+      if (this.tx) {
+        this.tx.retry();
+      }
     };
 
     this.onReject = (e) => {
