@@ -2,18 +2,6 @@
 
 This package provides utilities for working with URLs.
 
-<!-- toc -->
-
-- [Instalation](#instalation)
-- [Usage](#usage)
-  - [Creating a URL](#creating-a-url)
-  - [Creating a path](#creating-a-path)
-  - [Parsing query parameters](#parsing-query-parameters)
-  - [Stringifing query parameters](#stringifing-query-parameters)
-- [MIT License](#mit-license)
-
-<!-- tocstop -->
-
 ## Instalation
 
 ```sh
