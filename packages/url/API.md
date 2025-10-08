@@ -1,13 +1,5 @@
 # API @nano-router/url
 
-<!-- toc -->
-
-- [createUrl](#createurl)
-- [objectToSearch](#objecttosearch)
-- [searchToObject](#searchtoobject)
-
-<!-- tocstop -->
-
 ## createUrl
 
 Creates a URL from the given parameters:
