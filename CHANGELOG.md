@@ -1,3 +1,22 @@
+### v3.2.1 (2026-01-14)
+
+#### Pull requests
+
+- [#308](https://github.com/sunesimonsen/nano-router/pull/308) Fix @nano-router\/react peer dependency range ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#301](https://github.com/sunesimonsen/nano-router/pull/301) Bump typescript-eslint from 7.18.0 to 8.31.0 ([Sune Simonsen](mailto:sune@we-knowhow.dk), [dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#307](https://github.com/sunesimonsen/nano-router/pull/307) Upgrade node-publisher ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#306](https://github.com/sunesimonsen/nano-router/pull/306) Ran npm audit ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#305](https://github.com/sunesimonsen/nano-router/pull/305) Remove markdown-toc as Github already has a TOC ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#304](https://github.com/sunesimonsen/nano-router/pull/304) Upgrade mocha ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#296](https://github.com/sunesimonsen/nano-router/pull/296) Bump eslint-config-prettier from 9.1.0 to 10.1.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#243](https://github.com/sunesimonsen/nano-router/pull/243) Bump node-publisher from 1.6.0 to 3.1.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#297](https://github.com/sunesimonsen/nano-router/pull/297) Bump jsdom from 19.0.0 to 26.1.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+
+#### Commits to master
+
+- [v3.2.1](https://github.com/sunesimonsen/nano-router/commit/423383889711190b386a65994e79fd8dfb55af07) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update changelog](https://github.com/sunesimonsen/nano-router/commit/4d3b90f2065bca5b5b919e96351eeb12e079318d) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v3.2.0 (2025-06-11)
 
 #### Pull requests
@@ -90,7 +109,7 @@
 
 #### Pull requests
 
-- [#226](https://github.com/sunesimonsen/nano-router/pull/226) Migrate @nano-router\/url to TypeScript ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#226](https://github.com/sunesimonsen/nano-router/pull/226) Migrate @nano-router\/url to TypeScript ([Sune Simonsen](mailto:sune@we-knowhow.dk))
 
 #### Commits to master
 
@@ -101,7 +120,7 @@
 
 #### Pull requests
 
-- [#225](https://github.com/sunesimonsen/nano-router/pull/225) Migrate @nano-router\/path to TypeScript ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#225](https://github.com/sunesimonsen/nano-router/pull/225) Migrate @nano-router\/path to TypeScript ([Sune Simonsen](mailto:sune@we-knowhow.dk))
 
 #### Commits to master
 
@@ -150,7 +169,7 @@
 
 #### Pull requests
 
-- [#216](https://github.com/sunesimonsen/nano-router/pull/216) Test on Node v20 ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#216](https://github.com/sunesimonsen/nano-router/pull/216) Test on Node v20 ([Sune Simonsen](mailto:sune@we-knowhow.dk))
 
 #### Commits to master
 
@@ -161,7 +180,7 @@
 
 #### Pull requests
 
-- [#212](https://github.com/sunesimonsen/nano-router/pull/212) Switch from Yarn to NPM and require newer Node versions ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#212](https://github.com/sunesimonsen/nano-router/pull/212) Switch from Yarn to NPM and require newer Node versions ([Sune Simonsen](mailto:sune@we-knowhow.dk))
 - [#190](https://github.com/sunesimonsen/nano-router/pull/190) Bump json5 from 1.0.1 to 1.0.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
 - [#205](https://github.com/sunesimonsen/nano-router/pull/205) Added more node test targets ([Sune Simonsen](mailto:sune@we-knowhow.dk))
 
@@ -189,7 +208,7 @@
 
 #### Pull requests
 
-- [#195](https://github.com/sunesimonsen/nano-router/pull/195) Add Navigate component ([Cristiana Man](mailto:man.cristiana1@gmail.com), [Cristiana Man](mailto:man.cristiana1@gmail.com), [Cristiana Man](mailto:man.cristiana1@gmail.com))
+- [#195](https://github.com/sunesimonsen/nano-router/pull/195) Add Navigate component ([Cristiana Man](mailto:man.cristiana1@gmail.com))
 - [#189](https://github.com/sunesimonsen/nano-router/pull/189) Bump unexpected from 12.0.4 to 13.1.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
 
 #### Commits to master
@@ -211,7 +230,7 @@
 - [#124](https://github.com/sunesimonsen/nano-router/pull/124) Bump rollup from 2.58.0 to 2.68.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
 - [#125](https://github.com/sunesimonsen/nano-router/pull/125) Bump unexpected from 12.0.3 to 12.0.4 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
 - [#126](https://github.com/sunesimonsen/nano-router/pull/126) Bump @babel\/register from 7.16.9 to 7.17.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
-- [#127](https://github.com/sunesimonsen/nano-router/pull/127) Use node-publisher for releasing ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#127](https://github.com/sunesimonsen/nano-router/pull/127) Use node-publisher for releasing ([Sune Simonsen](mailto:sune@we-knowhow.dk))
 
 #### Commits to master
 
@@ -299,7 +318,7 @@
 
 - [#62](https://github.com/sunesimonsen/nano-router/pull/62) Upgrade Lerna to the latest version ([Sune Simonsen](mailto:sune@we-knowhow.dk))
 - [#61](https://github.com/sunesimonsen/nano-router/pull/61) Move example to workspace and fix audit problems ([Sune Simonsen](mailto:sune@we-knowhow.dk))
-- [#60](https://github.com/sunesimonsen/nano-router/pull/60) Switch to yarn ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#60](https://github.com/sunesimonsen/nano-router/pull/60) Switch to yarn ([Sune Simonsen](mailto:sune@we-knowhow.dk))
 
 #### Commits to master
 
@@ -320,7 +339,7 @@
 #### Pull requests
 
 - [#16](https://github.com/sunesimonsen/nano-router/pull/16) Bump elliptic from 6.5.3 to 6.5.4 in \/example ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
-- [#17](https://github.com/sunesimonsen/nano-router/pull/17) Updated readme for @nano-router\/react ([Bence A. Tóth](mailto:tothab@gmail.com), [Bence A. Tóth](mailto:tothab@gmail.com), [Bence A. Tóth](mailto:tothab@gmail.com))
+- [#17](https://github.com/sunesimonsen/nano-router/pull/17) Updated readme for @nano-router\/react ([Bence A. Tóth](mailto:tothab@gmail.com))
 
 #### Commits to master
 
@@ -331,7 +350,7 @@
 
 #### Pull requests
 
-- [#15](https://github.com/sunesimonsen/nano-router/pull/15) External urls ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#15](https://github.com/sunesimonsen/nano-router/pull/15) External urls ([Sune Simonsen](mailto:sune@we-knowhow.dk))
 - [#14](https://github.com/sunesimonsen/nano-router/pull/14) Bump prismjs from 1.22.0 to 1.23.0 in \/packages\/react ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
 
 #### Commits to master
@@ -362,9 +381,9 @@
 
 #### Pull requests
 
-- [#11](https://github.com/sunesimonsen/nano-router/pull/11) Use Node native ES modules ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#11](https://github.com/sunesimonsen/nano-router/pull/11) Use Node native ES modules ([Sune Simonsen](mailto:sune@we-knowhow.dk))
 - [#10](https://github.com/sunesimonsen/nano-router/pull/10) Bump ini from 1.3.5 to 1.3.8 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
-- [#9](https://github.com/sunesimonsen/nano-router/pull/9) Generate links with targets from useLink ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#9](https://github.com/sunesimonsen/nano-router/pull/9) Generate links with targets from useLink ([Sune Simonsen](mailto:sune@we-knowhow.dk))
 
 #### Commits to master
 
@@ -382,7 +401,7 @@
 #### Pull requests
 
 - [#10](https://github.com/sunesimonsen/nano-router/pull/10) Bump ini from 1.3.5 to 1.3.8 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
-- [#9](https://github.com/sunesimonsen/nano-router/pull/9) Generate links with targets from useLink ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#9](https://github.com/sunesimonsen/nano-router/pull/9) Generate links with targets from useLink ([Sune Simonsen](mailto:sune@we-knowhow.dk))
 
 #### Commits to master
 
@@ -402,7 +421,7 @@
 
 #### Pull requests
 
-- [#8](https://github.com/sunesimonsen/nano-router/pull/8) Support external navigation \(Major\) ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#8](https://github.com/sunesimonsen/nano-router/pull/8) Support external navigation \(Major\) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
 
 #### Commits to master
 
@@ -486,7 +505,7 @@
 
 #### Pull requests
 
-- [#4](https://github.com/sunesimonsen/nano-router/pull/4) Support node without tooling ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#4](https://github.com/sunesimonsen/nano-router/pull/4) Support node without tooling ([Sune Simonsen](mailto:sune@we-knowhow.dk))
 
 #### Commits to master
 
@@ -516,7 +535,7 @@
 
 #### Pull requests
 
-- [#1](https://github.com/sunesimonsen/nano-router/pull/1) Docs ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#1](https://github.com/sunesimonsen/nano-router/pull/1) Docs ([Sune Simonsen](mailto:sune@we-knowhow.dk))
 
 #### Commits to master
 
