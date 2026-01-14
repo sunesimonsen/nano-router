@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@nano-router/url",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "Methods to create urls",
   "main": "./dist/bundle.cjs",
   "module": "./dist/bundle.mjs",
