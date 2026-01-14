@@ -32,7 +32,7 @@
   "sideEffects": false,
   "peerDependencies": {
     "@nano-router/history": "^3.0.0",
-    "react": "16 | 17 | 18"
+    "react": "16 || 17 || 18"
   },
   "devDependencies": {
     "@nano-router/history": "^3.2.0",
