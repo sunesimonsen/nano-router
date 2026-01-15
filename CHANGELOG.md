@@ -1,3 +1,14 @@
+### v4.0.0 (2026-01-15)
+
+#### Pull requests
+
+- [#309](https://github.com/sunesimonsen/nano-router/pull/309) Constrain the params field on the router to be a Record&lt;string,string&gt; ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+#### Commits to master
+
+- [v4.0.0](https://github.com/sunesimonsen/nano-router/commit/bf2ffcf0e70de9eb6731b3f1b814e80e7fb5842b) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update changelog](https://github.com/sunesimonsen/nano-router/commit/77a87cdc401db72f2db13613ad7aaee03b3dcbe4) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v3.2.1 (2026-01-14)
 
 #### Pull requests
