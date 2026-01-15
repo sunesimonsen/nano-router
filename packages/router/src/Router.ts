@@ -40,7 +40,7 @@ export class Router {
   #stateListener: Unsubscriber | null = null;
 
   #route: string;
-  #params: PathValues;
+  #params: Record<string, string>;
   #queryParams: QueryParams;
 
   constructor({ routes, history }: RouterArgs) {
@@ -64,7 +64,7 @@ export class Router {
     return this.#route;
   }
 
-  get params(): PathValues {
+  get params(): Record<string, string> {
     return this.#params;
   }
 
