@@ -14,7 +14,7 @@ history.pushLocation("https://www.example.com");
 
 It support blocking the navigation like you would expect.
 
-You can optionally provide a target, to open the location in another frame:
+You can optionally provide a target, to open the location in another frame.
 
 ```js
 history.pushLocation("https://www.example.com", "_blank");
