@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@nano-router/react",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "React integration for @nano-router/router",
   "main": "./dist/bundle.cjs",
   "module": "./dist/bundle.mjs",
