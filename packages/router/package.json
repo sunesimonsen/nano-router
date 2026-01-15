@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@nano-router/router",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "description": "The nano-router",
   "keywords": [
     "browser",
@@ -31,12 +31,12 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@nano-router/history": "^4.0.3",
-    "@nano-router/routes": "^4.0.3",
-    "@nano-router/url": "^4.0.3"
+    "@nano-router/history": "^4.0.4",
+    "@nano-router/routes": "^4.0.4",
+    "@nano-router/url": "^4.0.4"
   },
   "devDependencies": {
-    "@nano-router/path": "^4.0.3",
+    "@nano-router/path": "^4.0.4",
     "@types/jest": "^29.5.14",
     "jest": "^29.7.0",
     "rollup": "^4.24.4",
