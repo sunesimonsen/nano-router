@@ -1,8 +1,7 @@
 import React, { ReactNode, useMemo } from "react";
-import { RouterContext } from "./RouterContext.js";
 import { Router as NanoRouter, Routes } from "@nano-router/router";
 import { type RouterHistory } from "@nano-router/history";
-import { RouterSubscription } from "./RouterSubscription.js";
+import { RouterProvider } from "./RouterProvider.js";
 
 type RouterProps = {
   routes: Routes;
@@ -20,9 +19,5 @@ export const Router: React.FC<RouterProps> = ({
     [routes, history],
   );
 
-  return (
-    <RouterContext.Provider value={router}>
-      <RouterSubscription>{children}</RouterSubscription>
-    </RouterContext.Provider>
-  );
+  return <RouterProvider router={router}>{children}</RouterProvider>;
 };
