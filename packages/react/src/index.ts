@@ -9,3 +9,4 @@ export { usePrompt } from "./usePrompt.js";
 export { useQueryParams } from "./useQueryParams.js";
 export { useRouteName } from "./useRouteName.js";
 export { useRouter } from "./useRouter.js";
+export { RouterContext } from "./RouterContext.js";
