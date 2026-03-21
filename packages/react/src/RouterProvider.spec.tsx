@@ -78,10 +78,7 @@ const App = () => {
     [],
   );
 
-  const router = useMemo(
-    () => new Router({ routes, history }),
-    [history],
-  );
+  const router = useMemo(() => new Router({ routes, history }), [history]);
 
   return (
     <div>
