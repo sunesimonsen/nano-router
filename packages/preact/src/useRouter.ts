@@ -1,0 +1,13 @@
+import { useContext } from "preact/hooks";
+import { RouterContext } from "./RouterContext.js";
+import { Router } from "@nano-router/router";
+
+export const useRouter = (): Router => {
+  const router = useContext(RouterContext);
+
+  if (!router) {
+    throw new Error("No router has been provided");
+  }
+
+  return router;
+};
