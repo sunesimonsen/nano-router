@@ -1,3 +1,32 @@
+### v4.2.0 (2026-03-23)
+
+#### Pull requests
+
+- [#312](https://github.com/sunesimonsen/nano-router/pull/312) Add @nano-router\/preact package ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+#### Commits to master
+
+- [v4.2.0](https://github.com/sunesimonsen/nano-router/commit/e504d4437e610f369131a02e4d4f347a145ad2ad) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+### v4.1.0 (2026-03-21)
+
+#### Pull requests
+
+- [#311](https://github.com/sunesimonsen/nano-router/pull/311) Add RouterProvider component ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+#### Commits to master
+
+- [v4.1.0](https://github.com/sunesimonsen/nano-router/commit/ee498002e6d917f61d5faa5c831269a35afa0c38) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+### v4.0.4 (2026-01-15)
+
+- [v4.0.4](https://github.com/sunesimonsen/nano-router/commit/c97a3e72832a542751a2ec907fc5bf2957151977) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+### v4.0.3 (2026-01-15)
+
+- [v4.0.3](https://github.com/sunesimonsen/nano-router/commit/646beb1a5595c24481f3d091ca940817908c91eb) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update changelog](https://github.com/sunesimonsen/nano-router/commit/f947e9b363afa326d0551258620f2156a0facbef) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v4.0.2 (2026-01-15)
 
 - [v4.0.2](https://github.com/sunesimonsen/nano-router/commit/7795d1b7ad18ae6a4b5b4db2b0c81c78091987e2) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
