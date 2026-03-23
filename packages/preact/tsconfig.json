@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig-base.json",
+  "include": ["src/**/*.tsx?", "./test/setupAfterEnv.ts"],
+  "compilerOptions": {
+    "outDir": "./lib",
+    "rootDir": ".",
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "types": ["jest", "@testing-library/jest-dom"]
+  },
+  "files": ["src/index.ts"]
+}

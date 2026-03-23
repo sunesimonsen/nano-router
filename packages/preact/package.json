@@ -1,0 +1,59 @@
+{
+  "type": "module",
+  "name": "@nano-router/preact",
+  "version": "4.1.0",
+  "description": "Preact integration for @nano-router/router",
+  "main": "./dist/bundle.cjs",
+  "module": "./dist/bundle.mjs",
+  "exports": {
+    "types": "./lib/src/index.d.ts",
+    "module": "./dist/bundle.mjs",
+    "import": "./dist/bundle.mjs",
+    "require": "./dist/bundle.cjs"
+  },
+  "types": "./lib/src/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc --build --clean && tsc --build && rollup -c rollup.config.js"
+  },
+  "keywords": [
+    "router",
+    "preact",
+    "minimal",
+    "tiny"
+  ],
+  "author": "Sune Simonsen <sune@we-knowhow.dk>",
+  "license": "MIT",
+  "bugs": "https://github.com/sunesimonsen/nano-router/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunesimonsen/nano-router"
+  },
+  "sideEffects": false,
+  "peerDependencies": {
+    "@nano-router/history": "^4.0.0",
+    "preact": "^10.0.0"
+  },
+  "devDependencies": {
+    "@nano-router/history": "^4.0.4",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/preact": "^3.2.4",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "preact": "^10.25.0",
+    "rollup": "^4.24.4",
+    "ts-jest": "^29.1.2"
+  },
+  "dependencies": {
+    "@nano-router/router": "^4.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

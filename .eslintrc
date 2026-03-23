@@ -55,5 +55,13 @@
         "ignoreRestSiblings": true
       }
     ],
-  }
+  },
+  "overrides": [
+    {
+      "files": ["packages/preact/**/*.{ts,tsx}"],
+      "rules": {
+        "react/react-in-jsx-scope": "off"
+      }
+    }
+  ]
 }
