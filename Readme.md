@@ -7,6 +7,7 @@ A framework agnostic minimalistic router with a focus on named routes.
 | Package                                    | Version                                                 |
 | ------------------------------------------ | ------------------------------------------------------- |
 | [`@nano-router/react`](packages/react)     | [![npm version][react npm version]][react npm link]     |
+| [`@nano-router/preact`](packages/preact)   | [![npm version][preact npm version]][preact npm link]   |
 | [`@nano-router/router`](packages/router)   | [![npm version][router npm version]][router npm link]   |
 | [`@nano-router/routes`](packages/routes)   | [![npm version][routes npm version]][routes npm link]   |
 | [`@nano-router/url`](packages/url)         | [![npm version][url npm version]][url npm link]         |
@@ -15,6 +16,8 @@ A framework agnostic minimalistic router with a focus on named routes.
 
 [react npm version]: https://flat.badgen.net/npm/v/@nano-router/react
 [react npm link]: https://www.npmjs.com/package/@nano-router/react
+[preact npm version]: https://flat.badgen.net/npm/v/@nano-router/preact
+[preact npm link]: https://www.npmjs.com/package/@nano-router/preact
 [router npm version]: https://flat.badgen.net/npm/v/@nano-router/router
 [router npm link]: https://www.npmjs.com/package/@nano-router/router
 [routes npm version]: https://flat.badgen.net/npm/v/@nano-router/routes
