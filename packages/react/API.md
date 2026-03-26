@@ -1,20 +1,5 @@
 # API @nano-router/react
 
-<!-- toc -->
-
-- [Route](#route)
-- [Routes](#routes)
-- [Router](#router)
-- [useLink](#uselink)
-- [useLocation](#uselocation)
-- [useParams](#useparams)
-- [usePrompt](#useprompt)
-- [useQueryParams](#usequeryparams)
-- [useRouteName](#useroutename)
-- [useRouter](#userouter)
-
-<!-- tocstop -->
-
 ## Route
 
 See [@nano-router/routes](../routes/API.md#Route).

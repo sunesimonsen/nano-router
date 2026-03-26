@@ -1,22 +1,5 @@
 # API @nano-router/preact
 
-<!-- toc -->
-
-- [Route](#route)
-- [Routes](#routes)
-- [Router](#router)
-- [Navigate](#navigate)
-- [NestedRouter](#nestedrouter)
-- [useLink](#uselink)
-- [useLocation](#uselocation)
-- [useParams](#useparams)
-- [usePrompt](#useprompt)
-- [useQueryParams](#usequeryparams)
-- [useRouteName](#useroutename)
-- [useRouter](#userouter)
-
-<!-- tocstop -->
-
 ## Route
 
 See [@nano-router/routes](../routes/API.md#Route).

@@ -3,18 +3,6 @@
 This package provides [React hooks](https://reactjs.org/docs/hooks-intro.html)
 for the [nano-router](../router).
 
-<!-- toc -->
-
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Setup your routes](#setup-your-routes)
-  - [Add the router to your application](#add-the-router-to-your-application)
-  - [Switch on the route name](#switch-on-the-route-name)
-  - [Use routing information in your views](#use-routing-information-in-your-views)
-- [MIT License](#mit-license)
-
-<!-- tocstop -->
-
 ## Installation
 
 ```sh

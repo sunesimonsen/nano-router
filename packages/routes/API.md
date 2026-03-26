@@ -1,25 +1,5 @@
 # API @nano-router/routes
 
-<!-- toc -->
-
-- [Route](#route)
-  - [Methods](#methods)
-    - [Constructor](#constructor)
-    - [match](#match)
-    - [stringify](#stringify)
-- [ExternalRoute](#externalroute)
-  - [Methods](#methods-1)
-    - [Constructor](#constructor-1)
-    - [match](#match-1)
-    - [stringify](#stringify-1)
-- [Routers](#routers)
-  - [Methods](#methods-2)
-    - [Constructor](#constructor-2)
-    - [match](#match-2)
-    - [byName](#byname)
-
-<!-- tocstop -->
-
 ## Route
 
 ### Methods

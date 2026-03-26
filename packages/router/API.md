@@ -1,29 +1,5 @@
 # API @nano-router/router
 
-<!-- toc -->
-
-- [Route](#route)
-- [ExternalRoute](#externalroute)
-- [Routes](#routes)
-- [Router](#router)
-  - [Fields](#fields)
-    - [history](#history)
-    - [location](#location)
-    - [params](#params)
-    - [queryParams](#queryparams)
-    - [route](#route)
-  - [Methods](#methods)
-    - [constructor](#constructor)
-    - [back](#back)
-    - [block](#block)
-    - [createUrl](#createurl)
-    - [forward](#forward)
-    - [go](#go)
-    - [listen](#listen)
-    - [navigate](#navigate)
-
-<!-- tocstop -->
-
 ## Route
 
 See [@nano-router/routes](../routes/API.md#Route).

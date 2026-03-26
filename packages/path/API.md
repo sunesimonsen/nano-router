@@ -1,15 +1,5 @@
 # API @nano-router/path
 
-<!-- toc -->
-
-- [PathPattern](#pathpattern)
-  - [Methods](#methods)
-    - [Constructor](#constructor)
-    - [match](#match)
-    - [stringify](#stringify)
-
-<!-- tocstop -->
-
 ## PathPattern
 
 ### Methods

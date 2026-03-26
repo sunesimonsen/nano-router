@@ -2,17 +2,6 @@
 
 This package provides a path pattern, that can either parse a given path, or construct a path from given parameters.
 
-<!-- toc -->
-
-- [Instalation](#instalation)
-- [Usage](#usage)
-  - [Create the path pattern](#create-the-path-pattern)
-  - [Match a path against the pattern](#match-a-path-against-the-pattern)
-  - [Stringify the pattern](#stringify-the-pattern)
-- [MIT License](#mit-license)
-
-<!-- tocstop -->
-
 ## Instalation
 
 ```sh

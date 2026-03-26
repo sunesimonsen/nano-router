@@ -4,18 +4,6 @@ This package provides
 [@depository/view](https://github.com/sunesimonsen/depository/tree/main/packages/view)
 integration for the [nano-router](../router).
 
-<!-- toc -->
-
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Setup your routes](#setup-your-routes)
-  - [Add the router to your application](#add-the-router-to-your-application)
-  - [Switch on the route name](#switch-on-the-route-name)
-  - [Use routing information in your views](#use-routing-information-in-your-views)
-- [MIT License](#mit-license)
-
-<!-- tocstop -->
-
 ## Installation
 
 ```sh

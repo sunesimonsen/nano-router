@@ -1,16 +1,5 @@
 # API @nano-router/depository-view
 
-<!-- toc -->
-
-- [Route](#route)
-- [Routes](#routes)
-- [Router](#router)
-- [Routing](#routing)
-- [Link](#link)
-- [Prompt](#prompt)
-
-<!-- tocstop -->
-
 ## Route
 
 See [@nano-router/routes](../routes/API.md#Route).

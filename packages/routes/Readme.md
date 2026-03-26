@@ -2,17 +2,6 @@
 
 This package provides routing configuration for the [@nano-router/router](../router).
 
-<!-- toc -->
-
-- [Instalation](#instalation)
-- [Usage](#usage)
-  - [Configure your routes](#configure-your-routes)
-  - [Match a path against the routes](#match-a-path-against-the-routes)
-  - [Find a route by name and stringify it](#find-a-route-by-name-and-stringify-it)
-- [MIT License](#mit-license)
-
-<!-- tocstop -->
-
 ## Instalation
 
 ```sh

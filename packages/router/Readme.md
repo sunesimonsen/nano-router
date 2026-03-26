@@ -4,20 +4,6 @@ A framework agnostic minimalistic router with a focus on named routes.
 
 This package is meant as a basis for creating framework specific routers like the [React integration](../react).
 
-<!-- toc -->
-
-- [Instalation](#instalation)
-- [Usage](#usage)
-  - [Setup the history](#setup-the-history)
-  - [Setup your routes](#setup-your-routes)
-  - [Create the router](#create-the-router)
-  - [Listen for updates on the router](#listen-for-updates-on-the-router)
-  - [navigate](#navigate)
-  - [Get the current route information](#get-the-current-route-information)
-- [MIT License](#mit-license)
-
-<!-- tocstop -->
-
 ## Instalation
 
 ```sh
