@@ -1,3 +1,9 @@
+### v4.3.0 (2026-03-26)
+
+- [v4.3.0](https://github.com/sunesimonsen/nano-router/commit/b3aae6174d05010860e33f01a3311b57b0f33cae) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Remove the TOCs from the readmes](https://github.com/sunesimonsen/nano-router/commit/250db563759c8a528ab30402cbd698f43d566495) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update changelog](https://github.com/sunesimonsen/nano-router/commit/3244286bd01859cbadad9c1a82da708e1d333111) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v4.2.0 (2026-03-23)
 
 #### Pull requests
